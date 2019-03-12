@@ -1,0 +1,23 @@
+% whatImGonnaBelieve :- whatHaveToHappenToBelieveThat
+mayComeToTheBritishOldClub(PERSON) :- man(PERSON).
+
+iWillHaveTacos :- iAmHungry.
+
+goodIdeaToInviteThem(X, Y) :- man (X), woman(Y).
+
+inviteToATacosStand(X, Y) :-
+	goodIdeaToInviteThem(X, Y),
+	iWillHaveTacos.
+
+canInviteAGirlToHaveDrink(GIRL) :-
+	woman(GIRL),
+	ofAge(GIRL).
+
+ofAge(NAME) :-
+	age(NAME, AGE),
+	AGE >= 21.
+
+haveTheSameAge(NAME1, NAME2) :-
+	age(NAME1, AGE),
+	age(NAME2, AGE),
+	NAME1 <> NAME2.

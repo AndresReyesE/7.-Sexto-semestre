@@ -1,0 +1,5 @@
+iBuilder - separa la construcción de un objeto complejo de su representación. Se utiliza cuando el sistema debe ser independiente de cómo se construyen sus objetos y cómo se ensamblan y ese proceso de construcción dee permitir varias representaciones. 
+
+Factory method - se crean objetos pero con la posibilidad de que ellos elijan su propia subclase
+
+

@@ -1,0 +1,40 @@
+Modelo de redes:
+ Átomo: unidad más pequeña, tiene un nombre
+ Grupo: conjunto de átomos
+ Artículo: conjunto de grupos
+ BD de redes: conjunto de artículos
+
+Modelo jerárquico:
+ Campos
+ Segmento
+ Arbol de segmentos
+ BD jerarquica 
+
+Debilidades de las SGBDR:
+- Semántica pobre pues se trata sólo de datos alfanuméricos con restricciones y los procedimientos no pueden ser almacenados
+- Ausencia de extensibilidad ya que no pueden representarse los datos complejos
+- SQL no es un lenguaje de programación sino un lenguaje de consulta
+- Problemas de impedancia entre los LP y Lenguajes de Consulta
+
+Reglas de base (de oro)
+Persistencia
+Manejo de disco
+Fiabilidad y seguridad
+Ad-hoc
+
+... SGBD OO
+Tipos complejos
+Clases
+Herencia
+Sobrecarga
+Encapsulación
+
+Pasos para la concepción de un esquema
+1. Percepción del mundo real (obtención de mapas externos)
+2. Construcción de un esquema conceptual (ER/UML)
+3. Concepción de un esquema lógico
+4. Afinación del esquema lógico
+5. Construcción de un esquema físico
+
+
+ 

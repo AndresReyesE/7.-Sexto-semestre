@@ -1,0 +1,63 @@
+city(paris).
+city(rome).
+city(madrid).
+city(berlin).
+city(milan).
+-city(singapore).
+-city(wonderland).
+
+country(paris, france).
+country(rome, italy).
+country(milan, italy).
+country(madrid, spain).
+country(berlin, germany).
+
+start(berlin).
+
+%DISJUNCTIVE RULE
+train(X) v bus(X):-
+city(X).
+
+%we have trains or buses to X, but not both
+
+:- train(X), country(X, italy). 
+%no va a haber answer set a ninguna ciudad italiana que tenga trenes
+
+:- bus(X),
+    country(X, spain).
+
+
+
+roundWayTrainTicket(X, Y) :-
+    train(X),
+    train(Y),
+    X <> Y.
+
+roundWayBusTicket(X, Y) :-
+    bus(X),
+    bus(Y),
+    X <> Y.
+
+convenientTrainTrip(X, Y, Z) :-
+    roundWayTrainTicket(X, Y),
+    roundWayTrainTicket(Y, Z),
+    X <> Z.
+
+convenientBusTrip(X, Y, Z) :-
+    roundWayBusTicket(X, Y),
+    roundWayBusTicket(Y, Z),
+    X <> Z.
+
+recommendation(travelByTrain, X, Y, Z) :-
+    start(X),
+    convenientTrainTrip(X, Y, Z).
+
+recommendation(travelByBus, X, Y, Z) :-
+    start(X),
+    convenientBusTrip(X, Y, Z).
+
+impossibleTripTo(X) :-
+    -city(X).
+
+noTransportationToSingapore:-
+    not city(singapore).

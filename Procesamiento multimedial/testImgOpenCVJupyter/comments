@@ -1,0 +1,18 @@
+#flags = [cv.COLOR_BGR2GRAY, cv.COLOR_BGR2YUV, cv.COLOR_BGR2XYZ, cv.COLOR_BGR2HSV]
+flags = [i for i in dir(cv) if i.endswith('COLOR_')]
+
+
+print(flags)
+
+
+#storing our target image in memory by declaring it as a variable
+#for i in flags:
+#    image = cv.imread('image.png', i)
+#    cv.imshow('image', image)
+#    cv.waitKey(0)
+#    cv.destroyAllWindows()
+#display the image to be visualized, 
+# will wait for any key to be pressed 
+# and will close the opened window
+
+

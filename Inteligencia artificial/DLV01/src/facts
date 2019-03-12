@@ -1,0 +1,14 @@
+%arity 0
+iAmHungry.
+
+%John is a man
+man(john).
+man(paul).
+woman(mary).
+woman(petra).
+
+%arity 2
+age(john, 20).
+age(mary, 20).
+age(petra, 38).
+age(paul, 24).
