@@ -2,41 +2,53 @@
 #include "server.h"
 
 
-char * recv_message(int client_sock);
-void send_result (int client_sock, int value);
+int recv_int (int client_sock);
+void send_integer (int client_sock, int value);
 
 
 int main(int argc, char *argv[])
 {
     int socket_desc = initialization();
-    
+    int id, port;
+
     while(1) {
+
+
         int client_sock = connection(socket_desc);
         // process(client_sock);
-        char * m = recv_message(client_sock);
+        int proc = recv_int(client_sock);
 
-        int value = store(m);
-        free(m);
-        send_result(client_sock, value);
+        switch (proc) {
+            case 1:     //registrar un servidor
+                id = recv_int (client_sock);
+                port = recv_int(client_sock);
+                printf("Suscription: %d, %d", id, port);
+                
+                register_service(id, port);
+                break;
+
+            case 2:     //buscar un 
+                id = recv_int (client_sock);
+                port = find_service (id);
+                printf("Look up: %d, %d", id, port);
+
+                send_integer(client_sock, port);
+                break;
+            
+            default:
+                puts("El servicio no existe");
+        }
     }
     
     close(socket_desc);
     return 0;
 }
 
-char * recv_message (int client_sock)
-{
-    char * message;
-    int read_size, length;
+int recv_int (int client_sock) {
+    int read_size, value;
 
-    read_size = recv(client_sock, &length, sizeof(length), 0);
+    read_size = recv(client_sock, &value, sizeof(value), 0);
 
-
-    message = (char *) malloc(length);
-    
-    // receive a message from client
-    read_size = recv(client_sock, message, length, 0);
-        // send the message back to client
     
     if(read_size == 0) {
         puts("Client disconnected");
@@ -46,10 +58,10 @@ char * recv_message (int client_sock)
         perror("recv failed");
     }
 
-    return message;
+    return value;
 }
 
-void send_result (int client_sock, int value) {
+void send_integer (int client_sock, int value) {
     printf("Server result: %d\n", value);
 
     if (send(client_sock, &value, sizeof(value), 0) < 0) {

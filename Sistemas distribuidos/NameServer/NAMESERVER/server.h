@@ -15,9 +15,6 @@ typedef struct {
     int port;
 } LOCATION;
 
-int entry = NIL;
-LOCATION directory[TABLE_SIZE];
-
 //utils
 int initialization();
 int connection(int socket_desc);

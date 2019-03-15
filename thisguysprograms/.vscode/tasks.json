@@ -6,7 +6,7 @@
         {
             "label": "Compile C",
             "type": "shell",
-            "command": "gcc -g c.c -o c -lm",
+            "command": "gcc -g examen.c -o examen",
             "group": {
                 "kind": "build",
                 "isDefault": true

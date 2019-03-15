@@ -5,10 +5,11 @@
 #include <arpa/inet.h>
 #include <sys/socket.h>
 
-#define PORT_NUM 8888
+#define PORTMAPPER 1111
 // #define LOCAL_HOST "127.0.0.1"
 
-int connection();
+int connection(int port);
 int close(int sock);
 
 int store (char * m);
+int find_service (int id);

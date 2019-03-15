@@ -1,59 +1,47 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 
-/*
-48. Escribe un programa que reciba un número entero N del usuario e imprima el contorno de
-pirámide de N pisos de asteriscos. Ej.
->> 3
-      *
-     * *
-    *****
-*/
-
-//Pide un número al usuario y lo regresa
-int obtener_dato() {
-    int x;
-    
-    printf ("Ingrese un numero: ");
-    scanf ("%d", &x);
-
-    return x;
-}
-
-//Verifica que el número sea positivo, regresa 0 si lo es, 1 si es no-positivo
-int verificar_valor (int x) {
-    int valido = 1;
-
-    if (x <= 0)
-        printf ("El numero debe de ser mayor que 0\n");
-    else
-        valido = 0;
-
-    return valido; 
-}
-
-void imprimir_rombo (int x) {
-    for (int i = 0; i < x; i++) {
-        for (int j = x - i - 1; j >= 0; j--)
-            printf(" ");
-
-        for (int j = 0; j < i * 2 + 1; j++)
-            printf("*");
-        
-        printf("\n");
-    }
-}
+void swap (int * p, int * q);
+void randomize (int * A, int size);
 
 int main (void) {
-    int x, valido;
-    
-    do {
-        x = obtener_dato();
-        valido = verificar_valor(x);
-    } while (valido != 0);
+    // int size = 30;
+    // // int * A = (int *) malloc(30 * sizeof(int));
+    // int A[size];
 
-    imprimir_rombo(x);
+    // for (int i = 0; i < size; i++)
+    //     A[i] = i + 1;
+
+    // randomize(A, size);
+
+    // free (A);
+
+    int i = 18, *ip, **ipp;
+
+    ip = &i;
+    ipp = &ip;
+
+    printf("ip = %lo, &ip = %lo, ipp = %lo\n", ip, &ip, ipp);
+    printf("*ipp = %lo, *ip = %d\n", *ipp, *ip);
+    printf("&i = %lo, i = %d\n", &i, i);
 
     return 0;
+}
+
+void swap (int *p, int *q) {
+    int temp = *p;
+
+    *p = *q;
+    *q = temp;
+}
+
+void randomize (int * A, int size) {
+    int k = size;
+    for (int i = 0; i < size; i++) {
+        int j = rand() % k;
+
+        swap (A + i, A + j);
+
+        k--;
+    }
 }

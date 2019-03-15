@@ -1,5 +1,8 @@
 #include "server.h"
 
+int entry = NIL;
+LOCATION directory[TABLE_SIZE];
+
 void register_service(int id, int port) {
     for (int i = 0; i < entry; i++) {
         if (directory[i].id == id) {

@@ -17,8 +17,11 @@ int main(int argc, char *argv[])
     host = argv[1];
     m = argv[2];
 
-    sock = connection();
-    int result = store (m);
+    int port = find_service(atoi (argv[1]));
+    sock  = connection(port);
+
+    int result = store(m);
+
     printf("Resultado recibido %d\n", result);
 
     printf("El mensaje fue almacenado\n");

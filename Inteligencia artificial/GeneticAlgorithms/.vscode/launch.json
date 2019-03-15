@@ -1,0 +1,21 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ProjectGeneticAlgorithms",
+            "request": "launch",
+            "mainClass": "ProjectGeneticAlgorithms",
+            "projectName": "GeneticAlgorithms_67730adf"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)",
+            "request": "launch",
+            "mainClass": "ProjectGeneticAlgorithms"
+        }
+    ]
+}
