@@ -6,7 +6,8 @@
         {
             "label": "Compile C",
             "type": "shell",
-            "command": "gcc Client/*.c -g -o client\ngcc Server/*.c -g -o server",
+            "command": "gcc -g Client/*.c -o client\ngcc -g Server/*.c -o server",
+            // "command": "gcc -g void.c -o void",
             "group": {
                 "kind": "build",
                 "isDefault": true

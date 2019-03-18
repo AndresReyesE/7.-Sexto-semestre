@@ -12,7 +12,3 @@
 
 int connection();
 int close(int sock);
-
-int store (char * m);
-
-int send_int (int x);

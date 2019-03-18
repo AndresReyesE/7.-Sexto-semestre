@@ -5,13 +5,33 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "(gdb) Launch Server",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/server",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/Server",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "preLaunchTask": "Compile C",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
             "name": "(gdb) Launch Client",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/Client/client",
-            "args": [],
-            "stopAtEntry": true,
-            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/client",
+            "args": ["Andres"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/Client",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",

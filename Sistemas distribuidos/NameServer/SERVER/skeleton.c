@@ -56,7 +56,7 @@ char * recv_message (int client_sock)
     read_size = recv(client_sock, &length, sizeof(length), 0);
 
 
-    message = (char *) malloc(length);
+    message = (char *) malloc (length);
     
     // receive a message from client
     read_size = recv(client_sock, message, length, 0);

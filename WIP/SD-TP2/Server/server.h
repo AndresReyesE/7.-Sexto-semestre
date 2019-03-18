@@ -15,5 +15,4 @@ int initialization(); //inicialización del servicio
 int connection(int socket_desc); //esperar a los clientes
 int close(int sock);
 
-//services
-int store (char * m);
+FILE * db;
