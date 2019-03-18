@@ -84,6 +84,7 @@ int main(int argc, char *argv[]) {
                 send_struct(client_sock, &per);
                 break;
         }
+        free(s);
     }
     
     close(socket_desc);
