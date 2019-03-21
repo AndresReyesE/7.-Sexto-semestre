@@ -3,7 +3,7 @@
 
 extern char * host;
 
-int connection()
+int connection(int port)
 {
     int sock;
     struct sockaddr_in server;
@@ -17,7 +17,7 @@ int connection()
     
     server.sin_addr.s_addr = inet_addr(host);
     server.sin_family = AF_INET;
-    server.sin_port = htons(PORT_NUM);
+    server.sin_port = htons(port);
     
     // connect to remote server
     if (connect(sock, (struct sockaddr *) &server, sizeof(server)) < 0) {

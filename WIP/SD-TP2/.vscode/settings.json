@@ -6,6 +6,8 @@
         "**/.factorypath": true
     },
     "files.associations": {
-        "interface.h": "c"
+        "interface.h": "c",
+        "client.h": "c",
+        "server.h": "c"
     }
 }

@@ -2,17 +2,6 @@
 #include "../interface.h"
 
 /**
- * Service 1
- */
-int store (char * m) {
-    FILE *fp = fopen("mensajes.txt", "a");
-
-    fprintf(fp, "%s\n", m);
-    fclose(fp);
-    return strlen(m);
-}
-
-/**
  * Service 2
  */
 int sum (int a, int b) {
@@ -24,15 +13,6 @@ int sum (int a, int b) {
  */
 void sumr (int * a, int * b, int * c) {
     *c = *a + *b;
-}
-
-void struct_function (struct person * p) {
-    strcpy(p->name, "Andres");
-    p->age = 21;
-    strcpy(p->addr.street, "Camino Real");
-    p->addr.number = 1105;
-    strcpy(p->addr.city, "Puebla");
-
 }
 
 int search_data (struct person * p, char * name) {

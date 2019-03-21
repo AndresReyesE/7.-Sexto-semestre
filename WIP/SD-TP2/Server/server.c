@@ -2,18 +2,22 @@
 
 #include "../interface.h"
 
-void perform_call (int id_request, void * result, int n, ...);
+int perform_call (int id_request, void * result, int n, ...);
 
-void perform_call (int id_request, void * result, int n,  ...) {
+int perform_call (int id_request, void * result, int n,  ...) {
     va_list v;
 
     va_start (v, n);
 
-            int * aa;
-            int * bb;
-            int * cc;
-    switch (id_request)
-    {
+    int * aa;
+    int * bb;
+    int * cc;
+    int found;
+    switch (id_request) {
+        case 1:
+            found = search_data ((struct person *) result, va_arg(v, char *)); 
+            return found;
+
         case 2:
             *(int *) result = sum(va_arg(v, int), va_arg(v, int));
             break;
@@ -25,14 +29,10 @@ void perform_call (int id_request, void * result, int n,  ...) {
             sumr (aa, bb, cc);
             break;
 
-        case 4:
-            struct_function((struct person *) result);
-
-        case 5:
-            search_data ((struct person *) result, va_arg(v, char *));
         default:
             break;
     }
 
     va_end(v);
+    return 0;
 }
