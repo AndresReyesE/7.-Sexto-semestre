@@ -28,9 +28,9 @@ int main (int argc, char **argv) {
 
     struct person p;    //structure where the results (by reference) will be stored
 
-    int found = search_data(&p, argv[1]);
+    int found = search_data(&p, argv[1]); //the call to search_data is performed as if it was a local function
 
-    if (found) { //the call to search_data is performed as if it was a local function
+    if (found) { 
         printf("Register found!\n");
         printf("Name:\t%s\n",   p.name);
         printf("Age:\t%d\n",    p.age);

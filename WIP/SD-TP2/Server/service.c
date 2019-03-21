@@ -2,19 +2,13 @@
 #include "../interface.h"
 
 /**
- * Service 2
+ * Service 1
+ * Search for a name in a simple text-file-implemented database, if the name is in the database, it fills the structure received with the
+ * data it has, otherwise it doesn't touch the structure
+ * @params
+ *  p - person structure pointer, reference to the structure where the correct values, if name found, should be stored
+ *  name - trimmed string indicating the name to be searched  
  */
-int sum (int a, int b) {
-    return a + b;
-}
-
-/**
- * Service 3
- */
-void sumr (int * a, int * b, int * c) {
-    *c = *a + *b;
-}
-
 int search_data (struct person * p, char * name) {
     int found = 0;
     db = fopen("db", "r");
@@ -96,4 +90,17 @@ int search_data (struct person * p, char * name) {
     fclose(db);
 
     return found;
+}
+/**
+ * Service 2
+ */
+int sum (int a, int b) {
+    return a + b;
+}
+
+/**
+ * Service 3
+ */
+void sumr (int * a, int * b, int * c) {
+    *c = *a + *b;
 }
