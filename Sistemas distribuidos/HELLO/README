@@ -1,0 +1,20 @@
+
+Colocar una copia del contenido de este directorio en:
+
+C:\RMI\
+
+Para compilar utilizar la siguiente linea:
+
+	javac -d . hello\*.java
+
+Para levantar el servidor de nombres (el CLASSPATH debe incluir el path de las clases del servidor):
+
+	rmiregistry
+
+Para ejecutar el servidor:
+
+	java -Djava.rmi.server.codebase=file:/RMI/ example.hello.Server
+
+Para ejecutar el cliente:
+
+	java example.hello.Client
