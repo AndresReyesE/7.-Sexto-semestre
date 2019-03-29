@@ -72,7 +72,9 @@ if ${use_color} ; then
 	if [[ ${EUID} == 0 ]] ; then
 		PS1="\[$(tput setaf 1)\]«\u\\[$(tput sgr0)\]\[$(tput bold)\] \W\\[$(tput sgr0)\]\[$(tput setaf 1)\]»\$ \[$(tput sgr0)\]"
 	else
-		PS1="\[$(tput setaf 6)\]«\u\\[$(tput sgr0)\]\[$(tput bold)\] \W\\[$(tput sgr0)\]\[$(tput setaf 6)\]»φ \[$(tput sgr0)\]"
+		#PS1="\[$(tput setaf 6)\]«\u\\[$(tput sgr0)\]\[$(tput bold)\] \W\\[$(tput sgr0)\]\[$(tput setaf 6)\]»φ \[$(tput sgr0)\]"
+		PS1="\[$(tput setaf 6)\]⌐ 〔\u ❖\[$(tput sgr0)\]\[$(tput bold)\] \W\\[$(tput sgr0)\]\[$(tput setaf 6)\]〕☤ \n﹂➣ \[$(tput sgr0)\]"
+
 	fi
 
 	alias ls='ls --color=auto'
@@ -284,6 +286,7 @@ alias l='ls -l'
 alias 7='cd /home/reyes/7.-Sexto-semestre'
 alias kde='kdeconnect-cli'
 alias kdh='kdeconnect-handler'
+alias W='cd ~/7.-Sexto-semestre/WIP'
 
 tt () {
     echo "/$1/ /$2/ /"$@"/"

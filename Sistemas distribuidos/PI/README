@@ -1,0 +1,20 @@
+
+Colocar una copia del contenido de este directorio en:
+
+C:\RMI\
+
+Para compilar utilizar la siguiente linea:
+
+	javac -d . pi\*.java
+
+Para levantar el servidor de nombres (el CLASSPATH debe incluir el path de las clases del objeto servidor o hay que usar java.rmi.server.codebase para ejecutar el servidor):
+
+	rmiregistry
+
+Para ejecutar el servidor:
+
+	java -Djava.rmi.server.codebase=file:/RMI/ engine.ComputeEngine
+
+Para ejecutar el cliente:
+
+	java client.ComputePi localhost 4
