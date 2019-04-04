@@ -4,9 +4,9 @@
 #include <time.h>
 
 /*
- * Carlos Andr�s Reyes Evangelista
+ * Carlos Andrés Reyes Evangelista
  * 157068
- * Ingenier�a en Sistemas Computacionales. UDLAP.
+ * Ingeniería en Sistemas Computacionales. UDLAP.
  */
  
  int size = 24;
@@ -115,8 +115,6 @@ void write (struct s *st, char hero [][len]) {
 
 
 int main (int argc, char **argv) {
-//	char hero[][20] = {"Androxus", "Ash", "Barik", "Bomb_King", "Buck", "Cassie", "Drogoz", "Evie", "Fernando", "Furia", "Grohk", "Grover", "Inara", "Jenos", "Khan", "Kinessa", "Koga", "Lex", "Lian", "Maeve", "Makoa", "Mal'Damba", "Moji", "Pip", "Ruckus", "Seris", "Sha-lin", "Skye", "Strix", "Talus", "Terminus", "Torvald", "Tyra", "Viktor", "Vivian", "Willo", "Ying", "Zhin"};	 	
-	
 	// printf("Arg received: %s", argv[1]);
 	strcpy(path, argv[1]);
 
