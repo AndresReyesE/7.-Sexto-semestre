@@ -1,0 +1,271 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
+[draggable=true] {
+  cursor: move !important; }
+
+.page {
+  padding: 15px 0;
+  margin: 0;
+  font-size: 14px;
+  font-family: 'Helvetica Neue', 'Lucida Grande', sans-serif;
+  color: #4A4B54;
+  min-width: 960px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start; }
+  .page strong {
+    font-weight: bold; }
+
+.wrapper {
+  padding: 0 10px; }
+
+.header {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #E3E3E3;
+  border-top: 1px solid #E3E3E3;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px; }
+
+.logo {
+  background: url("../images/logo.svg") center center no-repeat;
+  width: 195px;
+  height: 61px;
+  background-size: 195px 61px; }
+
+.link {
+  color: #0651CF;
+  transition: all .3s; }
+  .link:hover {
+    color: #FEA30E; }
+  .link.active {
+    color: #96979F; }
+
+.total {
+  margin: 0 40px;
+  color: #4A4B54; }
+
+.title {
+  color: #393C40;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 15px; }
+
+.sidebar {
+    float: left;
+    width: 170px;
+}
+.sidebar-menu__item {
+    margin-bottom: 5px;
+    height: 28px;
+    padding-left: 20px;
+    border-left: 5px solid #FFF; }
+    .sidebar-menu__item a {
+        color: #96979F;
+        line-height: 28px;
+    }
+    .sidebar-menu__item.active {
+        color: #303942;
+        border-left: 5px solid #4E5765;
+    }
+    .sidebar-menu__item.active a {
+        color: #303942;
+    }
+
+.menu__item {
+  margin-right: 20px; }
+
+.group {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #E3E3E3;
+  position: relative; }
+  .group__title {
+    font-size: 24px;
+    font-family: 'Helvetica Neue', 'Lucida Grande', sans-serif;
+    line-height: 28px;
+    float: left;
+    margin-right: 15px;
+    margin-top: -3px;
+    border: none;
+    outline: none;
+    border: 1px solid #fff;
+    transition: all .3s;
+    min-width: 50px; }
+    .group__title:focus {
+      border: 1px solid #0651CF; }
+    .group__title:-webkit-input-placeholder {
+      font-size: 24px;
+      font-weight: normal;
+      line-height: 28px; }
+  .group__header {
+    margin-bottom: 20px; }
+  .group__amount {
+    font-size: 12px;
+    color: #96979F;
+    margin-bottom: 10px;
+    line-height: 28px; }
+  .group__action {
+      color: #5C6166;
+  }
+  .group__action_delete {
+      position: absolute;
+      right: 0;
+      background: url('../images/glyph-remove.png') right center no-repeat;
+      background-size: 11px 12px;
+      padding-right: 20px;
+  }
+  .group__action {
+    font-size: 12px;
+    transition: all .3s;
+    cursor: pointer;
+    margin-right: 20px; }
+    .group__action:hover {
+      color: #0651CF; }
+  .group__date {
+    font-size: 12px;
+    color: #96979F; }
+
+.links {
+  margin-left: 0px; }
+  .links__item {
+    position: relative;
+    margin-bottom: 15px;
+    padding-left: 24px; }
+    .links__item:hover .links__item-remove {
+      display: block; }
+  .links__item-link {
+    color: #0651CF;
+    transition: all .3s;
+    line-height: 16px;
+    cursor: pointer; }
+    .links__item-link:hover {
+      color: #393C40; }
+  .links__item-icon {
+    margin-right: 10px;
+    float: left; }
+  .links__item-remove {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: url("../images/remove.svg") center center no-repeat;
+    background-size: 8px 8px;
+    left: 0;
+    cursor: pointer;
+    display: none; }
+
+.option {
+  margin-bottom: 20px; }
+  .option__desc {
+    font-size: 18px;
+    margin-bottom: 10px; }
+  .option__choices {
+    margin-left: 20px; }
+  .option input[type='radio'] {
+    margin-right: 10px; }
+  .option p {
+    margin-bottom: 10px; }
+
+.alert {
+  display: block;
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 30px;
+  display: inline-block;
+  width: auto; }
+  .alert_success {
+    background-color: #B8E986;
+    color: #417505; }
+
+#saved {
+  display: none; }
+
+.sortable-ghost {
+  opacity: .2; }
+
+ .sidebar {
+
+ }
+
+ .sidebar__title {
+     color: #5C6166;
+     font-size: 18px;
+     line-height: 21px;
+     margin-left: 25px;
+     margin-bottom: 25px;
+ }
+
+ .content {
+     width: 750px;
+ }
+
+.button {
+    -webkit-appearance: none;
+        -webkit-user-select: none;
+        background-image: -webkit-linear-gradient(#ededed, #ededed 38%, #dedede);
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        border-radius: 2px;
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08), inset 0 1px 2px rgba(255, 255, 255, 0.75);
+        color: #444;
+        font: inherit;
+        margin: 0 1px 0 0;
+        height: 28px;
+        font-size: 12px;
+        outline: none;
+        text-shadow: 0 1px 0 rgb(240, 240, 240); }
+.button:hover {
+    background-image: -webkit-linear-gradient(#f0f0f0, #f0f0f0 38%, #e0e0e0);
+        border-color: rgba(0, 0, 0, 0.3);
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.12), inset 0 1px 2px rgba(255, 255, 255, 0.95);
+        color: black; }
+.button:active {
+    background-image: -webkit-linear-gradient(#e7e7e7, #e7e7e7 38%, #d7d7d7);
+        box-shadow: none;
+        text-shadow: none; }
+        
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .group__action_delete {
+        background-image: url('../images/glyph-remove@2x.png');
+    }
+}
+/*# sourceMappingURL=style.css.map */

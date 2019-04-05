@@ -39,7 +39,11 @@ package example.hello;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
+import java.util.Date;
 
 public interface Hello extends Remote {
     String sayHello() throws RemoteException;
+    String sayBuhBye() throws RemoteException;
+    Offer sendOffer(Offer o) throws RemoteException;
+    Date sendDate(Date d) throws RemoteException;
 }

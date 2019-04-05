@@ -39,6 +39,7 @@ package example.hello;
 
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.util.Date;
 
 public class Client {
 
@@ -52,12 +53,14 @@ public class Client {
 	    Registry registry = LocateRegistry.getRegistry(host);
 		
 		Hello stub = (Hello) registry.lookup("Hello");
-		Hello stub2 = (Goodbye) registry.lookup("Goodbye");
+		Hello stub2 = (Hello) registry.lookup("Goodbye");
+		Hello stub3 = (Hello) registry.lookup("Date");
 		
 		String response = stub.sayHello();
-		String response2 = stub.sayBuhBye();
+		// String response2 = stub2.sayBuhBye();
+		// Date response3 = stub3.sendDate(new Date());
 		
-		System.out.println("response: " + response + "\n\n" + response2);
+		System.out.println("response3: " + response + "\n\n" + response2 + "\n\n" + response3);
 	} catch (Exception e) {
 	    System.err.println("Client exception: " + e.toString());
 	    e.printStackTrace();
