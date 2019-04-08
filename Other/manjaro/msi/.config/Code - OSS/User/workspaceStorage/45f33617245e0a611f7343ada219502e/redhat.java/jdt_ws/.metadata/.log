@@ -1,0 +1,1384 @@
+!SESSION 2019-03-26 23:43:56.207 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_202
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /home/reyes/.config/Code - OSS/User/workspaceStorage/45f33617245e0a611f7343ada219502e/redhat.java/jdt_ws
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:43:58.760
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:43:58.960
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:43:58.990
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:43:58.991
+!MESSAGE Initializing Java Language Server 0.35.0.201903150009
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:43:59.033
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:43:59.076
+!MESSAGE Creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:43:59.711
+!MESSAGE Finished creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:00.165
+!MESSAGE Try to create an invisible project for the workspace /home/reyes/7.-Sexto-semestre/Inteligencia artificial
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:00.165
+!MESSAGE Creating the Java project Inteligencia artificial_e042b571
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:00.176
+!MESSAGE Finished creating the Java project Inteligencia artificial_e042b571
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:00.224
+!MESSAGE Successfully created a workspace invisible project Inteligencia artificial_e042b571
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:00.230
+!MESSAGE Workspace initialized in 1220ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:00.323
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:00.325
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:00.326
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:00.347
+!MESSAGE >>New configuration: {java={home=null, jdt={ls={vmargs=-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication}}, errors={incompleteClasspath={severity=warning}}, configuration={checkProjectSettingsExclusions=true, updateBuildConfiguration=interactive, maven={userSettings=null}}, trace={server=off}, import={gradle={enabled=true}, maven={enabled=true}, exclusions=[**/node_modules/**, **/.metadata/**, **/archetype-resources/**, **/META-INF/maven/**]}, referencesCodeLens={enabled=false}, signatureHelp={enabled=false}, implementationsCodeLens={enabled=false}, format={enabled=true, settings={url=null, profile=null}, comments={enabled=true}, onType={enabled=true}}, saveActions={organizeImports=false}, contentProvider={preferred=null}, autobuild={enabled=true}, maxConcurrentBuilds=1.0, completion={enabled=true, overwrite=true, guessMethodArguments=false, favoriteStaticMembers=[org.junit.Assert.*, org.junit.Assume.*, org.junit.jupiter.api.Assertions.*, org.junit.jupiter.api.Assumptions.*, org.junit.jupiter.api.DynamicContainer.*, org.junit.jupiter.api.DynamicTest.*, org.mockito.Mockito.*, org.mockito.ArgumentMatchers.*, org.mockito.Answers.*], importOrder=[java, javax, com, org]}, progressReports={enabled=true}, codeGeneration={hashCodeEquals={useJava7Objects=false, useInstanceof=false, useBlocks=false, generateComments=false}}, debug={logLevel=warn, settings={showHex=false, showStaticVariables=true, showQualifiedNames=false, maxStringLength=0.0, enableHotCodeReplace=true, enableRunDebugCodeLens=true, forceBuildBeforeLaunch=true}}}}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:00.350
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:00.684
+!MESSAGE >> workspace/executeCommand vscode.java.resolveMainMethod
+
+!ENTRY java-debug 1 0 2019-03-26 23:44:00.695
+!MESSAGE Starting com.microsoft.java.debug.plugin
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:01.038
+!MESSAGE begin problem for /Gene.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:01.038
+!MESSAGE 0 problems reported for /Gene.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:01.039
+!MESSAGE Reconciled 0, validated: 1. Took 195 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:01.601
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:01.655
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:01.657
+!MESSAGE Blackboard.java isn't on the classpath. Only syntax errors will be reported for file:///home/reyes/7.-Sexto-semestre/Inteligencia%20artificial/agent/Blackboard.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:01.671
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:01.921
+!MESSAGE >> workspace/executeCommand vscode.java.resolveMainMethod
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:02.245
+!MESSAGE begin problem for /Blackboard.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:02.246
+!MESSAGE 0 problems reported for /Blackboard.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:02.246
+!MESSAGE Reconciled 0, validated: 1. Took 174 ms
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2019-03-26 23:44:02.358
+!MESSAGE Resolve organize imports source action
+!STACK 1
+Java Model Exception: Java Model Status [_/agent [in Inteligencia artificial_e042b571] is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getResolvedClasspathEntry(PackageFragmentRoot.java:616)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation$TypeReferenceProcessor.process(OrganizeImportsOperation.java:358)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation.createTextEdit(OrganizeImportsOperation.java:597)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getOrganizeImportsProposal(SourceAssistProcessor.java:129)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:81)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:126)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:592)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$30(JDTLanguageServer.java:821)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:443)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2019-03-26 23:44:02.362
+!MESSAGE _/agent [in Inteligencia artificial_e042b571] is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:02.914
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:05.414
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:05.416
+!MESSAGE Clearing problems for /Blackboard.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:05.448
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:05.449
+!MESSAGE UDLAgent.java isn't on the classpath. Only syntax errors will be reported for file:///home/reyes/7.-Sexto-semestre/Inteligencia%20artificial/agent/UDLAgent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:05.464
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:05.740
+!MESSAGE >> workspace/executeCommand vscode.java.resolveMainMethod
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:06.007
+!MESSAGE begin problem for /UDLAgent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:06.008
+!MESSAGE 0 problems reported for /UDLAgent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:06.008
+!MESSAGE Reconciled 0, validated: 1. Took 144 ms
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2019-03-26 23:44:06.084
+!MESSAGE Resolve organize imports source action
+!STACK 1
+Java Model Exception: Java Model Status [_/agent [in Inteligencia artificial_e042b571] is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getResolvedClasspathEntry(PackageFragmentRoot.java:616)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation$TypeReferenceProcessor.process(OrganizeImportsOperation.java:358)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation.createTextEdit(OrganizeImportsOperation.java:597)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getOrganizeImportsProposal(SourceAssistProcessor.java:129)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:81)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:126)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:592)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$30(JDTLanguageServer.java:821)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:443)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2019-03-26 23:44:06.084
+!MESSAGE _/agent [in Inteligencia artificial_e042b571] is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:19.456
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:22.096
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:31.033
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:40.557
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:42.822
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:54.790
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:44:55.026
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2019-03-26 23:44:55.037
+!MESSAGE Resolve organize imports source action
+!STACK 1
+Java Model Exception: Java Model Status [_/agent [in Inteligencia artificial_e042b571] is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getResolvedClasspathEntry(PackageFragmentRoot.java:616)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation$TypeReferenceProcessor.process(OrganizeImportsOperation.java:358)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation.createTextEdit(OrganizeImportsOperation.java:597)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getOrganizeImportsProposal(SourceAssistProcessor.java:129)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:81)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:126)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:592)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$30(JDTLanguageServer.java:821)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:443)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2019-03-26 23:44:55.038
+!MESSAGE _/agent [in Inteligencia artificial_e042b571] is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:45:59.760
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2019-03-26 23:45:59.767
+!MESSAGE Resolve organize imports source action
+!STACK 1
+Java Model Exception: Java Model Status [_/agent [in Inteligencia artificial_e042b571] is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getResolvedClasspathEntry(PackageFragmentRoot.java:616)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation$TypeReferenceProcessor.process(OrganizeImportsOperation.java:358)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation.createTextEdit(OrganizeImportsOperation.java:597)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getOrganizeImportsProposal(SourceAssistProcessor.java:129)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:81)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:126)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:592)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$30(JDTLanguageServer.java:821)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:443)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2019-03-26 23:45:59.767
+!MESSAGE _/agent [in Inteligencia artificial_e042b571] is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:46:31.930
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:46:32.361
+!MESSAGE >> document/definition
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:50:10.626
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:50:10.870
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2019-03-26 23:50:10.877
+!MESSAGE Resolve organize imports source action
+!STACK 1
+Java Model Exception: Java Model Status [_/agent [in Inteligencia artificial_e042b571] is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getResolvedClasspathEntry(PackageFragmentRoot.java:616)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation$TypeReferenceProcessor.process(OrganizeImportsOperation.java:358)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation.createTextEdit(OrganizeImportsOperation.java:597)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getOrganizeImportsProposal(SourceAssistProcessor.java:129)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:81)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:126)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:592)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$30(JDTLanguageServer.java:821)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:443)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2019-03-26 23:50:10.878
+!MESSAGE _/agent [in Inteligencia artificial_e042b571] is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:56:04.632
+!MESSAGE >> document/definition
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:56:04.660
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:56:05.123
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:56:05.147
+!MESSAGE >> document/definition
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:56:05.349
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2019-03-26 23:56:05.378
+!MESSAGE Resolve organize imports source action
+!STACK 1
+Java Model Exception: Java Model Status [_/agent [in Inteligencia artificial_e042b571] is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getResolvedClasspathEntry(PackageFragmentRoot.java:616)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation$TypeReferenceProcessor.process(OrganizeImportsOperation.java:358)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation.createTextEdit(OrganizeImportsOperation.java:597)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getOrganizeImportsProposal(SourceAssistProcessor.java:129)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:81)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:126)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:592)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$30(JDTLanguageServer.java:821)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:443)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2019-03-26 23:56:05.378
+!MESSAGE _/agent [in Inteligencia artificial_e042b571] is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:56:05.820
+!MESSAGE >> document/definition
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:56:06.174
+!MESSAGE >> document/definition
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:56:06.950
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:56:07.077
+!MESSAGE >> document/definition
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:56:07.254
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:56:07.550
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:56:07.575
+!MESSAGE >> document/definition
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:56:07.789
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2019-03-26 23:56:07.796
+!MESSAGE Resolve organize imports source action
+!STACK 1
+Java Model Exception: Java Model Status [_/agent [in Inteligencia artificial_e042b571] is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getResolvedClasspathEntry(PackageFragmentRoot.java:616)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation$TypeReferenceProcessor.process(OrganizeImportsOperation.java:358)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation.createTextEdit(OrganizeImportsOperation.java:597)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getOrganizeImportsProposal(SourceAssistProcessor.java:129)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:81)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:126)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:592)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$30(JDTLanguageServer.java:821)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:443)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2019-03-26 23:56:07.796
+!MESSAGE _/agent [in Inteligencia artificial_e042b571] is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:56:07.922
+!MESSAGE >> document/definition
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:56:08.025
+!MESSAGE >> document/definition
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:56:08.224
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:56:08.261
+!MESSAGE >> document/definition
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:56:08.816
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2019-03-26 23:56:08.902
+!MESSAGE Resolve organize imports source action
+!STACK 1
+Java Model Exception: Java Model Status [_/agent [in Inteligencia artificial_e042b571] is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getResolvedClasspathEntry(PackageFragmentRoot.java:616)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation$TypeReferenceProcessor.process(OrganizeImportsOperation.java:358)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation.createTextEdit(OrganizeImportsOperation.java:597)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getOrganizeImportsProposal(SourceAssistProcessor.java:129)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:81)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:126)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:592)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$30(JDTLanguageServer.java:821)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:443)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2019-03-26 23:56:08.903
+!MESSAGE _/agent [in Inteligencia artificial_e042b571] is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:56:09.128
+!MESSAGE >> document/definition
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:56:09.376
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2019-03-26 23:56:09.383
+!MESSAGE Resolve organize imports source action
+!STACK 1
+Java Model Exception: Java Model Status [_/agent [in Inteligencia artificial_e042b571] is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getResolvedClasspathEntry(PackageFragmentRoot.java:616)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation$TypeReferenceProcessor.process(OrganizeImportsOperation.java:358)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation.createTextEdit(OrganizeImportsOperation.java:597)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getOrganizeImportsProposal(SourceAssistProcessor.java:129)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:81)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:126)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:592)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$30(JDTLanguageServer.java:821)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:443)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2019-03-26 23:56:09.383
+!MESSAGE _/agent [in Inteligencia artificial_e042b571] is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:56:14.155
+!MESSAGE >> document/definition
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:15.299
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:23.074
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:23.075
+!MESSAGE Clearing problems for /UDLAgent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:23.092
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:23.093
+!MESSAGE Message.java isn't on the classpath. Only syntax errors will be reported for file:///home/reyes/7.-Sexto-semestre/Inteligencia%20artificial/agent/Message.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:23.096
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:23.337
+!MESSAGE >> workspace/executeCommand vscode.java.resolveMainMethod
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:23.561
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:23.563
+!MESSAGE begin problem for /Message.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:23.564
+!MESSAGE 0 problems reported for /Message.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:23.565
+!MESSAGE Reconciled 0, validated: 1. Took 18 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:23.566
+!MESSAGE Clearing problems for /Message.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:23.599
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:23.600
+!MESSAGE Puzzle4x4Agent.java isn't on the classpath. Only syntax errors will be reported for file:///home/reyes/7.-Sexto-semestre/Inteligencia%20artificial/agent/Puzzle4x4Agent.java
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2019-03-26 23:57:23.609
+!MESSAGE Resolve organize imports source action
+!STACK 1
+Java Model Exception: Java Model Status [_/agent [in Inteligencia artificial_e042b571] is not on its project's build path]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:583)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:256)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:530)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:250)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:530)
+	at org.eclipse.jdt.internal.core.CompilationUnit.openAncestors(CompilationUnit.java:1243)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:250)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.Openable.getBuffer(Openable.java:298)
+	at org.eclipse.jdt.internal.core.Openable.findRecommendedLineSeparator(Openable.java:218)
+	at org.eclipse.jdt.internal.core.dom.rewrite.imports.ImportRewriteAnalyzer.<init>(ImportRewriteAnalyzer.java:487)
+	at org.eclipse.jdt.core.dom.rewrite.ImportRewrite.rewriteImports(ImportRewrite.java:1328)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation.createTextEdit(OrganizeImportsOperation.java:625)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getOrganizeImportsProposal(SourceAssistProcessor.java:129)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:81)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:126)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:592)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$30(JDTLanguageServer.java:821)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:443)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2019-03-26 23:57:23.610
+!MESSAGE _/agent [in Inteligencia artificial_e042b571] is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:23.610
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:23.893
+!MESSAGE >> workspace/executeCommand vscode.java.resolveMainMethod
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:24.196
+!MESSAGE begin problem for /Puzzle4x4Agent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:24.197
+!MESSAGE 0 problems reported for /Puzzle4x4Agent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:24.197
+!MESSAGE Reconciled 0, validated: 1. Took 137 ms
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2019-03-26 23:57:24.221
+!MESSAGE Resolve organize imports source action
+!STACK 1
+Java Model Exception: Java Model Status [_/agent [in Inteligencia artificial_e042b571] is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getResolvedClasspathEntry(PackageFragmentRoot.java:616)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation$TypeReferenceProcessor.process(OrganizeImportsOperation.java:358)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation.createTextEdit(OrganizeImportsOperation.java:597)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getOrganizeImportsProposal(SourceAssistProcessor.java:129)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:81)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:126)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:592)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$30(JDTLanguageServer.java:821)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:443)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2019-03-26 23:57:24.221
+!MESSAGE _/agent [in Inteligencia artificial_e042b571] is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ls.core 4 2 2019-03-26 23:57:24.248
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ls.core".
+!STACK 0
+com.microsoft.java.debug.core.DebugException: Failed to resolve main method codeLens: _/agent [in Inteligencia artificial_e042b571] is not on its project's build path
+	at com.microsoft.java.debug.plugin.internal.ResolveMainMethodHandler.resolveMainMethods(ResolveMainMethodHandler.java:70)
+	at com.microsoft.java.debug.plugin.internal.JavaDebugDelegateCommandHandler.executeCommand(JavaDebugDelegateCommandHandler.java:57)
+	at org.eclipse.jdt.ls.core.internal.handlers.WorkspaceExecuteCommandHandler$1.run(WorkspaceExecuteCommandHandler.java:151)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.ls.core.internal.handlers.WorkspaceExecuteCommandHandler.executeCommand(WorkspaceExecuteCommandHandler.java:141)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$4(JDTLanguageServer.java:455)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$30(JDTLanguageServer.java:821)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:443)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+Caused by: Java Model Exception: Java Model Status [_/agent [in Inteligencia artificial_e042b571] is not on its project's build path]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:583)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:256)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:530)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:250)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:530)
+	at org.eclipse.jdt.internal.core.CompilationUnit.openAncestors(CompilationUnit.java:1243)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:250)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:267)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:281)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getTypes(CompilationUnit.java:972)
+	at com.microsoft.java.debug.plugin.internal.ResolveMainMethodHandler.getPotentialMainClassTypes(ResolveMainMethodHandler.java:111)
+	at com.microsoft.java.debug.plugin.internal.ResolveMainMethodHandler.searchMainMethods(ResolveMainMethodHandler.java:88)
+	at com.microsoft.java.debug.plugin.internal.ResolveMainMethodHandler.resolveMainMethodCore(ResolveMainMethodHandler.java:76)
+	at com.microsoft.java.debug.plugin.internal.ResolveMainMethodHandler.resolveMainMethods(ResolveMainMethodHandler.java:68)
+	... 13 more
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2019-03-26 23:57:24.250
+!MESSAGE Error in calling delegate command handler
+!STACK 0
+com.microsoft.java.debug.core.DebugException: Failed to resolve main method codeLens: _/agent [in Inteligencia artificial_e042b571] is not on its project's build path
+	at com.microsoft.java.debug.plugin.internal.ResolveMainMethodHandler.resolveMainMethods(ResolveMainMethodHandler.java:70)
+	at com.microsoft.java.debug.plugin.internal.JavaDebugDelegateCommandHandler.executeCommand(JavaDebugDelegateCommandHandler.java:57)
+	at org.eclipse.jdt.ls.core.internal.handlers.WorkspaceExecuteCommandHandler$1.run(WorkspaceExecuteCommandHandler.java:151)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.ls.core.internal.handlers.WorkspaceExecuteCommandHandler.executeCommand(WorkspaceExecuteCommandHandler.java:141)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$4(JDTLanguageServer.java:455)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$30(JDTLanguageServer.java:821)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:443)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+Caused by: Java Model Exception: Java Model Status [_/agent [in Inteligencia artificial_e042b571] is not on its project's build path]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:583)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:256)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:530)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:250)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:530)
+	at org.eclipse.jdt.internal.core.CompilationUnit.openAncestors(CompilationUnit.java:1243)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:250)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:267)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:281)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getTypes(CompilationUnit.java:972)
+	at com.microsoft.java.debug.plugin.internal.ResolveMainMethodHandler.getPotentialMainClassTypes(ResolveMainMethodHandler.java:111)
+	at com.microsoft.java.debug.plugin.internal.ResolveMainMethodHandler.searchMainMethods(ResolveMainMethodHandler.java:88)
+	at com.microsoft.java.debug.plugin.internal.ResolveMainMethodHandler.resolveMainMethodCore(ResolveMainMethodHandler.java:76)
+	at com.microsoft.java.debug.plugin.internal.ResolveMainMethodHandler.resolveMainMethods(ResolveMainMethodHandler.java:68)
+	... 13 more
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:24.348
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:24.783
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:29.051
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:32.621
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:32.622
+!MESSAGE Clearing problems for /Puzzle4x4Agent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:32.647
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:32.648
+!MESSAGE Main-agent.java isn't on the classpath. Only syntax errors will be reported for file:///home/reyes/7.-Sexto-semestre/Inteligencia%20artificial/agent/Main-agent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:32.651
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:32.903
+!MESSAGE >> workspace/executeCommand vscode.java.resolveMainMethod
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:33.149
+!MESSAGE begin problem for /Main-agent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:33.150
+!MESSAGE 0 problems reported for /Main-agent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:33.150
+!MESSAGE Reconciled 0, validated: 1. Took 49 ms
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2019-03-26 23:57:33.154
+!MESSAGE Resolve organize imports source action
+!STACK 1
+Java Model Exception: Java Model Status [_/agent [in Inteligencia artificial_e042b571] is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getResolvedClasspathEntry(PackageFragmentRoot.java:616)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation$TypeReferenceProcessor.process(OrganizeImportsOperation.java:358)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation.createTextEdit(OrganizeImportsOperation.java:597)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getOrganizeImportsProposal(SourceAssistProcessor.java:129)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:81)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:126)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:592)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$30(JDTLanguageServer.java:821)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:443)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2019-03-26 23:57:33.154
+!MESSAGE _/agent [in Inteligencia artificial_e042b571] is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:33.691
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:41.150
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:41.151
+!MESSAGE Clearing problems for /Main-agent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:41.198
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:41.199
+!MESSAGE Puzzle4x4Agent.java isn't on the classpath. Only syntax errors will be reported for file:///home/reyes/7.-Sexto-semestre/Inteligencia%20artificial/agent/Puzzle4x4Agent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:41.206
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:41.472
+!MESSAGE >> workspace/executeCommand vscode.java.resolveMainMethod
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:41.732
+!MESSAGE begin problem for /Puzzle4x4Agent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:41.733
+!MESSAGE 0 problems reported for /Puzzle4x4Agent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:41.733
+!MESSAGE Reconciled 0, validated: 1. Took 77 ms
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2019-03-26 23:57:41.810
+!MESSAGE Resolve organize imports source action
+!STACK 1
+Java Model Exception: Java Model Status [_/agent [in Inteligencia artificial_e042b571] is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getResolvedClasspathEntry(PackageFragmentRoot.java:616)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation$TypeReferenceProcessor.process(OrganizeImportsOperation.java:358)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation.createTextEdit(OrganizeImportsOperation.java:597)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getOrganizeImportsProposal(SourceAssistProcessor.java:129)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:81)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:126)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:592)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$30(JDTLanguageServer.java:821)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:443)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2019-03-26 23:57:41.810
+!MESSAGE _/agent [in Inteligencia artificial_e042b571] is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:57:41.886
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:28.783
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:29.723
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:29.723
+!MESSAGE Clearing problems for /Puzzle4x4Agent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:29.768
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:29.769
+!MESSAGE UDLAgent.java isn't on the classpath. Only syntax errors will be reported for file:///home/reyes/7.-Sexto-semestre/Inteligencia%20artificial/agent/UDLAgent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:29.774
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:30.004
+!MESSAGE >> workspace/executeCommand vscode.java.resolveMainMethod
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:30.009
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:30.340
+!MESSAGE begin problem for /UDLAgent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:30.341
+!MESSAGE 0 problems reported for /UDLAgent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:30.341
+!MESSAGE Reconciled 0, validated: 1. Took 117 ms
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2019-03-26 23:58:30.387
+!MESSAGE Resolve organize imports source action
+!STACK 1
+Java Model Exception: Java Model Status [_/agent [in Inteligencia artificial_e042b571] is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getResolvedClasspathEntry(PackageFragmentRoot.java:616)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation$TypeReferenceProcessor.process(OrganizeImportsOperation.java:358)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation.createTextEdit(OrganizeImportsOperation.java:597)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getOrganizeImportsProposal(SourceAssistProcessor.java:129)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:81)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:126)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:592)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$30(JDTLanguageServer.java:821)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:443)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2019-03-26 23:58:30.387
+!MESSAGE _/agent [in Inteligencia artificial_e042b571] is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2019-03-26 23:58:30.413
+!MESSAGE Resolve organize imports source action
+!STACK 1
+Java Model Exception: Java Model Status [_/agent [in Inteligencia artificial_e042b571] is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getResolvedClasspathEntry(PackageFragmentRoot.java:616)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation$TypeReferenceProcessor.process(OrganizeImportsOperation.java:358)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation.createTextEdit(OrganizeImportsOperation.java:597)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getOrganizeImportsProposal(SourceAssistProcessor.java:129)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:81)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:126)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:592)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$30(JDTLanguageServer.java:821)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:443)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2019-03-26 23:58:30.413
+!MESSAGE _/agent [in Inteligencia artificial_e042b571] is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:35.835
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:35.837
+!MESSAGE Clearing problems for /UDLAgent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:35.889
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:35.890
+!MESSAGE Main-agent.java isn't on the classpath. Only syntax errors will be reported for file:///home/reyes/7.-Sexto-semestre/Inteligencia%20artificial/agent/Main-agent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:35.894
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:36.121
+!MESSAGE >> workspace/executeCommand vscode.java.resolveMainMethod
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:36.387
+!MESSAGE begin problem for /Main-agent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:36.388
+!MESSAGE 0 problems reported for /Main-agent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:36.389
+!MESSAGE Reconciled 0, validated: 1. Took 46 ms
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2019-03-26 23:58:36.397
+!MESSAGE Resolve organize imports source action
+!STACK 1
+Java Model Exception: Java Model Status [_/agent [in Inteligencia artificial_e042b571] is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getResolvedClasspathEntry(PackageFragmentRoot.java:616)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation$TypeReferenceProcessor.process(OrganizeImportsOperation.java:358)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation.createTextEdit(OrganizeImportsOperation.java:597)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getOrganizeImportsProposal(SourceAssistProcessor.java:129)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:81)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:126)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:592)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$30(JDTLanguageServer.java:821)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:443)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2019-03-26 23:58:36.397
+!MESSAGE _/agent [in Inteligencia artificial_e042b571] is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:36.634
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:37.675
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:37.974
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:38.263
+!MESSAGE >> document/definition
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:38.513
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:38.841
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:38.885
+!MESSAGE >> document/definition
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:39.069
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2019-03-26 23:58:39.075
+!MESSAGE Resolve organize imports source action
+!STACK 1
+Java Model Exception: Java Model Status [_/agent [in Inteligencia artificial_e042b571] is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getResolvedClasspathEntry(PackageFragmentRoot.java:616)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation$TypeReferenceProcessor.process(OrganizeImportsOperation.java:358)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation.createTextEdit(OrganizeImportsOperation.java:597)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getOrganizeImportsProposal(SourceAssistProcessor.java:129)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:81)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:126)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:592)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$30(JDTLanguageServer.java:821)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:443)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2019-03-26 23:58:39.075
+!MESSAGE _/agent [in Inteligencia artificial_e042b571] is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:39.551
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:39.566
+!MESSAGE >> document/definition
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:40.002
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2019-03-26 23:58:40.020
+!MESSAGE Resolve organize imports source action
+!STACK 1
+Java Model Exception: Java Model Status [_/agent [in Inteligencia artificial_e042b571] is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getResolvedClasspathEntry(PackageFragmentRoot.java:616)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation$TypeReferenceProcessor.process(OrganizeImportsOperation.java:358)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation.createTextEdit(OrganizeImportsOperation.java:597)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getOrganizeImportsProposal(SourceAssistProcessor.java:129)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:81)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:126)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:592)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$30(JDTLanguageServer.java:821)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:443)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2019-03-26 23:58:40.021
+!MESSAGE _/agent [in Inteligencia artificial_e042b571] is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:43.644
+!MESSAGE >> document/typeDefinition
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:43.798
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:58:45.730
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:59:34.178
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:59:36.630
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:59:40.041
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:59:40.042
+!MESSAGE Clearing problems for /Main-agent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:59:40.097
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:59:40.098
+!MESSAGE Puzzle4x4Agent.java isn't on the classpath. Only syntax errors will be reported for file:///home/reyes/7.-Sexto-semestre/Inteligencia%20artificial/agent/Puzzle4x4Agent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:59:40.104
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:59:40.390
+!MESSAGE >> workspace/executeCommand vscode.java.resolveMainMethod
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:59:40.582
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:59:40.625
+!MESSAGE begin problem for /Puzzle4x4Agent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:59:40.625
+!MESSAGE 0 problems reported for /Puzzle4x4Agent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:59:40.625
+!MESSAGE Reconciled 0, validated: 1. Took 71 ms
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2019-03-26 23:59:40.707
+!MESSAGE Resolve organize imports source action
+!STACK 1
+Java Model Exception: Java Model Status [_/agent [in Inteligencia artificial_e042b571] is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getResolvedClasspathEntry(PackageFragmentRoot.java:616)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation$TypeReferenceProcessor.process(OrganizeImportsOperation.java:358)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation.createTextEdit(OrganizeImportsOperation.java:597)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getOrganizeImportsProposal(SourceAssistProcessor.java:129)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:81)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:126)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:592)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$30(JDTLanguageServer.java:821)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:443)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2019-03-26 23:59:40.708
+!MESSAGE _/agent [in Inteligencia artificial_e042b571] is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:59:41.568
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-26 23:59:42.052
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2019-03-26 23:59:42.070
+!MESSAGE Resolve organize imports source action
+!STACK 1
+Java Model Exception: Java Model Status [_/agent [in Inteligencia artificial_e042b571] is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getResolvedClasspathEntry(PackageFragmentRoot.java:616)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation$TypeReferenceProcessor.process(OrganizeImportsOperation.java:358)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation.createTextEdit(OrganizeImportsOperation.java:597)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getOrganizeImportsProposal(SourceAssistProcessor.java:129)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:81)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:126)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:592)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$30(JDTLanguageServer.java:821)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:443)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2019-03-26 23:59:42.070
+!MESSAGE _/agent [in Inteligencia artificial_e042b571] is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:00:10.742
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:00:10.743
+!MESSAGE Clearing problems for /Puzzle4x4Agent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:00:10.792
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:00:10.793
+!MESSAGE UDLAgent.java isn't on the classpath. Only syntax errors will be reported for file:///home/reyes/7.-Sexto-semestre/Inteligencia%20artificial/agent/UDLAgent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:00:10.801
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:00:11.035
+!MESSAGE >> workspace/executeCommand vscode.java.resolveMainMethod
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:00:11.037
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:00:11.316
+!MESSAGE begin problem for /UDLAgent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:00:11.316
+!MESSAGE 0 problems reported for /UDLAgent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:00:11.317
+!MESSAGE Reconciled 0, validated: 1. Took 66 ms
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2019-03-27 00:00:11.343
+!MESSAGE Resolve organize imports source action
+!STACK 1
+Java Model Exception: Java Model Status [_/agent [in Inteligencia artificial_e042b571] is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getResolvedClasspathEntry(PackageFragmentRoot.java:616)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation$TypeReferenceProcessor.process(OrganizeImportsOperation.java:358)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation.createTextEdit(OrganizeImportsOperation.java:597)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getOrganizeImportsProposal(SourceAssistProcessor.java:129)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:81)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:126)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:592)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$30(JDTLanguageServer.java:821)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:443)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2019-03-27 00:00:11.343
+!MESSAGE _/agent [in Inteligencia artificial_e042b571] is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2019-03-27 00:00:11.404
+!MESSAGE Resolve organize imports source action
+!STACK 1
+Java Model Exception: Java Model Status [_/agent [in Inteligencia artificial_e042b571] is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getResolvedClasspathEntry(PackageFragmentRoot.java:616)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation$TypeReferenceProcessor.process(OrganizeImportsOperation.java:358)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation.createTextEdit(OrganizeImportsOperation.java:597)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getOrganizeImportsProposal(SourceAssistProcessor.java:129)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:81)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:126)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:592)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$30(JDTLanguageServer.java:821)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:443)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2019-03-27 00:00:11.404
+!MESSAGE _/agent [in Inteligencia artificial_e042b571] is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:00:15.290
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:00:17.023
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:00:17.025
+!MESSAGE Clearing problems for /UDLAgent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:00:17.077
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:00:17.077
+!MESSAGE Puzzle4x4Agent.java isn't on the classpath. Only syntax errors will be reported for file:///home/reyes/7.-Sexto-semestre/Inteligencia%20artificial/agent/Puzzle4x4Agent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:00:17.081
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:00:17.333
+!MESSAGE >> workspace/executeCommand vscode.java.resolveMainMethod
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:00:17.334
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:00:17.618
+!MESSAGE begin problem for /Puzzle4x4Agent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:00:17.618
+!MESSAGE 0 problems reported for /Puzzle4x4Agent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:00:17.619
+!MESSAGE Reconciled 0, validated: 1. Took 85 ms
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2019-03-27 00:00:17.644
+!MESSAGE Resolve organize imports source action
+!STACK 1
+Java Model Exception: Java Model Status [_/agent [in Inteligencia artificial_e042b571] is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getResolvedClasspathEntry(PackageFragmentRoot.java:616)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation$TypeReferenceProcessor.process(OrganizeImportsOperation.java:358)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation.createTextEdit(OrganizeImportsOperation.java:597)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getOrganizeImportsProposal(SourceAssistProcessor.java:129)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:81)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:126)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:592)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$30(JDTLanguageServer.java:821)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:443)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2019-03-27 00:00:17.644
+!MESSAGE _/agent [in Inteligencia artificial_e042b571] is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2019-03-27 00:00:17.686
+!MESSAGE Resolve organize imports source action
+!STACK 1
+Java Model Exception: Java Model Status [_/agent [in Inteligencia artificial_e042b571] is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getResolvedClasspathEntry(PackageFragmentRoot.java:616)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation$TypeReferenceProcessor.process(OrganizeImportsOperation.java:358)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation.createTextEdit(OrganizeImportsOperation.java:597)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getOrganizeImportsProposal(SourceAssistProcessor.java:129)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:81)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:126)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:592)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$30(JDTLanguageServer.java:821)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:443)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2019-03-27 00:00:17.686
+!MESSAGE _/agent [in Inteligencia artificial_e042b571] is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:00:17.943
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:03.751
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:04.964
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:05.289
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2019-03-27 00:01:05.333
+!MESSAGE Resolve organize imports source action
+!STACK 1
+Java Model Exception: Java Model Status [_/agent [in Inteligencia artificial_e042b571] is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getResolvedClasspathEntry(PackageFragmentRoot.java:616)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation$TypeReferenceProcessor.process(OrganizeImportsOperation.java:358)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation.createTextEdit(OrganizeImportsOperation.java:597)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getOrganizeImportsProposal(SourceAssistProcessor.java:129)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:81)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:126)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:592)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$30(JDTLanguageServer.java:821)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:443)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2019-03-27 00:01:05.333
+!MESSAGE _/agent [in Inteligencia artificial_e042b571] is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:22.593
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:22.594
+!MESSAGE Clearing problems for /Puzzle4x4Agent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:22.635
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:22.635
+!MESSAGE Message.java isn't on the classpath. Only syntax errors will be reported for file:///home/reyes/7.-Sexto-semestre/Inteligencia%20artificial/agent/Message.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:22.637
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:22.865
+!MESSAGE >> workspace/executeCommand vscode.java.resolveMainMethod
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:23.060
+!MESSAGE begin problem for /Message.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:23.061
+!MESSAGE 0 problems reported for /Message.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:23.062
+!MESSAGE Reconciled 0, validated: 1. Took 23 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:26.461
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:26.462
+!MESSAGE Clearing problems for /Message.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:26.488
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:26.488
+!MESSAGE Main-agent.java isn't on the classpath. Only syntax errors will be reported for file:///home/reyes/7.-Sexto-semestre/Inteligencia%20artificial/agent/Main-agent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:26.491
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:26.734
+!MESSAGE >> workspace/executeCommand vscode.java.resolveMainMethod
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:26.737
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:26.969
+!MESSAGE begin problem for /Main-agent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:26.970
+!MESSAGE 0 problems reported for /Main-agent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:26.970
+!MESSAGE Reconciled 0, validated: 1. Took 29 ms
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2019-03-27 00:01:26.994
+!MESSAGE Resolve organize imports source action
+!STACK 1
+Java Model Exception: Java Model Status [_/agent [in Inteligencia artificial_e042b571] is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getResolvedClasspathEntry(PackageFragmentRoot.java:616)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation$TypeReferenceProcessor.process(OrganizeImportsOperation.java:358)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation.createTextEdit(OrganizeImportsOperation.java:597)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getOrganizeImportsProposal(SourceAssistProcessor.java:129)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:81)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:126)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:592)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$30(JDTLanguageServer.java:821)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:443)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2019-03-27 00:01:26.995
+!MESSAGE _/agent [in Inteligencia artificial_e042b571] is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2019-03-27 00:01:27.043
+!MESSAGE Resolve organize imports source action
+!STACK 1
+Java Model Exception: Java Model Status [_/agent [in Inteligencia artificial_e042b571] is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getResolvedClasspathEntry(PackageFragmentRoot.java:616)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation$TypeReferenceProcessor.process(OrganizeImportsOperation.java:358)
+	at org.eclipse.jdt.core.manipulation.OrganizeImportsOperation.createTextEdit(OrganizeImportsOperation.java:597)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getOrganizeImportsProposal(SourceAssistProcessor.java:129)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:81)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:126)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:592)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$30(JDTLanguageServer.java:821)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:443)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2019-03-27 00:01:27.043
+!MESSAGE _/agent [in Inteligencia artificial_e042b571] is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:27.866
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:30.912
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:30.913
+!MESSAGE Clearing problems for /Main-agent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:30.934
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:30.935
+!MESSAGE Condition.java isn't on the classpath. Only syntax errors will be reported for file:///home/reyes/7.-Sexto-semestre/Inteligencia%20artificial/agent/Condition.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:30.941
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:31.183
+!MESSAGE >> workspace/executeCommand vscode.java.resolveMainMethod
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:31.405
+!MESSAGE begin problem for /Condition.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:31.405
+!MESSAGE 0 problems reported for /Condition.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:31.406
+!MESSAGE Reconciled 0, validated: 1. Took 16 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:31.930
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:31.930
+!MESSAGE Clearing problems for /Condition.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:31.958
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:31.960
+!MESSAGE Commitment.java isn't on the classpath. Only syntax errors will be reported for file:///home/reyes/7.-Sexto-semestre/Inteligencia%20artificial/agent/Commitment.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:31.966
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:32.205
+!MESSAGE >> workspace/executeCommand vscode.java.resolveMainMethod
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:32.456
+!MESSAGE begin problem for /Commitment.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:32.456
+!MESSAGE 0 problems reported for /Commitment.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:32.456
+!MESSAGE Reconciled 0, validated: 1. Took 41 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:40.511
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:42.307
+!MESSAGE >> shutdown
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:42.325
+!MESSAGE >> exit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:42.325
+!MESSAGE Shutdown received... waking up main thread
+
+!ENTRY java-debug 1 0 2019-03-27 00:01:42.338
+!MESSAGE Stopping com.microsoft.java.debug.plugin
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-03-27 00:01:42.339
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:

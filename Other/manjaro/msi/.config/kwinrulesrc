@@ -1,0 +1,17 @@
+[1]
+Description=Window settings for dolphin
+clientmachine=localhost
+clientmachinematch=0
+decocolor=Kvantum
+decocolorrule=2
+title=Root — Dolphin
+titlematch=0
+types=1
+windowrole=dolphin#1
+windowrolematch=1
+wmclass=dolphin
+wmclasscomplete=false
+wmclassmatch=1
+
+[General]
+count=1

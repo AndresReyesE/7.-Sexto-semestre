@@ -1,0 +1,25 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "/js/jquery.min.js", "/js/background.js", "/js/moment.js", "/js/website-background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "./ico/128clock.png",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "js": [ "/js/jquery.min.js", "/js/popup.js", "/js/websites.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "description": "Provides a Pomodoro for focused time management and the ability to block websites to help prevent distractions while you work.",
+   "icons": {
+      "128": "./ico/128clock.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAl168A8KtkXO9yh6l2Ws9MInKUlxq2GQiTIa16j4/5pRe/PGbco/z+ft8Dtkf22z4oZlJbzu7ShiSYC2Xwd3axOAi7cUtYIhRp8I4F9m5Wca7kNRDNF7QKpk8JKpmO4dKMjSW7vWh0OKbmr22xNkJ07eNNvb2wp8dTLKdT8ZAFNn7ZE7VZ1mAXic7W40xE4j5mAd2cINBuMcXLg9LxOCb+S+9unRRgUx4fVgPz7SiB0676BLnUIoOCIIff678wUuO1/dFG1+OHbNMYaAu39IfSdmuFCCOO0nyiHcbm+z0q2Uzu0FxyfxMt0hbnVRQwOljhKfktPBoblckQUGb7opWewIDAQAB",
+   "manifest_version": 2,
+   "name": "FocusMe: A Pomodoro Timer and Website Blocker",
+   "permissions": [ "webRequest", "webRequestBlocking", "activeTab", "background", "storage", "notifications", "*://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2018.2.8",
+   "web_accessible_resources": [ "block.html" ]
+}

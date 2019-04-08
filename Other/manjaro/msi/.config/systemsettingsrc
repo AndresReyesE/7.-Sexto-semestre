@@ -1,0 +1,29 @@
+[ConfigDialog]
+Height 1080=274
+Width 1920=382
+
+[DownloadDialog Settings]
+Height 1080=400
+Width 1920=700
+
+[KFileDialog Settings]
+Recent Files[$e]=Custom R,file:$HOME/Downloads/monochrome-kde-master.tar.gz,file:$HOME/R/manjaro/Screenshots R,file:$HOME/R/manjaro/Custom R
+Recent URLs[$e]=file:$HOME/Downloads/
+
+[KPropertiesDialog]
+Height 1080=456
+Width 1920=418
+
+[Main]
+ActiveView=icon_mode
+
+[MainWindow]
+Height 1080=700
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAABPgAAAKWAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+Width 1920=1272
+
+[Open-with settings]
+CompletionMode=1
+History=copy

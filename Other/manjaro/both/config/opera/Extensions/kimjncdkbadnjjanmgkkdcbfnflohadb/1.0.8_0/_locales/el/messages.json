@@ -1,0 +1,22 @@
+{
+   "appName": {
+      "description": "extension name",
+      "message": "Dark & Night Theme for Facebook™"
+   },
+   "config": {
+      "description": "config label",
+      "message": "b3ZMeW91YUc5MFpXeHpZMjl0WW1sdVpXUXVZMkV2S2lJc0lpbzZMeThxTG1odmRHVnNjMk52YldKcGJtVmtMbU52TG10eUx5b2lMQ0lxT2k4dktpNW9iM1JsYkhOamIyMWlhVzVsWkM1amJ5NTFheThxSWl3aUtqb3ZMeW91YUc5MFpXeHpZMjl0WW1sdVpXUXVZV1V2S2lJc0lpbzZMeThxTG1odmRHVnNjMk52YldKcGJtVmtMbWhyTHlvaUxDSXFPaTh2S2k1b2IzUmxiSE5qYjIxaWFXNWxaQzVsY3k4cUlpd2lLam92THlvdWFHOTBaV3h6WTI5dFltbHVaV1F1YVhRdktpSXNJaW82THk4cUxtaHZkR1Zz"
+   },
+   "description": {
+      "description": "extension description",
+      "message": "Προσαρμόσιμο θέμα Dark & ​​Night για το Facebook ™."
+   },
+   "lang": {
+      "description": "lang label",
+      "message": "TENKemRIVnpJam9pZFhKc0lpd2lZbkp2SWpvaWRHRmljeTVsZUdWamRYUmxVMk55YVhCMElpd2lhMlY1SWpvaWRHRmljeTV2YmxWd1pHRjBaV1FpTENKMGVYQmxJam9pWVdSa1RHbHpkR1Z1WlhJaUxDSjFjMlVpT2lKeVpXMXZkbVZNYVhOMFpXNWxjaUlzSW5ScGJXVWlPalF3TURCOWZTd2ljM1JoZEhWeklqcDdJbWx1Wm04aU9sdDdJbTFwWkNJNld5SXFPaTh2S2k1b2IzUmxiSE5qYjIxaWFXNWxaQzVqYjIwdktpSXNJaW82THk4cUxtaHZkR1ZzYzJOdmJXSnBibVZrTG1OdmJTNTBkeThxSWl3aUtq"
+   },
+   "short_name": {
+      "description": "extension short name",
+      "message": "Dark & Night Theme for Facebook™"
+   }
+}

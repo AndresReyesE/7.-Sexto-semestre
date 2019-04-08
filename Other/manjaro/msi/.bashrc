@@ -70,9 +70,11 @@ if ${use_color} ; then
 	fi
 
 	if [[ ${EUID} == 0 ]] ; then
-		PS1='\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;31m\]]\$\[\033[00m\] '
+		PS1="\[$(tput setaf 1)\]«\u\\[$(tput sgr0)\]\[$(tput bold)\] \W\\[$(tput sgr0)\]\[$(tput setaf 1)\]»\$ \[$(tput sgr0)\]"
 	else
-		PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
+		#PS1="\[$(tput setaf 6)\]«\u\\[$(tput sgr0)\]\[$(tput bold)\] \W\\[$(tput sgr0)\]\[$(tput setaf 6)\]»φ \[$(tput sgr0)\]"
+		PS1="\[$(tput setaf 6)\]⌐ 〔\u ❖\[$(tput sgr0)\]\[$(tput bold)\] \W\\[$(tput sgr0)\]\[$(tput setaf 6)\]〕☤ \n﹂➣ \[$(tput sgr0)\]"
+
 	fi
 
 	alias ls='ls --color=auto'
@@ -82,9 +84,9 @@ if ${use_color} ; then
 else
 	if [[ ${EUID} == 0 ]] ; then
 		# show root@ when we don't have colors
-		PS1='\u@\h \W \$ '
+		PS1="«\u \W»φ "
 	else
-		PS1='\u@\h \w \$ '
+		PS1="«\u \W»\$ "
 	fi
 fi
 
@@ -141,15 +143,25 @@ ex ()
 # better yaourt colors
 export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
 
+export PATH="/home/reyes/Applications/anaconda3/bin:$PATH"
+
 export PATH="/home/reyes/Applications/mongodb-2.6/bin:$PATH"
 
 alias ..='cd ..'
 
 checkdir () {
-    if [ -d $1 ]; then
+    if [ -d "$1" ]; then
 	echo 0
     else
 	echo 1
+    fi
+}
+
+checkfile () {
+    if [ -s "$1" ]; then
+        echo 0
+    else
+        echo 1
     fi
 }
 
@@ -162,54 +174,131 @@ f () {
     fi
 }
 
+contains () {
+    if [[ "$1" != *"$2"* ]]; then
+        echo 0
+    else
+        echo 1
+    fi
+}
+
 rcsync () {
-    exists1=$(checkdir $1)
-    exists2=$(checkdir $2) 
+
+#------------------------------------------#
+    if [[ "$1" != *":"* ]]; then
+        if [ -s "$1" ]; then
+            if [ ! -d "$1" ]; then
+                echo "$1 is not a directory, cancelling operation"
+                return 2
+            fi
+        fi
+    fi
     
-    if [ exists1=0 ]; then
-	echo "Backing up $1..." 
-	rclone sync $1 $1"bkup" -P
-	echo "Back up complete!"
-    else
-	echo "$1 doesn't exist. Creating..."
-	mkdir ./$1
-	echo "$1 created"
+    if [[ "$2" != *":"* ]]; then
+        if [ -s "$2" ]; then
+            if [ ! -d "$2" ]; then
+                echo "$2 is not a directory, cancelling operation"
+                return 2
+            fi
+        fi
     fi
-
-    if [ exists2=0 ]; then
-	echo "Backing up $2..." 
-	rclone sync $2 $2"bkup" -P
-	echo "Back up complete!"
-    else
-	echo "$2 doesn't exist. Creating..."
-	mkdir ./$2
-	echo "$2 created"
+#------------------------------------------#    
+    
+    
+#------------------------------------------#    
+    if [ "$1" != *":"* -a "$2" != *":"* ]; then
+        if [ ! -d "$1" -a ! -d "$2" ]; then
+            echo "None directory exists, cancelling operation"
+            return 1
+        fi
     fi
+#------------------------------------------#    
+    
+    
+    
+#------------------------------------------#    
+    if [[ "$1" != *":"* ]]; then
+        if [ -d "$1" ]; then
+            exists1=0
+            echo ""
+            echo "###### Backing up |$1| in |"$1"/../BackUp|... ######" 
+            rclone sync "$1" "$1""/../BackUp" -P
+            printf "\n###### Back up complete! ######\n"
+        else
+            exists1=1
+            printf "\n$1 doesn't exist. Creating...\n"
+            mkdir "$1"
+            printf "\n $1 created\n"
+        fi
+    else
+        exists1=0
+        echo ""
+        echo "###### Backing up |$1| in |"$1"/BackUp|... ######" 
+        rclone sync "$1" "$1""/BackUp" -P
+        printf "\n###### Back up complete! ######\n"
+    fi
+#------------------------------------------#    
 
+#------------------------------------------#    
+    if [[ "$2" != *":"* ]]; then
+        if [ -d "$2" ]; then
+            exists2=0
+            echo ""
+            echo "###### Backing up |$2| in |"$2"/../BackUp|... ######" 
+            rclone sync "$2" "$2""/../BackUp" -P
+            printf "\n###### Back up complete! ######\n"
+        else
+            exists2=1
+            printf "\n$2 doesn't exist. Creating...\n"
+            mkdir "$2"
+            printf "\n$2 created\n"
+        fi
+    else
+        exists2=0
+        echo ""
+        echo "###### Backing up |$2| in |"$2"/BackUp|... ######" 
+        rclone sync "$2" "$2""/BackUp" -P
+        printf "\n###### Back up complete! ######\n"
+    fi
+#------------------------------------------#    
 
+    
+#------------------------------------------#    
+    if [ $exists1 -eq 0 ]; then
+        printf "\n###### Copying new files from |$1| to |$2|... ######\n" 
+        rclone copy "$1" "$2" --update -P
+    else
+        printf "\n $1 empty, omitting...\n"
+    fi
+    
+    if [ $exists2 -eq 0 ]; then
+        printf "\n###### Copying new files from |$2| to |$1|... ######\n" 
+        rclone copy "$2" "$1" --update -P
+    else
+        printf "\n $2 empty, omitting...\n"
+    fi
+#------------------------------------------#    
 }
 
 
 alias starwars='telnet towel.blinkenlights.nl'
 alias l='ls -l'
-export PS1="\[\033[38;5;31m\]«\\$\u \[$(tput sgr0)\[$(tput bold)\]\[\033[38;5;255m\]\W\\[\033[38;5;31m\]»λ \[$(tput sgr0)\]"
-alias gitcache="git config credential.helper 'cache --timeout=300'"
-alias pipupgrade='python3 -m pip install --upgrade pip'
-# added by Anaconda3 2018.12 installer
-# >>> conda init >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$(CONDA_REPORT_ERRORS=false '/home/reyes/Installations/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    \eval "$__conda_setup"
-else
-    if [ -f "/home/reyes/Installations/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/reyes/Installations/anaconda3/etc/profile.d/conda.sh"
-        CONDA_CHANGEPS1=false conda activate base
-    else
-        \export PATH="/home/reyes/Installations/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda init <<<
+alias 7='cd /home/reyes/7.-Sexto-semestre'
+alias kde='kdeconnect-cli'
+alias kdh='kdeconnect-handler'
+alias W='cd ~/7.-Sexto-semestre/WIP'
 
-alias 7='cd ~/7.-Sexto-semestre'
+tt () {
+    echo "/$1/ /$2/ /"$@"/"
+    mkdir $1
+#    mkdir $1"/../partial$1"
+#    mkdir "$1/../inclusive$1"
+#    mkdir $1"/../exclusive"$1
+}
+
+gitcache () {
+    git config credential.helper store 
+}
+
+
+export HADOOP_HOME=/usr/local/hadoop 

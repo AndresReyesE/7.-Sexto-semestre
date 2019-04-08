@@ -1,2 +1,18 @@
 For VSCode ManTsh:
 75e3342fe34e86386bfdeb753a65e746e6beae6b
+
+For VSCode ManMSI:
+e84bc93d1954e8236a62cc7446860fc7e2b301bf
+Gist ID:
+30083a46ba5b6780a8fbee0ac057b4dc
+clojure v0.10.5
+  code-settings-sync v3.2.7
+  cpptools v0.22.1
+  java v0.42.0
+  linux-themes v1.0.1
+  material-icon-theme v3.7.0
+  python v2019.3.6215
+  theme-dracula v2.17.0
+  theme-material-theme v1.0.1
+  vsc-material-theme v2.8.2
+  vscode-java-debug v0.17.0

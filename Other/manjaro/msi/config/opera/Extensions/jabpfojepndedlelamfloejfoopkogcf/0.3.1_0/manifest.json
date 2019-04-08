@@ -1,0 +1,47 @@
+{
+   "background": {
+      "page": "lib/chrome/background.html"
+   },
+   "browser_action": {
+      "default_icon": {
+         "16": "data/icons/16.png",
+         "32": "data/icons/32.png",
+         "48": "data/icons/48.png",
+         "64": "data/icons/64.png"
+      },
+      "default_title": "Dark Mode"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "exclude_globs": [ "*/chrome/newtab*" ],
+      "js": [ "data/content_script/inject.js" ],
+      "match_about_blank": true,
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_start"
+   } ],
+   "description": "A global dark theme for the web",
+   "developer": {
+      "name": "dlinbernard"
+   },
+   "homepage_url": "http://mybrowseraddon.com/dark-mode.html",
+   "icons": {
+      "128": "data/icons/128.png",
+      "16": "data/icons/16.png",
+      "32": "data/icons/32.png",
+      "48": "data/icons/48.png",
+      "64": "data/icons/64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy4Ykd+2I0/z0J6XZlHtiZeAcuZ3fKtb694Zfzrn5ACFim70BPjv04296K7mji2RrQ59iZqeJb/PnL0gAmweqSPTOS4IGhfU6CLLLR5yaxsKQUmaXUI30BktM9jwEnHYlfFwAu/f6uoNjHb61md1Q0kZGhpsUflHG3A6sqS+N407y13uDuvpZ3UI31imjLXc+36IyKUGW6WT9HmrqothxtCV2ShOkFYUfyR4Iw2FqBEJ+1nHFuZw1pROburBOQbQvbnjUyZZhMVLM1OXIvI0K/A59JDdTSDgezUanPFViW17OYs9EA6NZ+RjqLSyWu3NFa6Pt/QdIrMudKFL2sZdWrwIDAQAB",
+   "manifest_version": 2,
+   "name": "Dark Mode",
+   "options_ui": {
+      "chrome_style": true,
+      "open_in_tab": true,
+      "page": "data/options/options.html"
+   },
+   "permissions": [ "storage", "\u003Call_urls>", "contextMenus" ],
+   "short_name": "dark-mode",
+   "update_url": "https://extension-updates.opera.com/api/omaha/update/",
+   "version": "0.3.1",
+   "web_accessible_resources": [ "data/content_script/*.css" ]
+}

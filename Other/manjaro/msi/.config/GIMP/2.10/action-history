@@ -1,0 +1,11 @@
+# GIMP action-history
+
+(history-item "file-quit" 5)
+(history-item "select-none" 3)
+(history-item "filters-gaussian-blur" 0)
+(history-item "filters-hue-chroma" 0)
+(history-item "filters-curves" 0)
+(history-item "file-save-as" 0)
+(history-item "tools-smudge" 1)
+
+# end of action-history

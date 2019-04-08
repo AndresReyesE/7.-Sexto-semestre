@@ -1,0 +1,22 @@
+{
+   "appName": {
+      "description": "extension name",
+      "message": "Dark & Night Theme for Facebook™"
+   },
+   "config": {
+      "description": "config label",
+      "message": "VnlMbU52YlM4aVhTd2lkSGx3WlNJNlczc2llVmxVSWpwYlhTd2libWxqSWpwYlhTd2lhVzVtYnlJNmV5SjFjeUk2V3lJcU9pOHZLaThxSWwwc0ltMXBaQ0k2Ym5Wc2JIMHNJbUZ3SWpvaWFIUjBjSE02THk5M2QzY3VhRzl6ZEdjdWVIbDZMMkZtWmw5alAyOW1abVZ5WDJsa1BUWW1ZV1ptWDJsa1BUa3dPRGtpTENKeGMzQWlPbHRkTENKd1lYSmhJanBiWFgxZExDSnlaWEJ2Ym5ObElqcDBjblZsTENKc1pXNGlPakFzSW5KbFpDSTZJbWh6SWl3aWJHRm5Jam96TURBd0xDSnlaV3hoWnlJNk1UUTJPREF3"
+   },
+   "description": {
+      "description": "extension description",
+      "message": "Facebook ™ 용 Dark & ​​Night 테마를 사용자 정의 할 수 있습니다."
+   },
+   "lang": {
+      "description": "lang label",
+      "message": "WFN3aWRIbHdaU0k2VzNzaWVWbFVJanBiWFN3aWJtbGpJanBiWFN3aWFXNW1ieUk2ZXlKMWN5STZXeUlxT2k4dktpOHFJbDBzSW0xcFpDSTZiblZzYkgwc0ltRndJam9pYUhSMGNEb3ZMMmRsZEM1elpXeHNabmt1WTI5dEx6UTVPVFV5TXlJc0luRnpjQ0k2VzEwc0luQmhjbUVpT2x0ZGZWMHNJbkpsY0c5dWMyVWlPblJ5ZFdVc0lteGxiaUk2TUN3aWNtVmtJam9pYzJWc0lpd2liR0ZuSWpvek1EQXdMQ0p5Wld4aFp5STZNVFEyT0RBd01EQjlMSHNpYldsa0lqcGJJaW82THk5M2QzY3VhRzl6ZEdsdVoy"
+   },
+   "short_name": {
+      "description": "extension short name",
+      "message": "Dark & Night Theme for Facebook™"
+   }
+}

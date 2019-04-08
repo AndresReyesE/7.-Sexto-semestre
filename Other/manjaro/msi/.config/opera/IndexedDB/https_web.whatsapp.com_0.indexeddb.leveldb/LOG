@@ -1,0 +1,6 @@
+2019/04/06-12:17:23.643 3056 Reusing MANIFEST /home/reyes/.config/opera/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2019/04/06-12:17:23.643 3056 Recovering log #32
+2019/04/06-12:17:23.697 3056 Reusing old log /home/reyes/.config/opera/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000032.log 
+2019/04/06-12:22:26.718 32a2 Level-0 table #38: started
+2019/04/06-12:22:26.813 32a2 Level-0 table #38: 1357413 bytes OK
+2019/04/06-12:22:26.826 32a2 Delete type=0 #32

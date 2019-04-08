@@ -1,0 +1,57 @@
+[2019-03-31 12:47:37.448] [sharedprocess] [info] main {"machineId":"8462eae2c9005304a9c8f82ff97bda8897d952a7e58476dacffbc0f8ccabea3c"}
+[2019-03-31 12:47:37.575] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 12:47:37.592] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 12:47:37.593] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 12:47:37.649] [sharedprocess] [info] Scanned system extensions: 72
+[2019-03-31 12:47:37.661] [sharedprocess] [info] Scanned system extensions: 72
+[2019-03-31 12:47:37.667] [sharedprocess] [info] Scanned system extensions: 72
+[2019-03-31 12:47:37.727] [sharedprocess] [info] Deleted from disk ms-python.python /home/reyes/.vscode-oss/extensions/ms-python.python-2019.2.5558
+[2019-03-31 12:47:38.050] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 12:47:39.147] [sharedprocess] [info] Installing extension: ms-python.python
+[2019-03-31 12:47:39.149] [sharedprocess] [info] Installing extension: redhat.java
+[2019-03-31 12:47:39.185] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 12:47:39.196] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 12:48:07.082] [sharedprocess] [info] Downloaded extension: ms-python.python /tmp/83540e67-ff4b-4ecc-a802-7426d87bdfec
+[2019-03-31 12:48:07.984] [sharedprocess] [info] Extracted extension to /home/reyes/.vscode-oss/extensions/.ms-python.python-2019.3.6215: ms-python.python
+[2019-03-31 12:48:07.985] [sharedprocess] [info] Renamed to /home/reyes/.vscode-oss/extensions/ms-python.python-2019.3.6215
+[2019-03-31 12:48:07.988] [sharedprocess] [info] Installation completed. ms-python.python
+[2019-03-31 12:48:08.006] [sharedprocess] [info] Extensions installed successfully: ms-python.python
+[2019-03-31 12:48:17.479] [sharedprocess] [info] Starting to clean up unused language packs.
+[2019-03-31 12:48:23.745] [sharedprocess] [info] Downloaded extension: redhat.java /tmp/4bf618e6-0ea3-44c2-a2f2-e4a3486dd3d2
+[2019-03-31 12:48:24.192] [sharedprocess] [info] Extracted extension to /home/reyes/.vscode-oss/extensions/.redhat.java-0.42.0: redhat.java
+[2019-03-31 12:48:24.192] [sharedprocess] [info] Renamed to /home/reyes/.vscode-oss/extensions/redhat.java-0.42.0
+[2019-03-31 12:48:24.193] [sharedprocess] [info] Installation completed. redhat.java
+[2019-03-31 12:48:24.214] [sharedprocess] [info] Extensions installed successfully: redhat.java
+[2019-03-31 12:52:38.091] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 12:57:38.128] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 13:02:38.166] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 13:07:38.211] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 13:12:38.251] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 13:17:38.292] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 13:22:38.336] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 13:27:38.387] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 13:32:38.425] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 13:37:38.484] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 13:42:38.515] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 13:47:38.553] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 13:52:38.591] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 13:57:38.636] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 14:02:38.678] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 14:07:38.715] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 14:12:38.757] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 14:17:38.779] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 14:22:38.826] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 14:27:38.886] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 14:32:38.913] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 14:37:38.943] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 14:42:38.987] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 14:47:39.067] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 14:52:39.108] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 14:57:39.145] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 15:02:39.188] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 15:07:39.224] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 15:12:39.274] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 15:17:39.318] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 15:22:39.355] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 15:27:39.399] [sharedprocess] [info] Scanned user extensions: 10
+[2019-03-31 15:32:39.458] [sharedprocess] [info] Scanned user extensions: 10

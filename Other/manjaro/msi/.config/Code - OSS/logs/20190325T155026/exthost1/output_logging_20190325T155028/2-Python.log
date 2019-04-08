@@ -1,0 +1,21 @@
+Starting Jedi Python language engine.
+##########Linting Output - pylint##########
+************* Module imgFileUtils
+2,0,error,import-error:Unable to import 'numpy'
+
+-----------------------------------
+Your code has been rated at 8.57/10
+
+##########Linting Output - pylint##########
+************* Module RGBGeneration
+6,4,warning,unused-variable:Unused variable 'actualObservations'
+23,8,warning,unused-variable:Unused variable 'pathBlue'
+
+-----------------------------------
+Your code has been rated at 8.95/10
+
+##########Linting Output - pylint##########
+
+------------------------------------
+Your code has been rated at 10.00/10
+

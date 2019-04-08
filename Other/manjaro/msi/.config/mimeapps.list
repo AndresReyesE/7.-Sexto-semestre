@@ -1,0 +1,16 @@
+[Added Associations]
+image/tiff=magick-3.desktop;org.kde.gwenview.desktop;okularApplication_tiff.desktop;okularApplication_kimgio.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird-EY58YZ.desktop;
+message/rfc822=userapp-Thunderbird-EY58YZ.desktop;
+
+[Added KDE Service Associations]
+image/tiff=khtmlimage.desktop;okularTiff.desktop;okularKimgio.desktop;oktetapart.desktop;
+
+[Default Applications]
+image/tiff=magick-3.desktop;
+text/html=opera.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-EY58YZ.desktop
+message/rfc822=userapp-Thunderbird-EY58YZ.desktop
+
+[Removed Associations]
+image/tiff=magick-2.desktop;magick.desktop;

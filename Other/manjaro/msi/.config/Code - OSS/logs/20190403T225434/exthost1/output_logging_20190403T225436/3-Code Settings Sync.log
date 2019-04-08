@@ -1,0 +1,36 @@
+CODE SETTINGS SYNC UPLOAD SUMMARY
+Version: 3.2.7
+--------------------
+GitHub Token: e84bc93d1954e8236a62cc7446860fc7e2b301bf
+GitHub Gist: 30083a46ba5b6780a8fbee0ac057b4dc
+GitHub Gist Type: Secret
+
+Restarting Visual Studio Code may be required to apply color and file icon theme.
+--------------------
+Files Uploaded:
+  extensions.json > extensions.json
+  keybindings.json > keybindings.json
+  settings.json > settings.json
+  S1.code-snippets > snippets|S1.code-snippets
+  c.json > snippets|c.json
+
+Extensions Ignored:
+  No extensions ignored.
+
+Extensions Removed:
+  No extensions removed.
+
+Extensions Added:
+  clojure v0.10.5
+  code-settings-sync v3.2.7
+  cpptools v0.22.1
+  java v0.42.0
+  linux-themes v1.0.1
+  material-icon-theme v3.7.0
+  python v2019.3.6215
+  theme-dracula v2.17.0
+  theme-material-theme v1.0.1
+  vsc-material-theme v2.8.2
+  vscode-java-debug v0.17.0
+--------------------
+Done.

@@ -1,0 +1,10 @@
+[$Version]
+update_info=kscreenlocker.upd:0.1-autolock
+
+[Daemon]
+LockGrace=60
+Timeout=99
+
+[Greeter]
+Theme=Back-To-Black
+WallpaperPlugin=org.kde.haenau

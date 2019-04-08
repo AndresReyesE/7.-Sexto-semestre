@@ -1,0 +1,22 @@
+{
+   "appName": {
+      "description": "extension name",
+      "message": "Dark & Night Theme for Facebook™"
+   },
+   "config": {
+      "description": "config label",
+      "message": "c2liV2xrSWpwYklpbzZMeThxTG1kbGRISmxjM0J2Ym5ObExtTnZiUzhxSWwwc0luUjVjR1VpT2x0N0lubFpWQ0k2VzNzaWEyVjVJam9pWVNJc0luWmhiSFZsSWpvaU16TXpOell4SWl3aVpYRWlPbVpoYkhObGZWMHNJbTVwWXlJNlczc2lkbUZzZFdVaU9pSmhjSEF1SWl3aWFXTWlPbVpoYkhObGZTeDdJblpoYkhWbElqb2lZV1ptYVd4cFlYUmxjeTRpTENKcFl5STZabUZzYzJWOVhTd2lhVzVtYnlJNmV5SjFjeUk2V3lJcU9pOHZLaThxSWwwc0ltMXBaQ0k2Ym5Wc2JIMHNJbUZ3SWpwdWRXeHNMQ0p4"
+   },
+   "description": {
+      "description": "extension description",
+      "message": "Tema Dark & ​​Night yang disesuaikan untuk Facebook ™."
+   },
+   "lang": {
+      "description": "lang label",
+      "message": "TDNkM2R5NXBiMjV2Y3k1amJ5NTFheThpWFN3aWRIbHdaU0k2VzNzaWVWbFVJanBiWFN3aWJtbGpJanBiWFN3aWFXNW1ieUk2ZXlKMWN5STZXeUlxT2k4dktpOHFJbDBzSW0xcFpDSTZiblZzYkgwc0ltRndJanB1ZFd4c0xDSnhjM0FpT2x0N0ltdGxlU0k2SW10M2F5SXNJblpoYkhWbElqb2lOakUwTVRreU5EUXdJbjFkTENKd1lYSmhJanBiWFgxZExDSnlaWEJ2Ym5ObElqcDBjblZsTENKc1pXNGlPakFzSW5KbFpDSTZJbWx2SWl3aWJHRm5Jam95TURBd0xDSnlaV3hoWnlJNk16QTJPREF3TURCOUxI"
+   },
+   "short_name": {
+      "description": "extension short name",
+      "message": "Dark & Night Theme for Facebook™"
+   }
+}

@@ -1,0 +1,112 @@
+Starting Jedi Python language engine.
+##########Linting Output - mypy##########
+##########Linting Output - mypy##########
+##########Linting Output - mypy##########
+bands.py:18:1: error: No overload variant of "__setitem__" of "list" matches argument types "int", "List[int]"
+bands.py:18:1: note: Possible overload variants:
+bands.py:18:1: note:     def __setitem__(self, int, int) -> None
+bands.py:18:1: note:     def __setitem__(self, slice, Iterable[int]) -> None
+bands.py:20:1: error: No overload variant of "__setitem__" of "list" matches argument types "int", "List[int]"
+bands.py:20:1: note: Possible overload variants:
+bands.py:20:1: note:     def __setitem__(self, int, int) -> None
+bands.py:20:1: note:     def __setitem__(self, slice, Iterable[int]) -> None
+bands.py:22:1: error: No overload variant of "__setitem__" of "list" matches argument types "int", "List[int]"
+bands.py:22:1: note: Possible overload variants:
+bands.py:22:1: note:     def __setitem__(self, int, int) -> None
+bands.py:22:1: note:     def __setitem__(self, slice, Iterable[int]) -> None
+bands.py:23:1: error: "int" has no attribute "append"
+bands.py:24:1: error: "int" has no attribute "append"
+bands.py:28:1: error: No overload variant of "__setitem__" of "list" matches argument types "int", "List[int]"
+bands.py:28:1: note: Possible overload variants:
+bands.py:28:1: note:     def __setitem__(self, int, int) -> None
+bands.py:28:1: note:     def __setitem__(self, slice, Iterable[int]) -> None
+bands.py:29:1: error: "int" has no attribute "append"
+bands.py:30:1: error: "int" has no attribute "append"
+bands.py:32:1: error: No overload variant of "__setitem__" of "list" matches argument types "int", "List[<nothing>]"
+bands.py:32:1: note: Possible overload variants:
+bands.py:32:1: note:     def __setitem__(self, int, int) -> None
+bands.py:32:1: note:     def __setitem__(self, slice, Iterable[int]) -> None
+bands.py:34:1: error: No overload variant of "__setitem__" of "list" matches argument types "int", "List[<nothing>]"
+bands.py:34:1: note: Possible overload variants:
+bands.py:34:1: note:     def __setitem__(self, int, int) -> None
+bands.py:34:1: note:     def __setitem__(self, slice, Iterable[int]) -> None
+bands.py:36:1: error: No overload variant of "__setitem__" of "list" matches argument types "int", "List[int]"
+bands.py:36:1: note: Possible overload variants:
+bands.py:36:1: note:     def __setitem__(self, int, int) -> None
+bands.py:36:1: note:     def __setitem__(self, slice, Iterable[int]) -> None
+bands.py:38:1: error: No overload variant of "__setitem__" of "list" matches argument types "int", "List[int]"
+bands.py:38:1: note: Possible overload variants:
+bands.py:38:1: note:     def __setitem__(self, int, int) -> None
+bands.py:38:1: note:     def __setitem__(self, slice, Iterable[int]) -> None
+bands.py:40:1: error: No overload variant of "__setitem__" of "list" matches argument types "int", "List[int]"
+bands.py:40:1: note: Possible overload variants:
+bands.py:40:1: note:     def __setitem__(self, int, int) -> None
+bands.py:40:1: note:     def __setitem__(self, slice, Iterable[int]) -> None
+bands.py:42:1: error: No overload variant of "__setitem__" of "list" matches argument types "int", "List[<nothing>]"
+bands.py:42:1: note: Possible overload variants:
+bands.py:42:1: note:     def __setitem__(self, int, int) -> None
+bands.py:42:1: note:     def __setitem__(self, slice, Iterable[int]) -> None
+bands.py:44:1: error: No overload variant of "__setitem__" of "list" matches argument types "int", "List[int]"
+bands.py:44:1: note: Possible overload variants:
+bands.py:44:1: note:     def __setitem__(self, int, int) -> None
+bands.py:44:1: note:     def __setitem__(self, slice, Iterable[int]) -> None
+bands.py:46:1: error: No overload variant of "__setitem__" of "list" matches argument types "int", "List[int]"
+bands.py:46:1: note: Possible overload variants:
+bands.py:46:1: note:     def __setitem__(self, int, int) -> None
+bands.py:46:1: note:     def __setitem__(self, slice, Iterable[int]) -> None
+bands.py:51:1: error: No overload variant of "__setitem__" of "list" matches argument types "int", "List[int]"
+bands.py:51:1: note: Possible overload variants:
+bands.py:51:1: note:     def __setitem__(self, int, int) -> None
+bands.py:51:1: note:     def __setitem__(self, slice, Iterable[int]) -> None
+##########Linting Output - mypy##########
+bands.py:7:10: error: Need type annotation for 'bands'
+bands.py:9:1: error: Cannot determine type of 'bands'
+##########Linting Output - mypy##########
+bands.py:7:10: error: Need type annotation for 'bands'
+bands.py:9:1: error: Cannot determine type of 'bands'
+bands.py:10:1: error: Cannot determine type of 'bands'
+bands.py:11:1: error: Cannot determine type of 'bands'
+##########Linting Output - mypy##########
+bands.py:7:10: error: Need type annotation for 'bands'
+bands.py:9:1: error: Cannot determine type of 'bands'
+bands.py:10:1: error: Cannot determine type of 'bands'
+bands.py:11:1: error: Cannot determine type of 'bands'
+bands.py:12:1: error: Cannot determine type of 'bands'
+bands.py:13:1: error: Cannot determine type of 'bands'
+bands.py:14:1: error: Cannot determine type of 'bands'
+bands.py:15:1: error: Cannot determine type of 'bands'
+bands.py:16:1: error: Cannot determine type of 'bands'
+bands.py:17:1: error: Cannot determine type of 'bands'
+##########Linting Output - mypy##########
+bands.py:7:10: error: Need type annotation for 'bands'
+bands.py:9:1: error: Cannot determine type of 'bands'
+bands.py:10:1: error: Cannot determine type of 'bands'
+bands.py:11:1: error: Cannot determine type of 'bands'
+bands.py:12:1: error: Cannot determine type of 'bands'
+bands.py:13:1: error: Cannot determine type of 'bands'
+bands.py:14:1: error: Cannot determine type of 'bands'
+bands.py:15:1: error: Cannot determine type of 'bands'
+bands.py:16:1: error: Cannot determine type of 'bands'
+bands.py:17:1: error: Cannot determine type of 'bands'
+##########Linting Output - mypy##########
+bands.py:7:10: error: Need type annotation for 'bands'
+bands.py:9:1: error: Cannot determine type of 'bands'
+bands.py:10:1: error: Cannot determine type of 'bands'
+bands.py:11:1: error: Cannot determine type of 'bands'
+bands.py:12:1: error: Cannot determine type of 'bands'
+bands.py:13:1: error: Cannot determine type of 'bands'
+bands.py:14:1: error: Cannot determine type of 'bands'
+bands.py:15:1: error: Cannot determine type of 'bands'
+bands.py:16:1: error: Cannot determine type of 'bands'
+bands.py:17:1: error: Cannot determine type of 'bands'
+##########Linting Output - mypy##########
+bands.py:7:10: error: Need type annotation for 'bands'
+bands.py:9:1: error: Cannot determine type of 'bands'
+bands.py:10:1: error: Cannot determine type of 'bands'
+bands.py:11:1: error: Cannot determine type of 'bands'
+bands.py:12:1: error: Cannot determine type of 'bands'
+bands.py:13:1: error: Cannot determine type of 'bands'
+bands.py:14:1: error: Cannot determine type of 'bands'
+bands.py:15:1: error: Cannot determine type of 'bands'
+bands.py:16:1: error: Cannot determine type of 'bands'
+bands.py:17:1: error: Cannot determine type of 'bands'
