@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - KohonenNetworkProject",
+            "request": "launch",
+            "mainClass": "KohonenNetworkProject",
+            "projectName": "KonohenNeuralNetwork_75106601"
+        }
+    ]
+}

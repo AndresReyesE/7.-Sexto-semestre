@@ -1,5 +1,26 @@
 For VSCode ManTsh:
-75e3342fe34e86386bfdeb753a65e746e6beae6b
+GitHub Token: 75e3342fe34e86386bfdeb753a65e746e6beae6b
+GitHub Gist: 7fc9ef16060147c88895647334af51be
+
+Extensions Added:
+  clojure v0.10.5
+  code-runner v0.9.8
+  code-settings-sync v3.2.8
+  continuum v1.2.0
+  cpptools v0.22.1
+  eva-theme v0.7.6
+  java v0.42.1
+  material-icon-theme v3.7.0
+  Material-theme v2.21.0
+  one-monokai v0.3.7
+  project-manager v10.5.1
+  python v2019.3.6352
+  vsc-material-theme v2.8.2
+  vscode-icontheme-nomo-dark v1.3.6
+  vscode-java-debug v0.17.0
+  vscode-theme-darcula v1.2.0
+  vscode-theme-onedark v2.1.0
+  vsliveshare v1.0.18
 
 For VSCode ManMSI:
 e84bc93d1954e8236a62cc7446860fc7e2b301bf

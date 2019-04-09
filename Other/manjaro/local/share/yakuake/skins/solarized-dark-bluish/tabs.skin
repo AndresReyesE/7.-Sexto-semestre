@@ -1,0 +1,19 @@
+[Description]
+Skin=koko-minimal
+Author=hannes, kokoko3k
+Icon=/icon.png
+
+[Tabs]
+selected_background=/tabs/back_image.png
+unselected_background=/tabs/back_image.png
+x=0
+y=0
+red=239
+green=240
+blue=241
+
+
+[Background]
+back_image=/tabs/back_image.png
+
+

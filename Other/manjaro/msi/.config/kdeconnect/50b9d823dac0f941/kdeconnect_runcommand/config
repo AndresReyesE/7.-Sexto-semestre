@@ -1,2 +1,0 @@
-[General]
-commands="@ByteArray({\"_2af5a608_c14c_4709_8808_a25cd790416c_\":{\"command\":\"qdbus org.kde.Solid.PowerManagement /org/kde/Solid/PowerManagement/Actions/BrightnessControl org.kde.Solid.PowerManagement.Actions.BrightnessControl.setBrightness `qdbus org.kde.Solid.PowerManagement /org/kde/Solid/PowerManagement/Actions/BrightnessControl org.kde.Solid.PowerManagement.Actions.BrightnessControl.brightnessMax`\",\"name\":\"Maximum Brightness\"}})"

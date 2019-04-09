@@ -1,8 +1,0 @@
-[2019-03-25 15:15:56.056] [renderer1] [info] no standard startup: not running latest version
-[2019-03-25 15:18:57.157] [renderer1] [error] Data tree node not found: Locals: Error: Data tree node not found: Locals
-    at q.getDataNode (file:///usr/lib/code/out/vs/workbench/workbench.main.js:939:375)
-    at q.getNode (file:///usr/lib/code/out/vs/workbench/workbench.main.js:937:220)
-    at e.every.e (file:///usr/lib/code/out/vs/workbench/workbench.main.js:4727:797)
-    at Array.every (<anonymous>)
-    at e.getScopes.then.e (file:///usr/lib/code/out/vs/workbench/workbench.main.js:4727:778)
-    at process._tickCallback (internal/process/next_tick.js:68:7)

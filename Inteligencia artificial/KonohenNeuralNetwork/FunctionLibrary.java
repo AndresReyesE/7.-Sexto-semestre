@@ -83,7 +83,7 @@ public class FunctionLibrary
             sum = sum + (vector[i] * vector[i]);
             i = i + 1;
         }//end while
-        return sum;
+        return Math.sqrt(sum);
     }//end vectorLength
 
 

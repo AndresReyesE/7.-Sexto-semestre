@@ -212,7 +212,7 @@ public class Controller implements ActionListener,
         //
         try
         {
-            fileReader = new FileReader(new File("./patrons") );
+            fileReader = new FileReader( new File("/Users/gerardoayala/Desktop/datos/sample.txt") );
             bufferedReader = new BufferedReader(fileReader);
             i=0;
             view.letterListModel.clear();
@@ -267,7 +267,7 @@ public class Controller implements ActionListener,
         //
         try
         {
-            outputStream = new FileOutputStream("./patrons",false );
+            outputStream = new FileOutputStream("/Users/gerardoayala/Desktop/datos/sample.txt",false );
             printStream = new PrintStream(outputStream);
             i = 0;
             while(i < view.letterListModel.size())
@@ -583,9 +583,7 @@ public class Controller implements ActionListener,
             showInputPattern(inputPattern);
 
             // 4.- Get the winining neuron based on the input pattern
-            winningNeuronId = neuralNetwork.getWinningNeuronId(inputPattern,
-                                                               normalizationFactor,
-                                                               syntheticLastInput);
+            winningNeuronId = neuralNetwork.getWinningNeuronId(inputPattern);
 
             // 5.- Assign the corresponding letter of the sample data
             // into the map at the winning neuron index
@@ -601,8 +599,6 @@ public class Controller implements ActionListener,
     void recognizeActionPerformed(ActionEvent event)
     {
         double inputPattern[];
-        double normalizationFactor[];
-        double syntheticLastInput[];
         int winningNeuronId;
         char selfOrganizingMap[];
         SampleData patternToRecognize;
@@ -610,7 +606,7 @@ public class Controller implements ActionListener,
         int x;
         int y;
         //
-        // 1.- Check if the neural network exists (has been trained)
+        // Check if the neural network exists (has been trained)
         if (neuralNetwork == null)
         {
             JOptionPane.showMessageDialog(view,
@@ -619,17 +615,17 @@ public class Controller implements ActionListener,
             return;
         }//end if
 
-        // 2.- Get sample data to recognize
+        // Get sample data to recognize
         view.drawPanel.downSampleImage();
         patternToRecognize = view.samplePanel.getData();
         System.out.println("--- DATA TO RECOGNIZE ---");
         showSampleData(patternToRecognize);
 
-        // 3.- Construct the corresponding pattern
+        // Construct the corresponding pattern
         inputPattern = new double[DOWNSAMPLE_WIDTH * DOWNSAMPLE_HEIGHT];
         index = 0;
 
-        // 4.- Define the input pattern
+        // Define the input pattern
         y = 0;
         while(y < patternToRecognize.getHeight())
         {
@@ -653,22 +649,14 @@ public class Controller implements ActionListener,
         System.out.println("--- PATTERN TO RECOGNIZE ---");
         showInputPattern(inputPattern);
 
-        // 5.- Construct the normalization factor
-        normalizationFactor = new double[1];
+        // Get the winner neuron id
+        winningNeuronId = neuralNetwork.getWinningNeuronId(inputPattern);
 
-        // 6.- Construct the synthetic last input
-        syntheticLastInput = new double[1];
-
-        // 7.- Get the winner neuron id
-        winningNeuronId = neuralNetwork.getWinningNeuronId(inputPattern,
-                                                           normalizationFactor,
-                                                           syntheticLastInput);
-
-        // 8.- Construct and get the self organizing map
+        // Construct and get the self organizing map
         selfOrganizingMap = getSelfOrganizingMap();
         showSelfOrganizingMap(selfOrganizingMap);
 
-        // 9.- Present as result the winning neuron from the self organizing map
+        // Present as result the winning neuron from the self organizing map
         JOptionPane.showMessageDialog(view,
                                       "  " + selfOrganizingMap[winningNeuronId] +
                                       "   (Neuron #" + winningNeuronId + " fired)",

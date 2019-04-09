@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb839c37-dcf3-443c-80a3-89060e8c9841" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Sexto semestre.ctb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Sexto semestre.ctb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sistemas distribuidos/NameServer/CLIENT/cliente.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../Sistemas distribuidos/NameServer/CLIENT/cliente.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sistemas distribuidos/NameServer/CLIENT/cliente.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../Sistemas distribuidos/NameServer/CLIENT/cliente.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sistemas distribuidos/NameServer/NAMESERVER/server.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../Sistemas distribuidos/NameServer/NAMESERVER/server.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sistemas distribuidos/NameServer/NAMESERVER/services.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../Sistemas distribuidos/NameServer/NAMESERVER/services.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sistemas distribuidos/NameServer/NAMESERVER/skeleton.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../Sistemas distribuidos/NameServer/NAMESERVER/skeleton.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thisguysprograms/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../thisguysprograms/.vscode/launch.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thisguysprograms/.vscode/tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../thisguysprograms/.vscode/tasks.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thisguysprograms/c" beforeDir="false" afterPath="$PROJECT_DIR$/../../thisguysprograms/c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thisguysprograms/c.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../thisguysprograms/c.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../reyes⁄oracle.png" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ProjectGeneticAlgorithms.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -64,7 +56,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -82,6 +73,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -123,7 +115,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-5" y="0" width="1376" height="737" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Designer" order="1" />
@@ -132,7 +123,7 @@
       <window_info id="DB Browser" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.25833333" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.26666668" />
       <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="DB Execution Console" order="1" />

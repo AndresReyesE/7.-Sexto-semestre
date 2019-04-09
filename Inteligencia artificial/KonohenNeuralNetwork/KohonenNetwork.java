@@ -50,7 +50,10 @@ public class KohonenNetwork extends NeuralNetwork
     public boolean hasToAbortLearning;
 
 
-
+    static double normalizationFactor;
+    static double syntheticLastInput;
+    static double error;
+    static double maxError;
 
 
     /**
@@ -75,21 +78,50 @@ public class KohonenNetwork extends NeuralNetwork
 
 
 
+    /**
+     * Normalize weights
+     *
+     * @param aVector  weights
+     */
+    public double[] normalizeVector(double aVector[])
+    {
+        int i;
+        double vectorLength;
+        //
+
+        vectorLength = FunctionLibrary.vectorLength(aVector) ;
+        // just in case it gets too small
+        if (vectorLength < 0.000000001 )
+            vectorLength = 0.000000001 ;
+        //end if
+
+        i = 0;
+        while(i < numberOfInputUnits)
+        {
+            aVector[i] = aVector[i] * (1.0 / (vectorLength * vectorLength));
+            i = i + 1;
+        }//end while
+
+        // bias ( n element)
+        aVector[numberOfInputUnits] = 0.0;
+
+        return aVector;
+
+    }//end normalizeVector
+
+
 
 
     public void initialize()
     {
         int i ;
-        double connectionsVector[];
         //
         clearConnectionsStrengths() ;
         initializeConnectionStrengths();
-
         i = 0;
         while(i < numberOfNeurons)
         {
-            connectionsVector = connectionsStrengths[i];
-            normalizeWeights(connectionsVector);
+            connectionsStrengths[i] = normalizeVector(connectionsStrengths[i]);
             i = i + 1;
         }//end while
     }//end initialize
@@ -125,11 +157,12 @@ public class KohonenNetwork extends NeuralNetwork
         while(i < source.connectionsStrengths.length)
         {
             System.arraycopy(source.connectionsStrengths[i],0,
-                    destination.connectionsStrengths[i],0, source.connectionsStrengths[i].length);
+                             destination.connectionsStrengths[i],0,
+                             source.connectionsStrengths[i].length);
             i = i + 1;
         }//end while
 
-    }//end copyWeights
+    }//end copyConnectionsStrengths
 
 
 
@@ -140,24 +173,21 @@ public class KohonenNetwork extends NeuralNetwork
      * Normalize the input.
      *
      * @param inputPattern
-     * @param normalizationFactor
      */
     // obtains the normalizationFactor based on the given inputPattern
     // and initializes the syntheticLastInput with 0.0
-    public double[] getNormalizationFactor(final double inputPattern[],
-                                           double normalizationFactor[])
+    public void setNormalizationFactor(final double inputPattern[])
     {
-        double length;
+        double vectorLength;
         //
-        length = FunctionLibrary.vectorLength(inputPattern);
+        vectorLength = FunctionLibrary.vectorLength(inputPattern);
         // just in case it gets too small
-        if ( length < 1.E-30 )
-            length = 1.E-30;
+        if ( vectorLength < 0.000000001 )
+            vectorLength = 0.000000001 ;
         //end if
         // The normalization factor is
         // the reciprocal of the square root of the vector length
-        normalizationFactor[0] = 1.0 / Math.sqrt(length);
-        return normalizationFactor;
+        normalizationFactor = 1.0 / Math.sqrt(vectorLength);
     }//end getNormalizationFactor
 
 
@@ -168,8 +198,6 @@ public class KohonenNetwork extends NeuralNetwork
      * winning neuron.
      *
      * @param inputPattern
-     * @param normalizationFactor
-     * @param syntheticLastInput
      * @return The winning neuron number.
      */
     // Every node in the network is examined
@@ -177,9 +205,7 @@ public class KohonenNetwork extends NeuralNetwork
     // most like the input vector.
     // The winning node is commonly known as the Best Matching Unit (BMU)
     // changes the outputNeuronActivations
-    public int getWinningNeuronId(final double inputPattern[],
-                                  double normalizationFactor[],
-                                  double syntheticLastInput[])
+    public int getWinningNeuronId(final double inputPattern[])
     {
         int i;
         int winningNeuronId;
@@ -190,9 +216,8 @@ public class KohonenNetwork extends NeuralNetwork
 
         // 1.- Normalize the input
         // and obtain normalization factor and synthetic last input
-        normalizationFactor = getNormalizationFactor(inputPattern,
-                                                     normalizationFactor);
-        syntheticLastInput[0] = 0.0;
+        setNormalizationFactor(inputPattern);
+        syntheticLastInput = 0.0;
 
         // 2.- For Each output neuron
         maxOutputNeuronActivation = -1.E30;
@@ -205,9 +230,9 @@ public class KohonenNetwork extends NeuralNetwork
             // and their connection weights
             // and Normalizing the output neuron
             bias = neuronConnectionsStrengths[numberOfInputUnits];
-                    neuronActivationValues[i] = FunctionLibrary.dotProduct(inputPattern,neuronConnectionsStrengths) *
-                                        normalizationFactor[0] +
-                                        bias * syntheticLastInput[0];
+                    neuronActivationValues[i] = FunctionLibrary.dotProduct(inputPattern,
+                                                 neuronConnectionsStrengths) * normalizationFactor +
+                                                 bias * syntheticLastInput;
             // 4.- Bipolar mapping
             neuronActivationValues[i] = 0.5 * (neuronActivationValues[i] + 1.0) ;
             // 5.- Determine the winning neuron
@@ -239,13 +264,11 @@ public class KohonenNetwork extends NeuralNetwork
      * This method adjusts the weights based on the previous trial.
      *
      * @param winnerCount
-     * @param maxError
      * @param correction
      */
     // Obtains the maxError[0]
     public double getMaxError(final int winnerCount[],
-                              final double correction[][],
-                              double maxError[])
+                              final double correction[][])
     {
         double correctionFactor;
         double correctionVector[];
@@ -255,7 +278,7 @@ public class KohonenNetwork extends NeuralNetwork
         int i;
         int j;
         //
-        maxError[0] = 0.0 ;
+        maxError = 0.0 ;
 
         i = 0;
         while(i < numberOfNeurons )
@@ -280,56 +303,17 @@ public class KohonenNetwork extends NeuralNetwork
                 j = j + 1;
             }//end while
 
-            if ( length > maxError[0] )
-                maxError[0] = length;
+            if ( length > maxError)
+                maxError = length;
             //end if
 
             i = i + 1;
         }//end while
 
         // scale the correction
-        maxError[0] = Math.sqrt ( maxError[0] ) / learningRate ;
-        return maxError[0];
+        maxError = Math.sqrt ( maxError ) / learningRate ;
+        return maxError;
     }//end getMaxError
-
-
-
-
-
-
-    /**
-     * Normalize weights
-     *
-     * @param weights  weights
-     */
-    void normalizeWeights(double weights[])
-    {
-        int i;
-        double length;
-        //
-
-        length = FunctionLibrary.vectorLength(weights) ;
-        // just in case it gets too small
-        if (length < 1.E-30 )
-            length = 1.E-30 ;
-        //end if
-
-        length = 1.0 / Math.sqrt (length) ;
-
-        i = 0;
-        while(i < numberOfInputUnits)
-        {
-            weights[i] = weights[i] * length;
-            i = i + 1;
-        }//end while
-
-        weights[numberOfInputUnits] = 0;
-
-    }//end normalizeWeights
-
-
-
-
 
 
 
@@ -341,20 +325,16 @@ public class KohonenNetwork extends NeuralNetwork
      * set.
      *
      * @param winnerCount
-     * @param error
      * @param correction
      * @param workArea
      * @exception java.lang.RuntimeException
      */
-    void evaluateError(int winnerCount[], double error[],
-                       double correction[][],double workArea[])
+    void evaluateError(int winnerCount[],double correction[][],double workArea[])
             throws RuntimeException
     {
         int best;
         int trainingSetNumber;
         double theTrainingSet[];
-        double normalizationFactor[];
-        double syntheticLastInput[];
         double winnerCorrection[];
         double winnerConnection[];
         double length;
@@ -363,8 +343,7 @@ public class KohonenNetwork extends NeuralNetwork
         int x;
         int i;
         //
-        normalizationFactor = new double[1];
-        syntheticLastInput = new double[1];
+        syntheticLastInput = 0.0;
 
         // reset correction and winner counts
         y = 0;
@@ -386,7 +365,7 @@ public class KohonenNetwork extends NeuralNetwork
             i = i + 1;
         }//end while
 
-        error[0] = 0.0 ;
+        error = 0.0 ;
 
         // loop through all training sets to determine correction
         trainingSetNumber = 0;
@@ -397,8 +376,7 @@ public class KohonenNetwork extends NeuralNetwork
             System.out.println("### OUTPUT NEURON ACTIVATIONS before get winning neuron ###");
             FunctionLibrary.showVector(neuronActivationValues);
 
-            best = getWinningNeuronId(theTrainingSet,
-                    normalizationFactor,syntheticLastInput);
+            best = getWinningNeuronId(theTrainingSet);
 
             System.out.println("### OUTPUT NEURON ACTIVATIONS after got winning neuron ###");
             FunctionLibrary.showVector(neuronActivationValues);
@@ -411,7 +389,7 @@ public class KohonenNetwork extends NeuralNetwork
             i = 0;
             while(i < numberOfInputUnits)
             {
-                difference = theTrainingSet[i] * normalizationFactor[0] -
+                difference = theTrainingSet[i] * normalizationFactor -
                         winnerConnection[i] ;
                 length = length + difference * difference ;
                 if (learningMethod != 0)
@@ -419,13 +397,13 @@ public class KohonenNetwork extends NeuralNetwork
                     //end if
                 else
                 {
-                    workArea[i] = learningRate * theTrainingSet[i] * normalizationFactor[0] +
+                    workArea[i] = learningRate * theTrainingSet[i] * normalizationFactor +
                             winnerConnection[i];
                 }//end else
                 i = i + 1;
             }//end while
 
-            difference = syntheticLastInput[0] - winnerConnection[numberOfInputUnits];
+            difference = syntheticLastInput - winnerConnection[numberOfInputUnits];
             length = length + difference * difference ;
 
             if (learningMethod != 0)
@@ -434,17 +412,17 @@ public class KohonenNetwork extends NeuralNetwork
                 //end if
             else
             {
-                workArea[numberOfInputUnits] = learningRate * syntheticLastInput[0] +
+                workArea[numberOfInputUnits] = learningRate * syntheticLastInput +
                         winnerConnection[numberOfInputUnits];
             }//end else
 
-            if ( length > error[0] )
-                error[0] = length ;
+            if ( length > error )
+                error = length ;
             //end if
 
             if (learningMethod == 0)
             {
-                normalizeWeights(workArea);
+                workArea = normalizeVector(workArea);
                 i = 0;
                 while(i <= numberOfInputUnits)
                 {
@@ -456,7 +434,7 @@ public class KohonenNetwork extends NeuralNetwork
             trainingSetNumber = trainingSetNumber + 1;
         }//end while
 
-        error[0] = Math.sqrt (error[0]) ;
+        error = Math.sqrt (error) ;
 
     }//end evaluateErrors
 
@@ -476,14 +454,11 @@ public class KohonenNetwork extends NeuralNetwork
         int size;
         int which;
         double inputSet[];
-        double normalizationFactor[];
         double distance;
         double connectionsVector[];
-        double syntheticLastInput[];
         //
         which = 0;
-        syntheticLastInput = new double[1];
-        normalizationFactor = new double[1];
+        syntheticLastInput = 0.0;
         size = numberOfInputUnits + 1 ;
         distance = 1.E30 ;
 
@@ -491,8 +466,7 @@ public class KohonenNetwork extends NeuralNetwork
         while(traningSetIndex < trainingSet.getTrainingSetSize())
         {
             inputSet = trainingSet.getInputSet(traningSetIndex);
-            best = getWinningNeuronId(inputSet,
-                    normalizationFactor,syntheticLastInput) ;
+            best = getWinningNeuronId(inputSet) ;
             if ( neuronActivationValues[best] < distance )
             {
                 distance = neuronActivationValues[best];
@@ -503,8 +477,7 @@ public class KohonenNetwork extends NeuralNetwork
 
         inputSet = trainingSet.getInputSet(which);
 
-        best = getWinningNeuronId(inputSet,
-                normalizationFactor,syntheticLastInput);
+        best = getWinningNeuronId(inputSet);
 
         distance = -1.e30 ;
         i = numberOfNeurons;
@@ -525,8 +498,8 @@ public class KohonenNetwork extends NeuralNetwork
         System.arraycopy(inputSet,0,connectionsVector,0,
                 inputSet.length);
 
-        connectionsVector[numberOfInputUnits] = syntheticLastInput[0] / normalizationFactor[0];
-        normalizeWeights(connectionsVector);
+        connectionsVector[numberOfInputUnits] = syntheticLastInput / normalizationFactor;
+        connectionsVector = normalizeVector(connectionsVector);
     }//end forceAWinner
 
 
@@ -552,13 +525,11 @@ public class KohonenNetwork extends NeuralNetwork
         double theLearningRate;
         double maxMeanSquareError;
         double inputTrainingSet[];
-        double error[];
-        double maxError[];
         KohonenNetwork bestNetwork;
         //
         // 1.- creates and initializes error and mean square error
-        error = new double[1] ;
-        maxError = new double[1];
+        error = 0.0;
+        maxError = 0.0;
         meanSquareError = 1.0;
         // 2.- Confirms that normalization will be possible
         trainingSetIndex = 0;
@@ -574,9 +545,9 @@ public class KohonenNetwork extends NeuralNetwork
         // 3.- Creates a Kohonen neural network
         bestNetwork = new KohonenNetwork(numberOfInputUnits,numberOfNeurons,
                 controller);
-        System.out.println("%%% NEURAL NETWORK Neurons %%%");
-        System.out.println(" Number of INPUT neurons: " + numberOfInputUnits);
-        System.out.println(" Number of OUTPUT neurons: " + numberOfNeurons);
+        System.out.println("%%% NEURAL NETWORK Input Units & Neurons %%%");
+        System.out.println(" Number of INPUT units: " + numberOfInputUnits);
+        System.out.println(" Number of neurons: " + numberOfNeurons);
         // 4.- creates the winner count array and the correction matrix
         winnerCount = new int[numberOfNeurons];
         correctionMatrix = new double[numberOfNeurons][numberOfInputUnits + 1];
@@ -598,15 +569,15 @@ public class KohonenNetwork extends NeuralNetwork
         while(true)
         {
             // 7.- Obtains the error vector and the work area
-            evaluateError(winnerCount,error,correctionMatrix,workArea);
+            evaluateError(winnerCount,correctionMatrix,workArea);
             System.out.println("");
             System.out.println("%%% ERROR %%%");
-            System.out.println(error[0]);
+            System.out.println(error);
             System.out.println("");
-            meanSquareError = error[0];
+            meanSquareError = error;
             // 8.- if the meanSquareError is smaller then the error quit threshold
             // the iteration stops.
-            if (error[0] < errorQuitThreshold)
+            if (error < errorQuitThreshold)
                 break;
             //end if
             // 9.- updates the max square error
@@ -637,8 +608,7 @@ public class KohonenNetwork extends NeuralNetwork
                 continue ;
             }//end if
             // 12.- adjust weights
-            maxError[0] = getMaxError(winnerCount,correctionMatrix,
-                    maxError);
+            maxError = getMaxError(winnerCount,correctionMatrix);
             // 13.- update the statistics to show at the view
             controller.updateStatistics(trialCounter,meanSquareError,
                     maxMeanSquareError);
@@ -652,7 +622,7 @@ public class KohonenNetwork extends NeuralNetwork
             // 15.- Yields the CPU to other thread
             Thread.yield();
             // 16.- if the max erros is smaller than 0.00001
-            if (maxError[0] < 1E-5)
+            if (maxError < 1E-5)
             {
                 trialCounter = trialCounter + 1;
                 if (trialCounter > retriesBeforeQuit)
@@ -670,7 +640,7 @@ public class KohonenNetwork extends NeuralNetwork
         i = 0;
         while(i < numberOfNeurons)
         {
-            normalizeWeights(connectionsStrengths[i]);
+            connectionsStrengths[i] = normalizeVector(connectionsStrengths[i]);
             i = i + 1;
         }//end while
         hasToAbortLearning = true;
