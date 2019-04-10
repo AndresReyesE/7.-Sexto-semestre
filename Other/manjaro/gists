@@ -23,17 +23,35 @@ Extensions Added:
   vsliveshare v1.0.18
 
 For VSCode ManMSI:
-e84bc93d1954e8236a62cc7446860fc7e2b301bf
-Gist ID:
-30083a46ba5b6780a8fbee0ac057b4dc
-clojure v0.10.5
-  code-settings-sync v3.2.7
+GitHub Token: e84bc93d1954e8236a62cc7446860fc7e2b301bf
+GitHub Gist: 7fc9ef16060147c88895647334af51be
+
+Extensions Added:
+  better-comments v2.0.3
+  bracket-pair-colorizer-2 v0.0.28
+  clojure v0.10.5
+  code-runner v0.9.8
+  code-settings-sync v3.2.8
+  color-highlight v2.3.0
+  continuum v1.2.0
   cpptools v0.22.1
-  java v0.42.0
+  eva-theme v0.7.6
+  fresh-material v2.3.8
+  gitlens v9.6.0
+  indent-rainbow v7.4.0
+  java v0.42.1
   linux-themes v1.0.1
   material-icon-theme v3.7.0
-  python v2019.3.6215
+  Material-theme v2.21.0
+  one-monokai v0.3.7
+  project-manager v10.5.1
+  python v2019.3.6558
   theme-dracula v2.17.0
-  theme-material-theme v1.0.1
   vsc-material-theme v2.8.2
+  vscode-color v0.4.5
+  vscode-icons v8.5.0
+  vscode-icontheme-nomo-dark v1.3.6
   vscode-java-debug v0.17.0
+  vscode-theme-darcula v1.2.0
+  vscode-theme-onedark v2.1.0
+  vsliveshare v1.0.45
