@@ -1,8 +1,8 @@
-package example.test;
+// package example.test;
 
-import java.rmi.Remote;
-import java.rmi.RemoteException;
+// import java.rmi.Remote;
+// import java.rmi.RemoteException;
 
-public interface Callback extends Remote {
-    int register ()
-}
+// public interface Callback extends Remote {
+//     int register ()
+// }

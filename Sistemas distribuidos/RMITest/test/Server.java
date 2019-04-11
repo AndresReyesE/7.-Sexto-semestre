@@ -6,30 +6,15 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.Date;
 
-public class Server implements Inter {
+public class Server {
 
     public Server () {}
 
-    public String helloWorld () {
-        return "Hello World!";
-    }
-
-    public String heyDude (String name) {
-        return "Hey, what's up, " + name + "!?";
-    }
-
-    public Date getDate () {
-        return new Date();
-    }
-
-    public Offer sendOffer (Offer o) {
-        o.nickname += "-";
-        return o;
-    }
+//    Servant servant = new Servant();
 
     public static void main (String args[]) {
         try {
-            Server obj = new Server ();
+            Servant obj = new Servant ();
             Inter stub = (Inter) UnicastRemoteObject.exportObject(obj, 0);
 
             Registry registry = LocateRegistry.getRegistry();
