@@ -1,0 +1,8 @@
+#!/bin/bash
+
+print () {
+	gnome-screenshot -a --file="/home/reyes/Pictures/Screenshots/region.png" 
+	copyq copy image/png - < ~/Pictures/Screenshots/region.png
+}
+
+print
