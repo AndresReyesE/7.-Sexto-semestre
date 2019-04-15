@@ -1,0 +1,16 @@
+<!DOCTYPE family SYSTEM "family.dtd">
+<!--<family xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="family.xsd">-->
+<family>
+	<person id="john" children="jane jack">
+		<name> John Smith </name><age>38</age><email></email>
+	</person>
+	<person id="mary" children="jane jack">
+		<name> Mary Smith </name><age>38</age><email></email>
+	</person>
+	<person id="jane" mother="mary" father="john">
+		<name> Jane Smith </name><age>18</age><email></email>
+	</person>
+	<person id="jack" mother="mary" father="john">
+		<name> Jack Smith </name><age>16</age><email></email>
+	</person>
+</family>

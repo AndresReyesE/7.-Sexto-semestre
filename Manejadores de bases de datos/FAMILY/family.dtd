@@ -1,0 +1,7 @@
+<!ELEMENT family (person)+ >
+<!ELEMENT person (name) >
+<!ATTLIST person id ID #REQUIRED >
+<!ATTLIST person mother IDREF #IMPLIED >
+<!ATTLIST person father IDREF #IMPLIED >
+<!ATTLIST person children IDREFS #IMPLIED >
+<!ELEMENT name (#PCDATA)>

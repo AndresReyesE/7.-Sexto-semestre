@@ -1,0 +1,23 @@
+<!-- edited with XMLSpy v2008 sp1 (http://www.altova.com) by José Luis Zechinelli Martini (UDLA) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="person">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="name" type="xs:string"/>
+				<xs:element name="age" type="xs:decimal"/>
+				<xs:element name="email" type="xs:string"/>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:ID" use="required"/>
+			<xs:attribute name="mother" type="xs:IDREF"/>
+			<xs:attribute name="father" type="xs:IDREF"/>
+			<xs:attribute name="children" type="xs:IDREFS"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="family">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="person" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

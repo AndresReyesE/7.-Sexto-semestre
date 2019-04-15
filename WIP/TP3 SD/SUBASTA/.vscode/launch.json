@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Principal",
+            "request": "launch",
+            "mainClass": "Principal",
+            "projectName": "SUBASTA_71c366e6"
+        }
+    ]
+}
