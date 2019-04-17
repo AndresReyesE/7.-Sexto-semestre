@@ -1,0 +1,19 @@
+Starting band 6
+Starting folder 1
+Maximum for [LC080330422013062201T1]: 13.0 circles at threshold 1, accumulator 24, with filter: Blur 0 | BP = 3 | Sharp = 0 | Contr = 10 |. TP = 11, FP = 2. FN = 3, F-Score: 0.8148148148148148
+Starting folder 2
+Maximum for [LC080330422014042201T1]: 9.0 circles at threshold 12, accumulator 24, with filter: Blur 0 | BP = 3 | Sharp = 0 | Contr = 10 |. TP = 7, FP = 2. FN = 7, F-Score: 0.6086956521739131
+Starting folder 3
+Maximum for [LC080330422015010301T1]: 16.0 circles at threshold 10, accumulator 22, with filter: Blur 2 | BP = 3 | Sharp = 0 | Contr = 10 |. TP = 8, FP = 8. FN = 10, F-Score: 0.47058823529411764
+Starting folder 4
+Maximum for [LC080330422015111901T1]: 13.0 circles at threshold 4, accumulator 24, with filter: Blur 2 | BP = 3 | Sharp = 0 | Contr = 10 |. TP = 8, FP = 5. FN = 9, F-Score: 0.5333333333333333
+Starting folder 5
+Maximum for [LC080330422017061701T1]: 12.0 circles at threshold 1, accumulator 25, with filter: Blur 0 | BP = 3 | Sharp = 9 | Contr = 0 |. TP = 12, FP = 0. FN = 3, F-Score: 0.888888888888889
+Starting folder 6
+Starting folder 7
+Starting folder 8
+Starting folder 9
+Starting folder 10
+Starting folder 11
+Starting folder 12
+Starting folder 13

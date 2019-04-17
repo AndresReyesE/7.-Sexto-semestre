@@ -1,0 +1,26 @@
+Starting band 8
+Starting folder 1
+Maximum for [LC080330422013062201T1]: 7.0 circles at threshold 1, accumulator 26, with filter: Blur 0 | BP = 3 | Sharp = 0 | Contr = 10 |. TP = 7, FP = 0. FN = 7, F-Score: 0.6666666666666666
+Starting folder 2
+Maximum for [LC080330422014042201T1]: 13.0 circles at threshold 16, accumulator 26, with filter: Blur 0 | BP = 3 | Sharp = 9 | Contr = 10 |. TP = 9, FP = 4. FN = 5, F-Score: 0.6666666666666666
+Starting folder 3
+Maximum for [LC080330422015010301T1]: 17.0 circles at threshold 2, accumulator 24, with filter: Blur 0 | BP = 3 | Sharp = 0 | Contr = 0 |. TP = 9, FP = 8. FN = 10, F-Score: 0.5
+Starting folder 4
+Maximum for [LC080330422015111901T1]: 12.0 circles at threshold 4, accumulator 23, with filter: Blur 2 | BP = 3 | Sharp = 0 | Contr = 10 |. TP = 9, FP = 3. FN = 7, F-Score: 0.6428571428571429
+Starting folder 5
+Maximum for [LC080330422017061701T1]: 13.0 circles at threshold 1, accumulator 25, with filter: Blur 0 | BP = 3 | Sharp = 0 | Contr = 10 |. TP = 13, FP = 0. FN = 2, F-Score: 0.9285714285714286
+Starting folder 6
+Maximum for [LE070330422002010701T1]: 6.0 circles at threshold 1, accumulator 24, with filter: Blur 1 | BP = 5 | Sharp = 9 | Contr = 10 |. TP = 2, FP = 4. FN = 2, F-Score: 0.4
+Starting folder 7
+Starting folder 8
+Maximum for [LT050330421999112301T1]: 3.0 circles at threshold 8, accumulator 22, with filter: Blur 1 | BP = 5 | Sharp = 0 | Contr = 0 |. TP = 2, FP = 1. FN = 2, F-Score: 0.5714285714285715
+Starting folder 9
+Maximum for [LT050330422000011001T1]: 2.0 circles at threshold 1, accumulator 26, with filter: Blur 3 | BP = 3 | Sharp = 9 | Contr = 0 |. TP = 2, FP = 0. FN = 2, F-Score: 0.6666666666666666
+Starting folder 10
+Maximum for [LT050330422003040801T1]: 3.0 circles at threshold 1, accumulator 24, with filter: Blur 2 | BP = 5 | Sharp = 0 | Contr = 0 |. TP = 3, FP = 0. FN = 3, F-Score: 0.6666666666666666
+Starting folder 11
+Maximum for [LT050330422004061301T1]: 4.0 circles at threshold 1, accumulator 26, with filter: Blur 2 | BP = 3 | Sharp = 9 | Contr = 10 |. TP = 4, FP = 0. FN = 3, F-Score: 0.7272727272727273
+Starting folder 12
+Maximum for [LT050330422005110701T1]: 3.0 circles at threshold 1, accumulator 25, with filter: Blur 1 | BP = 3 | Sharp = 0 | Contr = 10 |. TP = 2, FP = 1. FN = 3, F-Score: 0.5
+Starting folder 13
+Maximum for [LT050330422010012101T1]: 10.0 circles at threshold 1, accumulator 25, with filter: Blur 2 | BP = 3 | Sharp = 0 | Contr = 10 |. TP = 10, FP = 0. FN = 3, F-Score: 0.8695652173913044
