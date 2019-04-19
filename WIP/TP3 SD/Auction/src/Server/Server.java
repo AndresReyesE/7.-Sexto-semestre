@@ -9,7 +9,7 @@ public class Server {
 	private Users users;
 	private Offers offers;
 	
-	private Server () throws Exception {
+	public Server () throws Exception {
 		if (uniqueInstance != null)
 			throw new Exception("An instance of the server has already been created");
 		else {
