@@ -93,7 +93,7 @@ public class RegisterController {
 				if (controllerMediator.signUp(txtName.getText(), txtNickname.getText(), txtEmail.getText(), txtAddress.getText(), txtPhone.getText())) {
 					lblUserNotifications.setVisible(true);
 					lblUserNotifications.setText("Account Successfully Registered!");
-//					loginToggled(new ActionEvent());
+					loginToggled(new ActionEvent());
 				}
 				
 				else

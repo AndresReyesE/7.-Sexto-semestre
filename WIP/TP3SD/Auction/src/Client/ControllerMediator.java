@@ -1,7 +1,9 @@
 package Client;
 
 import Mediator.Mediator;
+import RemoteObjects.User;
 
+import java.time.LocalDate;
 import java.util.HashMap;
 
 public class ControllerMediator extends Mediator {
@@ -33,7 +35,6 @@ public class ControllerMediator extends Mediator {
 	
 	void updateUserLoggedIn (String nickname) {
 		AuctionController ac = (AuctionController) this.retrieveColleague("Auction controller");
-		Model m = (Model) this.retrieveColleague("Model");
 		
 		ac.updateUserLoggedIn(nickname);
 	}
@@ -50,4 +51,16 @@ public class ControllerMediator extends Mediator {
 		
 		return model.login(nickname);
 	}
+	
+	void addOffer(String name, String description, String price, LocalDate deadline) {
+		model = (Model) this.retrieveColleague("Model");
+		
+		model.addOffer(name, description, price, deadline);
+	}
+	
+//	User getCurrentlyLoggedInAs () {
+//		model = (Model) this.retrieveColleague("Model");
+//
+//		return model.getCurrentlyLoggedInAs();
+//	}
 }

@@ -3,6 +3,8 @@ package Server;
 import PersistenceRoot.Offers;
 import PersistenceRoot.Users;
 
+import java.time.LocalDate;
+
 public class Server {
 	private static Server uniqueInstance = new Server();
 	
@@ -24,4 +26,9 @@ public class Server {
 	public Offers getOffers() {
 		return offers;
 	}
+	
+//	public void addOffer (String nickname, String name, String description, double initialPrice, LocalDate deadline) {
+//		offers.addOffer(name, description, initialPrice, deadline);
+//		users.seekUser(nickname).addOffer();
+//	}
 }
