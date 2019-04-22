@@ -137,6 +137,20 @@ class Model extends Subject {
 		return null;
 	}
 	
+	void addBid (int offerId, double bid) {
+		try {
+			offers.newBid(offerId, currentlyLoggedInAs.getNickname(), bid);
+			offers.displayOffers();
+//			controllerMediator.updateOffersList();
+		} catch (RemoteException re) {
+			System.err.println("Error retrieving offers from Client Side!");
+			StringWriter outError = new StringWriter();
+			re.printStackTrace(new PrintWriter(outError));
+			String errorString = outError.toString();
+			System.out.println(errorString);
+		}
+	}
+	
 	@Override
 	public void attach(Object observer) {
 	

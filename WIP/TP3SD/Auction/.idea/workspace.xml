@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Client/AuctionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/AuctionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/AuctionView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/AuctionView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Client/ControllerMediator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/ControllerMediator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Model.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Client/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PersistenceRoot/Offers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PersistenceRoot/Offers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RemoteObjects/Offer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RemoteObjects/Offer.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,146 +67,134 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/Client/AuctionController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="563">
-                  <caret line="165" column="5" lean-forward="true" selection-start-line="165" selection-start-column="5" selection-end-line="165" selection-end-column="5" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Client/AuctionView.fxml">
-              <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-              <provider editor-type-id="text-editor">
-                <state relative-caret-position="21">
-                  <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Client/RegisterController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-235">
-                  <caret line="95" column="52" lean-forward="true" selection-start-line="95" selection-start-column="52" selection-end-line="95" selection-end-column="52" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Client/Model.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="318">
-                  <caret line="86" column="12" lean-forward="true" selection-start-line="86" selection-start-column="12" selection-end-line="86" selection-end-column="12" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#3831#3832#0" expanded="true" />
-                    <element signature="e#3864#3865#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Client/ControllerMediator.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="409">
-                  <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Interfaces/UserInterface.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="336">
-                  <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Interfaces/OfferInterface.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="336">
-                  <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/PersistenceRoot/Offers.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="357">
-                  <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/PersistenceRoot/Users.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="178">
-                  <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/RemoteObjects/Offer.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="189">
-                  <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/Client/AuctionView.fxml">
-              <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-              <provider editor-type-id="text-editor">
-                <state relative-caret-position="21">
-                  <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Client/AuctionController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4095">
+              <caret line="198" column="4" selection-start-line="198" selection-start-column="4" selection-end-line="198" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1302#1303#0" expanded="true" />
+                <element signature="e#1333#1334#0" expanded="true" />
+                <element signature="e#1389#1390#0" expanded="true" />
+                <element signature="e#1424#1425#0" expanded="true" />
+                <element signature="e#1471#1472#0" expanded="true" />
+                <element signature="e#1512#1513#0" expanded="true" />
+                <element signature="e#1558#1559#0" expanded="true" />
+                <element signature="e#1599#1600#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Client/AuctionView.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-798">
+              <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Client/Model.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="154" column="23" selection-start-line="154" selection-start-column="23" selection-end-line="154" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Client/ControllerMediator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="611">
+              <caret line="71" column="20" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Interfaces/OfferInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PersistenceRoot/Offers.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="44" column="8" lean-forward="true" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PersistenceRoot/Users.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="178">
+              <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RemoteObjects/Offer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="403">
+              <caret line="120" column="5" lean-forward="true" selection-start-line="120" selection-start-column="5" selection-end-line="120" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/RemoteObjects/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="79" column="37" lean-forward="true" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Interfaces/BidInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -558,7 +551,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147645000" />
+    <option name="totallyTimeSpent" value="148450000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -570,10 +563,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-28" width="1928" height="1076" extended-state="6" />
+    <frame x="0" y="0" width="1920" height="1044" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.178762" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.18089648" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -582,7 +575,7 @@
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3352018" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29912663" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2987872" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.38646287" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -668,16 +661,6 @@
     <entry file="file://$PROJECT_DIR$/src/Style/Test.css/Test.css" />
     <entry file="file://$PROJECT_DIR$/src/Remote_objects/Product.java" />
     <entry file="file://$PROJECT_DIR$/src/PersistenceRoot/BidsHistory.java" />
-    <entry file="file://$PROJECT_DIR$/src/Interfaces/BidInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar!/java/rmi/registry/LocateRegistry.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
@@ -773,42 +756,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RemoteObjects/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="84" column="9" selection-start-line="84" selection-start-column="9" selection-end-line="84" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Server/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-8">
           <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Client/Model.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="86" column="12" lean-forward="true" selection-start-line="86" selection-start-column="12" selection-end-line="86" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3831#3832#0" expanded="true" />
-            <element signature="e#3864#3865#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Client/ControllerMediator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -825,10 +776,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Client/RegisterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-235">
+          <caret line="95" column="52" lean-forward="true" selection-start-line="95" selection-start-column="52" selection-end-line="95" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Client/AuctionView.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-798">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Client/AuctionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4095">
+          <caret line="198" column="4" selection-start-line="198" selection-start-column="4" selection-end-line="198" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1302#1303#0" expanded="true" />
+            <element signature="e#1333#1334#0" expanded="true" />
+            <element signature="e#1389#1390#0" expanded="true" />
+            <element signature="e#1424#1425#0" expanded="true" />
+            <element signature="e#1471#1472#0" expanded="true" />
+            <element signature="e#1512#1513#0" expanded="true" />
+            <element signature="e#1558#1559#0" expanded="true" />
+            <element signature="e#1599#1600#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Client/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="154" column="23" selection-start-line="154" selection-start-column="23" selection-end-line="154" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Client/ControllerMediator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="611">
+          <caret line="71" column="20" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Interfaces/OfferInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        <state relative-caret-position="294">
+          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -837,8 +844,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PersistenceRoot/Offers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+        <state relative-caret-position="193">
+          <caret line="44" column="8" lean-forward="true" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -857,36 +864,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RemoteObjects/Offer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+        <state relative-caret-position="403">
+          <caret line="120" column="5" lean-forward="true" selection-start-line="120" selection-start-column="5" selection-end-line="120" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Client/RegisterController.java">
+    <entry file="file://$PROJECT_DIR$/src/Interfaces/BidInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-235">
-          <caret line="95" column="52" lean-forward="true" selection-start-line="95" selection-start-column="52" selection-end-line="95" selection-end-column="52" />
+        <state relative-caret-position="126">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Client/AuctionView.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Client/AuctionController.java">
+    <entry file="file://$PROJECT_DIR$/src/RemoteObjects/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="165" column="5" lean-forward="true" selection-start-line="165" selection-start-column="5" selection-end-line="165" selection-end-column="5" />
+        <state relative-caret-position="527">
+          <caret line="79" column="37" lean-forward="true" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

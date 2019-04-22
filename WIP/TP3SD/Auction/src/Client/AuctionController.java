@@ -9,10 +9,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 
-//import java.util.Date;
-
 import java.time.LocalDate;
-import java.time.chrono.ChronoLocalDate;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
@@ -21,6 +18,8 @@ public class AuctionController {
 //	private Model model;
 	private SceneMediator mediator;
 	private ControllerMediator controllerMediator;
+	
+	private Offer selectedOffer;
 	/**
 	 * References to graphic components in Offer tab
 	 */
@@ -100,12 +99,6 @@ public class AuctionController {
 			controllerMediator.addOffer(txtOfferName.getText(), txtOfferDescription.getText(), txtOfferInitialPrice.getText(), dateOfferDeadline.getValue());
 			updateOffersList();
 		}
-//		System.out.println("Clic");
-//		l = new ArrayList<>();
-//		l.add(txtOfferName.getText());
-//		list.getItems().addAll(l);
-//		list.refresh();
-//		String selected = (String) list.getSelectionModel().getSelectedItem();
 	}
 	
 	@FXML
@@ -126,7 +119,7 @@ public class AuctionController {
 			offersPresentation.add(s);
 		}
 		
-		listOffers.getItems().removeAll();
+		listOffers.getItems().remove(0, listOffers.getItems().size());
 		listOffers.getItems().addAll(offersPresentation);
 		listOffers.refresh();
 	}
@@ -140,22 +133,23 @@ public class AuctionController {
 		int id = Integer.parseInt(strID);
 		
 		Hashtable <Integer, Offer> currentOffers = controllerMediator.getCurrentOffers();
-		Offer selectedOffer = currentOffers.get(id);
-		
-		if (selectedOffer != null) {
-			lblAuctionName.setText(selectedOffer.getName());
-			lblAuctionDescription.setText(selectedOffer.getDescription());
-			lblCurrentBid.setText(String.format("%.2f", selectedOffer.getCurrentBid()));
-			lblCurrentBidder.setText(selectedOffer.getCurrentBidder());
-			txtNewBid.setText(Double.toString(selectedOffer.getCurrentBid() + 1));
-			txtNewBid.requestFocus();
-		}
+		selectedOffer = currentOffers.get(id);
+		updateAuctionView();
+	}
+	
+	private void updateAuctionView () {
+		lblAuctionName.setText(selectedOffer.getName());
+		lblAuctionDescription.setText(selectedOffer.getDescription());
+		lblCurrentBid.setText(String.format("%.2f", selectedOffer.getCurrentBid()));
+		lblCurrentBidder.setText(selectedOffer.getCurrentBidder());
+		txtNewBid.setText(Double.toString(selectedOffer.getCurrentBid() + 1));
+		txtNewBid.requestFocus();
 	}
 	
 	@FXML
 	void sliderMoved (MouseEvent e) {
-		System.out.println("Slider moved");
-		System.out.println("" + sliderNewBid.getValue());
+//		System.out.println("Slider moved");
+//		System.out.println("" + sliderNewBid.getValue());
 		double min = Double.parseDouble(lblCurrentBid.getText()) + 1;
 		double max = Double.parseDouble(lblCurrentBid.getText()) * 10;
 		
@@ -164,5 +158,44 @@ public class AuctionController {
 		txtNewBid.setText(String.format("%.2f", proposalBid));
 		txtNewBid.requestFocus();
 	}
+	
+	@FXML
+	void bidUp (ActionEvent event) {
+		System.out.println("Bid up clicked!");
+		if (txtNewBid.getText().isEmpty()) {
+			lblAuctionDescription.setVisible(true);
+			lblAuctionDescription.setText("Place some bid");
+			txtNewBid.requestFocus();
+		}
+		else if (!isValidNumber(txtNewBid.getText())) {
+			lblAuctionDescription.setVisible(true);
+			lblAuctionDescription.setText("The bid can only be conformed by numbers");
+			txtNewBid.requestFocus();
+		}
+		else {
+			double bid = Double.parseDouble(txtNewBid.getText());
+			if (bid <= selectedOffer.getCurrentBid()) {
+				lblAuctionDescription.setVisible(true);
+				lblAuctionDescription.setText("Your bid gotta be greater than the current one");
+				txtNewBid.requestFocus();
+			}
+			else {
+				controllerMediator.addBid(selectedOffer.getId(), bid);
+				updateOffersList();
+				updateAuctionView();
+			}
+		}
+		
+	}
+	
+	
+	
+	@FXML
+	void keyTypedOnBid (KeyEvent e) {
+		System.out.println("Some key typed: " + e.getCode());
+		if (e.getCode().equals(KeyCode.ENTER))
+			bidUp(new ActionEvent());
+	}
+	
 	
 }

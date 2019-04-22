@@ -41,9 +41,13 @@ public class Offers implements OfferInterface {
 	@Override
 	public void newBid(int offerID, String bidder, double bid) throws RemoteException {
 		Offer offerConcerned = placedOffers.get(offerID);
-		Bid bidOffered = new Bid (offerID, bidder, bid);
+		Bid bidOffered = new Bid(offerID, bidder, bid);
 		
+		offerConcerned.setCurrentBid(bid);
 		offerConcerned.addToHistory(bidOffered);
+		
+		placedOffers.remove(offerID);
+		placedOffers.put(offerID, offerConcerned);
 	}
 	
 	@Override

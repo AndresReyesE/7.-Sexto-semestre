@@ -71,6 +71,12 @@ public class ControllerMediator extends Mediator {
 		
 		ac.updateOffersList();
 	}
+	
+	void addBid (int offerId, double bid) {
+		model = (Model) this.retrieveColleague("Model");
+		
+		model.addBid(offerId, bid);
+	}
 //	User getCurrentlyLoggedInAs () {
 //		model = (Model) this.retrieveColleague("Model");
 //

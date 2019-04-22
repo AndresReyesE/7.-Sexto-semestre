@@ -105,6 +105,18 @@ public class Offer implements Serializable {
 		System.out.println("Description:\t" + this.description);
 		System.out.println("Initial price:\t" + this.initialPrice);
 		System.out.println("Deadline:\t\t" + this.deadline);
+		System.out.println("History:\t\t" + this.displayHistory());
 		System.out.println("-------------------------------------------");
+	}
+	
+	String displayHistory () {
+		StringBuilder builder = new StringBuilder();
+		for (Bid bid : history) {
+			builder.append(bid.getNickname());
+			builder.append(" - ");
+			builder.append(bid.getBid());
+			builder.append(" | ");
+		}
+		return builder.toString();
 	}
 }
