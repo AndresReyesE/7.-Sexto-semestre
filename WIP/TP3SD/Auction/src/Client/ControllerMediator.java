@@ -1,10 +1,12 @@
 package Client;
 
 import Mediator.Mediator;
+import RemoteObjects.Offer;
 import RemoteObjects.User;
 
 import java.time.LocalDate;
 import java.util.HashMap;
+import java.util.Hashtable;
 
 public class ControllerMediator extends Mediator {
 	
@@ -58,6 +60,17 @@ public class ControllerMediator extends Mediator {
 		model.addOffer(name, description, price, deadline);
 	}
 	
+	Hashtable <Integer, Offer> getCurrentOffers () {
+		model = (Model) this.retrieveColleague("Model");
+		
+		return model.getCurrentOffers();
+	}
+	
+	void updateOffersList() {
+		AuctionController ac = (AuctionController) this.retrieveColleague("Auction controller");
+		
+		ac.updateOffersList();
+	}
 //	User getCurrentlyLoggedInAs () {
 //		model = (Model) this.retrieveColleague("Model");
 //

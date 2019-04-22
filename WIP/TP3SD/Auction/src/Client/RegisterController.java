@@ -94,6 +94,7 @@ public class RegisterController {
 					lblUserNotifications.setVisible(true);
 					lblUserNotifications.setText("Account Successfully Registered!");
 					loginToggled(new ActionEvent());
+					txtNickname.requestFocus();
 				}
 				
 				else
