@@ -6,7 +6,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleButton?>
-<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.effect.Bloom?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -14,24 +13,16 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" stylesheets="@../Style/Test.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.RegisterController">
    <children>
-      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="500.0" prefWidth="800.0" stylesheets="@../Style/Test.css">
+      <AnchorPane prefHeight="500.0" prefWidth="800.0" stylesheets="@../Style/Test.css">
          <children>
-            <Button fx:id="btnLoginSignup" depthTest="ENABLE" layoutX="601.0" layoutY="384.0" mnemonicParsing="false" onAction="#registerClicked" text="Sign up!" AnchorPane.bottomAnchor="53.0" AnchorPane.rightAnchor="59.0">
+            <Button fx:id="btnLoginSignUp" depthTest="ENABLE" layoutX="601.0" layoutY="384.0" mnemonicParsing="false" onAction="#registerClicked" text="Sign up!" AnchorPane.bottomAnchor="53.0" AnchorPane.rightAnchor="59.0">
                <effect>
                   <Bloom />
                </effect></Button>
-            <ToggleButton fx:id="toggleSignup" layoutX="598.0" layoutY="14.0" mnemonicParsing="false" onAction="#signupToggled" selected="true" text="Sign up" AnchorPane.rightAnchor="57.0" AnchorPane.topAnchor="14.0">
+            <ToggleButton fx:id="toggleSignUp" layoutX="598.0" layoutY="14.0" mnemonicParsing="false" onAction="#signUpToggled" selected="true" text="Have an account already? Log in instead!" AnchorPane.rightAnchor="57.0" AnchorPane.topAnchor="14.0">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
-            </ToggleButton>
-            <ToggleButton fx:id="toggleLogin" accessibleHelp="Accesible Help" accessibleRoleDescription="Accesible Role Description" accessibleText="Accesible Text" layoutX="610.0" layoutY="14.0" mnemonicParsing="false" onAction="#loginToggled" text="Log in" AnchorPane.rightAnchor="132.0" AnchorPane.topAnchor="14.0">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <toggleGroup>
-                  <ToggleGroup fx:id="loginSignup" />
-               </toggleGroup>
             </ToggleButton>
             <VBox alignment="TOP_CENTER" layoutX="60.0" layoutY="80.0" prefHeight="285.0" prefWidth="180.0" spacing="50.0" AnchorPane.leftAnchor="61.0">
                <children>

@@ -1,53 +1,62 @@
 package Client;
 
+import RemoteObjects.Bid;
 import RemoteObjects.Offer;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.VBox;
 
+import java.net.URL;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Hashtable;
+import java.util.ResourceBundle;
 
-public class AuctionController {
+public class AuctionController implements Initializable {
 	
-//	private Model model;
 	private SceneMediator mediator;
 	private ControllerMediator controllerMediator;
 	
 	private Offer selectedOffer;
+	private Hashtable <Integer, Offer> currentOffers;
+	private ArrayList <Bid> currentHistory;
+	
+	private ObservableList <String> currentOffersObservable;
+	private ObservableList <String> currentHistoryObservable;
+	
+	
 	/**
 	 * References to graphic components in Offer tab
 	 */
 	@FXML
-	private Label lblOfferRegisteredAs, lblOfferNickname, lblOfferName, lblOfferDescription, lblOfferInitialPrice, lblOfferDeadline;
+	private Label lblOfferNickname;
 	@FXML
 	private TextField txtOfferName, txtOfferDescription, txtOfferInitialPrice;
 	@FXML
 	private DatePicker dateOfferDeadline;
-	@FXML
-	private Button btnPlaceOffer;
 	
 	/**
 	 * References to graphic components in Auction tab
 	 */
 	@FXML
-	private ListView listOffers;
-	@FXML
-	private VBox vboxHistory;
+	private ListView <String> listOffers, listHistory;
 	@FXML
 	private Label lblAuctionName, lblAuctionDescription, lblCurrentBid, lblCurrentBidder, lblOfferNotifications;
 	@FXML
 	private TextField txtNewBid;
 	@FXML
 	private Slider sliderNewBid;
-	@FXML
-	private Button btnBidUp;
 	
+	/**
+	 * SETTERS OF REQUIRED MEDIATORS
+	 */
 	void setMediator (SceneMediator mediator) {
 		this.mediator = mediator;
 	}
@@ -56,12 +65,72 @@ public class AuctionController {
 		this.controllerMediator = cm;
 	}
 	
+	/* AUXILIARY METHODS */
+	private boolean isNotValidNumber(String s) {
+		return !s.matches("\\d+(\\.\\d+)?");
+	}
+	
+	
+	/* METHODS TO KEEP COHERENCE */
 	void updateUserLoggedIn (String nickname) {
 		lblOfferNickname.setText(nickname);
 	}
 	
-	private boolean isValidNumber (String s) {
-		return s.matches("\\d+(\\.\\d+)?");
+	void updateOffers () {
+		currentOffers = controllerMediator.getCurrentOffers();
+		currentOffersObservable.setAll(offersPresentation());
+	}
+	
+	void updateSelectedOffer (int id) {
+		selectedOffer = currentOffers.get(id);
+	}
+	
+	void updateHistoryList () {
+		if (selectedOffer == null)
+			currentHistoryObservable.remove(0, currentHistoryObservable.size());
+		else {
+			currentHistory = selectedOffer.getHistory();
+			currentHistoryObservable.setAll(historyPresentation());
+		}
+	}
+	
+	private void updateAuctionView () {
+		updateOffers();
+		lblAuctionName.setText(selectedOffer.getName());
+		lblAuctionDescription.setText(selectedOffer.getDescription());
+		lblCurrentBid.setText(String.format("%.2f", selectedOffer.getCurrentBid()));
+		lblCurrentBidder.setText(selectedOffer.getCurrentBidder());
+		txtNewBid.setText(Double.toString(selectedOffer.getCurrentBid() + 1));
+		txtNewBid.requestFocus();
+	}
+	
+	/* METHODS TO CREATE THE PRESENTATIONS OF LISTS */
+	
+	private ArrayList <String> offersPresentation () {
+		ArrayList <String> offersPresentation = new ArrayList<>();
+		
+		for (Offer offer : currentOffers.values()) {
+			String s = String.format("%03d", offer.getId()) + ".- Product: " + offer.getName() + " | Current bid: " + offer.getCurrentBid() + " | active until " + offer.getDeadline();
+			offersPresentation.add(s);
+		}
+		
+		return offersPresentation;
+	}
+	
+	private ArrayList <String> historyPresentation () {
+		ArrayList <String> historyPresentation = new ArrayList<>();
+		
+		for (Bid bid : currentHistory) {
+			String s = "| " + bid.getNickname() + " bade up to " + bid.getBid();
+			historyPresentation.add(s);
+		}
+		
+		return historyPresentation;
+	}
+	
+	@FXML
+	void auctionTab (Event event) {
+		updateOffers();
 	}
 	
 	@FXML
@@ -77,7 +146,7 @@ public class AuctionController {
 			lblOfferNotifications.setVisible(true);
 			txtOfferInitialPrice.requestFocus();
 		}
-		else if (!isValidNumber(txtOfferInitialPrice.getText())) {
+		else if (isNotValidNumber(txtOfferInitialPrice.getText())) {
 			lblOfferNotifications.setText("The product price is not a valid number. Please enter a numeric value greater than 0");
 			lblOfferNotifications.setVisible(true);
 			txtOfferInitialPrice.requestFocus();
@@ -97,7 +166,7 @@ public class AuctionController {
 			lblOfferNotifications.setVisible(true);
 			
 			controllerMediator.addOffer(txtOfferName.getText(), txtOfferDescription.getText(), txtOfferInitialPrice.getText(), dateOfferDeadline.getValue());
-			updateOffersList();
+			updateOffers();
 		}
 	}
 	
@@ -110,40 +179,16 @@ public class AuctionController {
 			lblOfferNotifications.setVisible(false);
 	}
 	
-	void updateOffersList () {
-		Hashtable <Integer, Offer> currentOffers = controllerMediator.getCurrentOffers();
-		ArrayList <String> offersPresentation = new ArrayList<>();
-		
-		for (Offer offer : currentOffers.values()) {
-			String s = String.format("%03d", offer.getId()) + ".- Product: " + offer.getName() + " | Current bid: " + offer.getCurrentBid() + " | active until " + offer.getDeadline();
-			offersPresentation.add(s);
-		}
-		
-		listOffers.getItems().remove(0, listOffers.getItems().size());
-		listOffers.getItems().addAll(offersPresentation);
-		listOffers.refresh();
-	}
-	
 	@FXML
 	void listClicked (MouseEvent event) {
-//		System.out.println("List clicked...");
-//		System.out.println("Element selected: " + listOffers.getSelectionModel().getSelectedItem());
-		String selectedItem = (String) listOffers.getSelectionModel().getSelectedItem();
+		String selectedItem = listOffers.getSelectionModel().getSelectedItem();
 		String strID = selectedItem.substring(0, 3);
 		int id = Integer.parseInt(strID);
 		
-		Hashtable <Integer, Offer> currentOffers = controllerMediator.getCurrentOffers();
-		selectedOffer = currentOffers.get(id);
+		updateOffers();
+		updateSelectedOffer(id);
 		updateAuctionView();
-	}
-	
-	private void updateAuctionView () {
-		lblAuctionName.setText(selectedOffer.getName());
-		lblAuctionDescription.setText(selectedOffer.getDescription());
-		lblCurrentBid.setText(String.format("%.2f", selectedOffer.getCurrentBid()));
-		lblCurrentBidder.setText(selectedOffer.getCurrentBidder());
-		txtNewBid.setText(Double.toString(selectedOffer.getCurrentBid() + 1));
-		txtNewBid.requestFocus();
+		updateHistoryList();
 	}
 	
 	@FXML
@@ -153,8 +198,7 @@ public class AuctionController {
 		double min = Double.parseDouble(lblCurrentBid.getText()) + 1;
 		double max = Double.parseDouble(lblCurrentBid.getText()) * 10;
 		
-		double sliderValue = sliderNewBid.getValue();
-		double proposalBid = sliderValue * (max - min) / 100 + min;
+		double sliderValue = sliderNewBid.getValue();		double proposalBid = sliderValue * (max - min) / 100 + min;
 		txtNewBid.setText(String.format("%.2f", proposalBid));
 		txtNewBid.requestFocus();
 	}
@@ -167,7 +211,7 @@ public class AuctionController {
 			lblAuctionDescription.setText("Place some bid");
 			txtNewBid.requestFocus();
 		}
-		else if (!isValidNumber(txtNewBid.getText())) {
+		else if (isNotValidNumber(txtNewBid.getText())) {
 			lblAuctionDescription.setVisible(true);
 			lblAuctionDescription.setText("The bid can only be conformed by numbers");
 			txtNewBid.requestFocus();
@@ -181,14 +225,15 @@ public class AuctionController {
 			}
 			else {
 				controllerMediator.addBid(selectedOffer.getId(), bid);
-				updateOffersList();
+//				updateOffersList();
+				updateOffers();
+				updateSelectedOffer(selectedOffer.getId());
 				updateAuctionView();
+				updateHistoryList();
 			}
 		}
 		
 	}
-	
-	
 	
 	@FXML
 	void keyTypedOnBid (KeyEvent e) {
@@ -198,4 +243,12 @@ public class AuctionController {
 	}
 	
 	
+	@Override
+	public void initialize(URL url, ResourceBundle resourceBundle) {
+		currentOffersObservable = FXCollections.observableArrayList();
+		currentHistoryObservable = FXCollections.observableArrayList();
+		
+		listOffers.setItems(currentOffersObservable);
+		listHistory.setItems(currentHistoryObservable);
+	}
 }

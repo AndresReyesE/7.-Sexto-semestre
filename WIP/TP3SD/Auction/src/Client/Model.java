@@ -1,5 +1,7 @@
 package Client;
 
+import Interfaces.CallbackInterface;
+import Interfaces.ClientInterface;
 import Interfaces.OfferInterface;
 import Interfaces.UserInterface;
 import Observer.Subject;
@@ -11,31 +13,37 @@ import java.io.StringWriter;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.rmi.server.UnicastRemoteObject;
 import java.time.LocalDate;
 import java.util.Hashtable;
 
 class Model extends Subject {
 	
-//	AuctionController auctionController;
+	//	AuctionController auctionController;
 	ControllerMediator controllerMediator;
 	
 	private Registry registry;
 	
 	private UserInterface users;
 	private OfferInterface offers;
+	private ClientInterface clients;
 	
 	private User currentlyLoggedInAs;
+	
+	Model() {}
 	
 	Model (String host) {
 		currentlyLoggedInAs = null;
 		try {
-			registry = LocateRegistry.getRegistry(host);
+			
+//			controllerMediator = med;
+			registry = LocateRegistry.getRegistry(host, 5000);
 			
 //			users = (UserInterface) registry.lookup("//localhost:5000/Users");
 //			offers = (OfferInterface) registry.lookup("//localhost:5000/Offers");
 			users = (UserInterface) registry.lookup("Users");
 			offers = (OfferInterface) registry.lookup("Offers");
-			
+			clients = (ClientInterface) registry.lookup("Clients");
 			
 		} catch (Exception e) {
 			StringWriter outError = new StringWriter();
@@ -45,13 +53,24 @@ class Model extends Subject {
 		}
 	}
 	
-//	public AuctionController getAuctionController() {
-//		return auctionController;
-//	}
-//
-//	void setAuctionController(AuctionController auctionController) {
-//		this.auctionController = auctionController;
-//	}
+	void bindCallback () {
+		try {
+			Callback callback = (Callback) controllerMediator.retrieveColleague("Callback");
+			CallbackInterface stubCallback = (CallbackInterface) UnicastRemoteObject.exportObject(callback, 0);
+			
+			int numberOfClients = clients.getClientsNumber();
+			
+			registry.rebind("Client" + numberOfClients, stubCallback);
+			
+			clients.subscribeClient("Client" + numberOfClients);
+		}
+		catch (Exception e) {
+			StringWriter outError = new StringWriter();
+			e.printStackTrace(new PrintWriter(outError));
+			String errorString = outError.toString();
+			System.out.println(errorString);
+		}
+	}
 	
 	void setControllerMediator (ControllerMediator cm) {
 		this.controllerMediator = cm;
@@ -83,7 +102,6 @@ class Model extends Subject {
 			System.out.println("The user " + nickname + result);
 			
 			controllerMediator.updateUserLoggedIn(found == null ? "" : found.getNickname());
-			controllerMediator.updateOffersList();
 			
 			this.currentlyLoggedInAs = found;
 			
@@ -108,7 +126,7 @@ class Model extends Subject {
 			users.addOfferToUser(currentlyLoggedInAs.getNickname(), offers.seekOffer(offerName, offerDeadline));
 //			User user = users.seekUser(currentlyLoggedInAs.getNickname());
 //			user.addOffer(offers.seekOffer(offerName, offerDeadline));
-			
+			clients.notifyClients();
 			offers.displayOffers();
 			users.displayUsers();
 		} catch (RemoteException re) {
@@ -142,6 +160,7 @@ class Model extends Subject {
 			offers.newBid(offerId, currentlyLoggedInAs.getNickname(), bid);
 			offers.displayOffers();
 //			controllerMediator.updateOffersList();
+			clients.notifyClients();
 		} catch (RemoteException re) {
 			System.err.println("Error retrieving offers from Client Side!");
 			StringWriter outError = new StringWriter();

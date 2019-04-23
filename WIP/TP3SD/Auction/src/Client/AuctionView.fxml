@@ -4,7 +4,6 @@
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
@@ -48,7 +47,7 @@
                </children></AnchorPane>
       </content>
     </Tab>
-      <Tab text="Auction">
+      <Tab onSelectionChanged="#auctionTab" text="Auction">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
@@ -56,13 +55,6 @@
                      <top>
                         <ListView fx:id="listOffers" onMouseReleased="#listClicked" prefHeight="119.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
                      </top>
-                     <right>
-                        <ScrollPane prefHeight="349.0" prefWidth="240.0" BorderPane.alignment="CENTER">
-                           <content>
-                              <VBox fx:id="vboxHistory" prefHeight="346.0" prefWidth="223.0" />
-                           </content>
-                        </ScrollPane>
-                     </right>
                      <center>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                            <children>
@@ -80,7 +72,10 @@
                               <Label fx:id="lblAuctionNotifications" layoutX="263.0" layoutY="294.0" text="Label" visible="false" />
                            </children>
                         </AnchorPane>
-                     </center></BorderPane>
+                     </center>
+                     <right>
+                        <ListView fx:id="listHistory" prefHeight="348.0" prefWidth="272.0" BorderPane.alignment="CENTER" />
+                     </right></BorderPane>
                </children></AnchorPane>
         </content>
       </Tab>

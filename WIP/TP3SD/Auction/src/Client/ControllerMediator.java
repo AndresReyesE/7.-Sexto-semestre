@@ -66,10 +66,11 @@ public class ControllerMediator extends Mediator {
 		return model.getCurrentOffers();
 	}
 	
-	void updateOffersList() {
+	void updateOffers() {
 		AuctionController ac = (AuctionController) this.retrieveColleague("Auction controller");
-		
-		ac.updateOffersList();
+
+//		ac.updateOffersList();
+		ac.updateOffers();
 	}
 	
 	void addBid (int offerId, double bid) {
@@ -77,9 +78,4 @@ public class ControllerMediator extends Mediator {
 		
 		model.addBid(offerId, bid);
 	}
-//	User getCurrentlyLoggedInAs () {
-//		model = (Model) this.retrieveColleague("Model");
-//
-//		return model.getCurrentlyLoggedInAs();
-//	}
 }

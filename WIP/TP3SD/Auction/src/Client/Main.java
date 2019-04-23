@@ -13,7 +13,6 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception{
 //		Parent root = FXMLLoader.load(getClass().getResource("AuctionView.fxml"));
-		
 		FXMLLoader registerLoader = new FXMLLoader(getClass().getResource("RegisterView.fxml"));
 		Parent register = registerLoader.load();
 		RegisterController registerController = registerLoader.getController();
@@ -26,13 +25,21 @@ public class Main extends Application {
 		
 		SceneMediator mediator = new SceneMediator(scene);
 		ControllerMediator controllerMediator = new ControllerMediator();
+		Callback callback = new Callback(controllerMediator);
+		
+		String host = getParameters().getRaw().size() < 1 ? null : getParameters().getRaw().get(0);
+		Model model = new Model(host);
 		
 		mediator.addColleague("Register view", register);
 		mediator.addColleague("Auction view", auction);
 		
+		controllerMediator.addColleague("Auction controller", auctionController);
+		controllerMediator.addColleague("Register controller", registerController);
+		controllerMediator.addColleague("Model", model);
+		controllerMediator.addColleague("Callback", callback);
 		
-		String host = getParameters().getRaw().size() < 1 ? null : getParameters().getRaw().get(0);
-		Model model = new Model(host);
+		
+		callback.setMediator(controllerMediator);
 		model.setControllerMediator(controllerMediator);
 //		model.setAuctionController(auctionController);
 		
@@ -44,11 +51,8 @@ public class Main extends Application {
 		auctionController.setMediator(mediator);
 		auctionController.setControllerMediator(controllerMediator);
 //		auctionController.setModel(model);
-		controllerMediator.addColleague("Auction controller", auctionController);
-		controllerMediator.addColleague("Register controller", registerController);
-		controllerMediator.addColleague("Model", model);
-		
-		
+
+		model.bindCallback();
 		
 		primaryStage.setTitle("RS Auctions");
 		primaryStage.setScene(scene);

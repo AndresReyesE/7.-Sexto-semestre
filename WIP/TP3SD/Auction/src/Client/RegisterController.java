@@ -10,12 +10,10 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 
 public class RegisterController {
-//	Model model;
+	
 	private SceneMediator mediator;
 	private ControllerMediator controllerMediator;
 	private boolean signUp = true;
-	
-//	private List<String> cmlParameters;
 	
 	/**
 	 * References to graphic components in Register tab
@@ -23,11 +21,11 @@ public class RegisterController {
 	@FXML
 	private TextField txtName, txtNickname, txtEmail, txtAddress, txtPhone;
 	@FXML
-	private Label lblName, lblNickname, lblEmail, lblAddress, lblPhone, lblUserNotifications;
+	private Label lblName, lblEmail, lblAddress, lblPhone, lblUserNotifications;
 	@FXML
-	private ToggleButton toggleLogin, toggleSignup;
+	private ToggleButton toggleSignUp;
 	@FXML
-	private Button btnLoginSignup;
+	private Button btnLoginSignUp;
 	
 	void setMediator (SceneMediator mediator) {
 		this.mediator = mediator;
@@ -37,41 +35,39 @@ public class RegisterController {
 		this.controllerMediator = cm;
 	}
 	
-//	void setModel (Model model) {
-//		this.model = model;
-//	}
 	
 	@FXML
-	void signupToggled (ActionEvent event) {
-		txtName.setVisible(true);
-		txtEmail.setVisible(true);
-		txtAddress.setVisible(true);
-		txtPhone.setVisible(true);
-		
-		lblName.setVisible(true);
-		lblEmail.setVisible(true);
-		lblAddress.setVisible(true);
-		lblPhone.setVisible(true);
-		
-		btnLoginSignup.setText("Sign up!");
-		signUp = true;
-	}
-	
-	@FXML
-	void loginToggled (ActionEvent event) {
-		txtName.setVisible(false);
-		txtEmail.setVisible(false);
-		txtAddress.setVisible(false);
-		txtPhone.setVisible(false);
-		
-		lblName.setVisible(false);
-		lblEmail.setVisible(false);
-		lblAddress.setVisible(false);
-		lblPhone.setVisible(false);
-		
-		btnLoginSignup.setText("Log in!");
-		signUp = false;
-		
+	void signUpToggled (ActionEvent event) {
+		if (toggleSignUp.isSelected()) {
+			txtName.setVisible(true);
+			txtEmail.setVisible(true);
+			txtAddress.setVisible(true);
+			txtPhone.setVisible(true);
+			
+			lblName.setVisible(true);
+			lblEmail.setVisible(true);
+			lblAddress.setVisible(true);
+			lblPhone.setVisible(true);
+			
+			toggleSignUp.setText("Have an account? Log In instead!");
+			btnLoginSignUp.setText("Sign up!");
+			signUp = true;
+		}
+		else {
+			txtName.setVisible(false);
+			txtEmail.setVisible(false);
+			txtAddress.setVisible(false);
+			txtPhone.setVisible(false);
+			
+			lblName.setVisible(false);
+			lblEmail.setVisible(false);
+			lblAddress.setVisible(false);
+			lblPhone.setVisible(false);
+			
+			toggleSignUp.setText("Don't have an account yet? Create one!");
+			btnLoginSignUp.setText("Log in!");
+			signUp = false;
+		}
 	}
 	
 	@FXML
@@ -93,7 +89,8 @@ public class RegisterController {
 				if (controllerMediator.signUp(txtName.getText(), txtNickname.getText(), txtEmail.getText(), txtAddress.getText(), txtPhone.getText())) {
 					lblUserNotifications.setVisible(true);
 					lblUserNotifications.setText("Account Successfully Registered!");
-					loginToggled(new ActionEvent());
+					toggleSignUp.setSelected(false);
+					signUpToggled(new ActionEvent());
 					txtNickname.requestFocus();
 				}
 				
@@ -123,11 +120,9 @@ public class RegisterController {
 	
 	@FXML
 	void keyTyped (KeyEvent e) {
-		System.out.println("Some key typed: " + e.getCode());
 		if (e.getCode().equals(KeyCode.ENTER))
 			registerClicked(new ActionEvent());
 		else if (e.getCode().isLetterKey())
 			lblUserNotifications.setVisible(false);
 	}
-	
 }

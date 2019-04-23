@@ -5,6 +5,7 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.Date;
+import java.util.ArrayList;
 
 public class Server {
 
@@ -21,6 +22,11 @@ public class Server {
 
             registry.bind("Hello", stub);
             registry.bind("Hey", stub);
+
+            ArrayList <ClientInterface> subscribedClients;
+            
+
+
             System.out.println("Server ready");
         } catch (Exception e) {
             System.err.print("Server exception " + e.toString());

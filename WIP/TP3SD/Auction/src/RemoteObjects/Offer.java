@@ -28,6 +28,7 @@ public class Offer implements Serializable {
 		currentBid = initialPrice;
 		
 		this.history = new ArrayList<>();
+		history.add(new Bid ("Initial price", initialPrice));
 	}
 	
 	public int getId() {

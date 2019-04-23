@@ -27,6 +27,7 @@ public class Offers implements OfferInterface {
 		Offer newOffer = new Offer(id, name, description, initialPrice, deadline);
 		
 		placedOffers.putIfAbsent(id, newOffer);
+		
 	}
 	
 	@Override
@@ -41,7 +42,7 @@ public class Offers implements OfferInterface {
 	@Override
 	public void newBid(int offerID, String bidder, double bid) throws RemoteException {
 		Offer offerConcerned = placedOffers.get(offerID);
-		Bid bidOffered = new Bid(offerID, bidder, bid);
+		Bid bidOffered = new Bid(bidder, bid);
 		
 		offerConcerned.setCurrentBid(bid);
 		offerConcerned.addToHistory(bidOffered);
