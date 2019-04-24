@@ -2,45 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Client/Callback.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interfaces/CallbackInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interfaces/ClientInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PersistenceRoot/Clients.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Sexto semestre.ctb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Sexto semestre.ctb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sistemas distribuidos/RMITest/example/test/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Sistemas distribuidos/RMITest/example/test/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sistemas distribuidos/RMITest/example/test/Inter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Sistemas distribuidos/RMITest/example/test/Inter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sistemas distribuidos/RMITest/example/test/Servant.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Sistemas distribuidos/RMITest/example/test/Servant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sistemas distribuidos/RMITest/example/test/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Sistemas distribuidos/RMITest/example/test/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sistemas distribuidos/RMITest/test/Callback.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sistemas distribuidos/RMITest/test/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Sistemas distribuidos/RMITest/test/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sistemas distribuidos/RMITest/test/Inter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Sistemas distribuidos/RMITest/test/Inter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sistemas distribuidos/RMITest/test/Servant.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Sistemas distribuidos/RMITest/test/Servant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sistemas distribuidos/RMITest/test/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Sistemas distribuidos/RMITest/test/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.~lock.TP3 - RMI.docx#" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Auction/Client/AuctionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Auction/Client/AuctionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Auction/Client/AuctionView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Auction/Client/AuctionView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Auction/Client/ControllerMediator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Auction/Client/ControllerMediator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Auction/Client/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Auction/Client/Model.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Auction/Client/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Auction/Client/RegisterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Auction/Client/RegisterView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Auction/Client/RegisterView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Auction/Interfaces/BidInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Auction/PersistenceRoot/Offers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Auction/PersistenceRoot/Offers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Auction/RemoteObjects/Bid.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Auction/RemoteObjects/Bid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Auction/RemoteObjects/Offer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Auction/RemoteObjects/Offer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Auction/Server/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Auction/Server/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/AuctionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/AuctionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/AuctionView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/AuctionView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/ControllerMediator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/ControllerMediator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/RegisterView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/RegisterView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/BidInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PersistenceRoot/Offers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PersistenceRoot/Offers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RemoteObjects/Bid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RemoteObjects/Bid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RemoteObjects/Offer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RemoteObjects/Offer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -103,8 +67,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Client/Callback.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+            <state relative-caret-position="294">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#279#280#0" expanded="true" />
@@ -115,9 +79,45 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Interfaces/ClientInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Interfaces/CallbackInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PersistenceRoot/Clients.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="10" column="49" lean-forward="true" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Client/AuctionController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
+            <state relative-caret-position="2898">
               <caret line="167" column="31" selection-start-line="167" selection-start-column="31" selection-end-line="167" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -131,11 +131,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Client/Model.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="661">
-              <caret line="71" column="9" lean-forward="true" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
+            <state relative-caret-position="976">
+              <caret line="71" column="9" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2151#2152#0" expanded="true" />
                 <element signature="e#2186#2187#0" expanded="true" />
+                <element signature="e#4518#4519#0" expanded="true" />
                 <element signature="e#4551#4552#0" expanded="true" />
               </folding>
             </state>
@@ -145,8 +147,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Client/ControllerMediator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="24" column="43" lean-forward="true" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+            <state relative-caret-position="1239">
+              <caret line="73" selection-start-line="73" selection-end-line="73" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -157,8 +159,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Client/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-149">
-              <caret line="34" column="8" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+            <state relative-caret-position="180">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -266,6 +268,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -326,15 +329,10 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Style" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Auction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -359,7 +357,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/src/sample/sample.fxml" />
   </component>
   <component name="RecentsManager">
@@ -379,7 +377,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Server">
+  <component name="RunManager" selected="Application.Client">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -401,6 +399,7 @@
     <configuration name="Client" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Client.Main" />
       <module name="Auction" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;192.168.100.217&quot;" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Client.*" />
@@ -531,12 +530,13 @@
       <workItem from="1555949074485" duration="15507000" />
       <workItem from="1555981772244" duration="9925000" />
       <workItem from="1556027457957" duration="27000" />
-      <workItem from="1556033818351" duration="14967000" />
+      <workItem from="1556033818351" duration="21006000" />
+      <workItem from="1556066209510" duration="1960000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193461000" />
+    <option name="totallyTimeSpent" value="201460000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -549,9 +549,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1928" height="1052" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.19583778" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.19797225" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -560,8 +559,8 @@
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.33510074" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2987872" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.38600212" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28665933" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.40132305" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32969433" />
@@ -648,10 +647,16 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Client/Main.java</url>
-          <line>26</line>
+          <url>file://$PROJECT_DIR$/src/PersistenceRoot/Clients.java</url>
+          <line>43</line>
           <properties />
-          <option name="timeStamp" value="3" />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Client/Main.java</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -716,12 +721,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Interfaces/BidInterface.java" />
     <entry file="file://$PROJECT_DIR$/src/Client/RegisterView.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="13" column="288" selection-start-line="13" selection-start-column="288" selection-end-line="13" selection-end-column="288" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RemoteObjects/User.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -811,22 +816,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Client/AuctionView.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="14" column="303" lean-forward="true" selection-start-line="14" selection-start-column="303" selection-end-line="14" selection-end-column="303" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Interfaces/CallbackInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Server/Server.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -850,36 +845,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PersistenceRoot/Clients.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#177#178#0" expanded="true" />
-            <element signature="e#211#212#0" expanded="true" />
-            <element signature="e#295#296#0" expanded="true" />
-            <element signature="e#322#323#0" expanded="true" />
-            <element signature="e#860#861#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Interfaces/ClientInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Client/Callback.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        <state relative-caret-position="294">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#279#280#0" expanded="true" />
@@ -888,31 +857,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Client/ControllerMediator.java">
+    <entry file="file://$PROJECT_DIR$/src/Interfaces/ClientInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="24" column="43" lean-forward="true" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+        <state relative-caret-position="231">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Client/Model.java">
+    <entry file="file://$PROJECT_DIR$/src/Interfaces/CallbackInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="661">
-          <caret line="71" column="9" lean-forward="true" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
+        <state relative-caret-position="105">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2186#2187#0" expanded="true" />
-            <element signature="e#4551#4552#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Client/AuctionController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
+        <state relative-caret-position="2898">
           <caret line="167" column="31" selection-start-line="167" selection-start-column="31" selection-end-line="167" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -922,10 +889,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Client/ControllerMediator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1239">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PersistenceRoot/Clients.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="10" column="49" lean-forward="true" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Client/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="976">
+          <caret line="71" column="9" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2151#2152#0" expanded="true" />
+            <element signature="e#2186#2187#0" expanded="true" />
+            <element signature="e#4518#4519#0" expanded="true" />
+            <element signature="e#4551#4552#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Client/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-149">
-          <caret line="34" column="8" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+        <state relative-caret-position="180">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -971,7 +972,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>11</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
