@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="file://$USER_HOME$/Installations/javafx11-scenebuilder/pkg/javafx11-scenebuilder/opt/SceneBuilder-11/runtime/lib" />
+    </CLASSES>
+    <JAVADOC />
+    <NATIVE>
+      <root url="file://$USER_HOME$/Installations/javafx11-scenebuilder/pkg/javafx11-scenebuilder/opt/SceneBuilder-11/runtime/lib" />
+    </NATIVE>
+    <SOURCES />
+    <jarDirectory url="file://$USER_HOME$/Installations/javafx11-scenebuilder/pkg/javafx11-scenebuilder/opt/SceneBuilder-11/runtime/lib" recursive="false" />
+  </library>
+</component>
