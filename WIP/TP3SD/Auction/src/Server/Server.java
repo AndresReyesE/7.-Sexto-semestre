@@ -5,7 +5,6 @@ import Interfaces.CallbackInterface;
 import PersistenceRoot.Clients;
 import PersistenceRoot.Offers;
 import PersistenceRoot.Users;
-import jdk.nashorn.internal.codegen.CompilerConstants;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
