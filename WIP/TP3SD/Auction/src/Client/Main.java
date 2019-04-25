@@ -1,5 +1,6 @@
 package Client;
 
+import Interfaces.ModelInterface;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -28,7 +29,10 @@ public class Main extends Application {
 		Callback callback = new Callback(controllerMediator);
 		
 		String host = getParameters().getRaw().size() < 1 ? null : getParameters().getRaw().get(0);
-		Model model = new Model(host);
+//		Model model = new Model(host);
+//		Model2 model = new Model2(host);
+		ModelInterface model;
+		
 		
 		mediator.addColleague("Register view", register);
 		mediator.addColleague("Auction view", auction);
@@ -52,7 +56,7 @@ public class Main extends Application {
 		auctionController.setControllerMediator(controllerMediator);
 //		auctionController.setModel(model);
 
-		model.bindCallback();
+//		model.bindCallback();
 		
 		primaryStage.setTitle("RS Auctions");
 		primaryStage.setScene(scene);

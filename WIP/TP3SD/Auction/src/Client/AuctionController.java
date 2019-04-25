@@ -198,7 +198,8 @@ public class AuctionController implements Initializable {
 		double min = Double.parseDouble(lblCurrentBid.getText()) + 1;
 		double max = Double.parseDouble(lblCurrentBid.getText()) * 10;
 		
-		double sliderValue = sliderNewBid.getValue();		double proposalBid = sliderValue * (max - min) / 100 + min;
+		double sliderValue = sliderNewBid.getValue();
+		double proposalBid = sliderValue * (max - min) / 100 + min;
 		txtNewBid.setText(String.format("%.2f", proposalBid));
 		txtNewBid.requestFocus();
 	}

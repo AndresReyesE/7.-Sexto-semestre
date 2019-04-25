@@ -5,6 +5,7 @@ import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.rmi.server.UnicastRemoteObject;
 import java.util.Date;
 
 public class Client implements ClientInterface, Serializable {
@@ -57,9 +58,11 @@ public class Client implements ClientInterface, Serializable {
             System.out.println("Response3: " + dateReceived);
             System.out.println("Response4: " + of.nickname);
 
-            ClientInterface self = new Client(args[0]);
+            Client self = new Client(args[0]);
+            ClientInterface selfStub = (ClientInterface) UnicastRemoteObject.exportObject(self, 0);
+
             System.out.println("Previously: " + self.getTest());
-            stub.suscribe(self);
+            stub.suscribe(selfStub);
             System.out.println("After: " + self.getTest());
             
         } catch (Exception e) {

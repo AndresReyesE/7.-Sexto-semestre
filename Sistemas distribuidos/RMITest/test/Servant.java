@@ -31,9 +31,9 @@ public class Servant implements Inter {
     }
 
     public void suscribe (ClientInterface newClient) {
-        System.out.println("Subscribing a new client with id: " + newClient.getID);
         int index = 0;
         try {
+            System.out.println("Subscribing a new client with id: " + newClient.getID());
             subscribedClients.add(newClient);
             for (ClientInterface c : subscribedClients) {
                 c.update(c.getID());

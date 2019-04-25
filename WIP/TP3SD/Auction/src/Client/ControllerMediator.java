@@ -4,6 +4,7 @@ import Mediator.Mediator;
 import RemoteObjects.Offer;
 import RemoteObjects.User;
 
+import java.rmi.RemoteException;
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Hashtable;
@@ -14,7 +15,7 @@ public class ControllerMediator extends Mediator {
 	
 	private AuctionController auctionController;
 	private RegisterController registerController;
-	private Model model;
+	private Model2 model;
 	
 	ControllerMediator() {
 		colleagues = new HashMap<>();
@@ -42,28 +43,40 @@ public class ControllerMediator extends Mediator {
 	}
 	
 	boolean signUp (String name, String nickname, String email, String address, String phone) {
-		model = (Model) this.retrieveColleague("Model");
+		model = (Model2) this.retrieveColleague("Model");
 		registerController = (RegisterController) this.retrieveColleague("Register controller");
-		
-		return model.signUp(name, nickname, email, address, phone);
+		try {
+			return model.registerUser(name, nickname, email, address, phone);
+		} catch (RemoteException e) {
+			return false;
+		}
 	}
 	
 	boolean login (String nickname) {
-		model = (Model) this.retrieveColleague("Model");
+		model = (Model2) this.retrieveColleague("Model");
 		
 		return model.login(nickname);
 	}
 	
 	void addOffer(String name, String description, String price, LocalDate deadline) {
-		model = (Model) this.retrieveColleague("Model");
+		model = (Model2) this.retrieveColleague("Model");
 		
-		model.addOffer(name, description, price, deadline);
+		try {
+			model.addOffer(name, description, price, deadline);
+		} catch (RemoteException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	Hashtable <Integer, Offer> getCurrentOffers () {
-		model = (Model) this.retrieveColleague("Model");
+		model = (Model2) this.retrieveColleague("Model");
 		
-		return model.getCurrentOffers();
+		try {
+			return model.getPlacedOffers();
+		} catch (RemoteException e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 	
 	void updateOffers() {
@@ -74,8 +87,12 @@ public class ControllerMediator extends Mediator {
 	}
 	
 	void addBid (int offerId, double bid) {
-		model = (Model) this.retrieveColleague("Model");
+		model = (Model2) this.retrieveColleague("Model");
 		
-		model.addBid(offerId, bid);
+		try {
+			model.newBid(offerId, bid);
+		} catch (RemoteException e) {
+			e.printStackTrace();
+		}
 	}
 }

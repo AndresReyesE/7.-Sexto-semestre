@@ -22,36 +22,37 @@ class Model extends Subject {
 	//	AuctionController auctionController;
 	ControllerMediator controllerMediator;
 	
-	private Registry registry;
 	
 	private UserInterface users;
 	private OfferInterface offers;
 	private ClientInterface clients;
 	
+	private Registry registry;
+	
 	private User currentlyLoggedInAs;
 	
-	Model() {}
-	
-	Model (String host) {
-		currentlyLoggedInAs = null;
-		try {
-			
-//			controllerMediator = med;
-			registry = LocateRegistry.getRegistry(host, 5000);
-			
-//			users = (UserInterface) registry.lookup("//localhost:5000/Users");
-//			offers = (OfferInterface) registry.lookup("//localhost:5000/Offers");
-			users = (UserInterface) registry.lookup("Users");
-			offers = (OfferInterface) registry.lookup("Offers");
-			clients = (ClientInterface) registry.lookup("Clients");
-			
-		} catch (Exception e) {
-			StringWriter outError = new StringWriter();
-			e.printStackTrace(new PrintWriter(outError));
-			String errorString = outError.toString();
-			System.out.println(errorString);
-		}
-	}
+//	Model() {}
+//
+//	Model (String host) {
+//		currentlyLoggedInAs = null;
+//		try {
+//
+////			controllerMediator = med;
+//			registry = LocateRegistry.getRegistry(host, 5000);
+//
+////			users = (UserInterface) registry.lookup("//localhost:5000/Users");
+////			offers = (OfferInterface) registry.lookup("//localhost:5000/Offers");
+//			users = (UserInterface) registry.lookup("Users");
+//			offers = (OfferInterface) registry.lookup("Offers");
+//			clients = (ClientInterface) registry.lookup("Clients");
+//
+//		} catch (Exception e) {
+//			StringWriter outError = new StringWriter();
+//			e.printStackTrace(new PrintWriter(outError));
+//			String errorString = outError.toString();
+//			System.out.println(errorString);
+//		}
+//	}
 	
 	void bindCallback () {
 		try {
@@ -72,50 +73,50 @@ class Model extends Subject {
 		}
 	}
 	
-	void setControllerMediator (ControllerMediator cm) {
-		this.controllerMediator = cm;
-	}
-	
-	boolean signUp (String name, String nickname, String email, String address, String phone) {
-		try {
-			System.out.println("Registering user in Model with data: " + name + ", " + nickname + " | " + email + " | " + address + " : " + phone);
-			boolean userRegistered = users.registerUser(name, nickname, email, address, phone);
-			
-			users.displayUsers();
-			return userRegistered;
-		}
-		catch (RemoteException re) {
-			System.err.println("Error registering user from Client Side!");
-			StringWriter outError = new StringWriter();
-			re.printStackTrace(new PrintWriter(outError));
-			String errorString = outError.toString();
-			System.out.println(errorString);
-		}
-		return false;
-	}
-	
-	boolean login (String nickname) {
-		try {
-			System.out.println("Logging in the user " + nickname + "...");
-			User found = users.seekUser(nickname);
-			String result = found == null ? " is not associated with any account" : " is now logged in";
-			System.out.println("The user " + nickname + result);
-			
-			controllerMediator.updateUserLoggedIn(found == null ? "" : found.getNickname());
-			
-			this.currentlyLoggedInAs = found;
-			
-			return found != null;
-		}
-		catch (RemoteException re) {
-			System.err.println("Error logging in user from Client Side!");
-			StringWriter outError = new StringWriter();
-			re.printStackTrace(new PrintWriter(outError));
-			String errorString = outError.toString();
-			System.out.println(errorString);
-		}
-		return false;
-	}
+//	void setControllerMediator (ControllerMediator cm) {
+//		this.controllerMediator = cm;
+//	}
+//
+//	boolean signUp (String name, String nickname, String email, String address, String phone) {
+//		try {
+//			System.out.println("Registering user in Model with data: " + name + ", " + nickname + " | " + email + " | " + address + " : " + phone);
+//			boolean userRegistered = users.registerUser(name, nickname, email, address, phone);
+//
+//			users.displayUsers();
+//			return userRegistered;
+//		}
+//		catch (RemoteException re) {
+//			System.err.println("Error registering user from Client Side!");
+//			StringWriter outError = new StringWriter();
+//			re.printStackTrace(new PrintWriter(outError));
+//			String errorString = outError.toString();
+//			System.out.println(errorString);
+//		}
+//		return false;
+//	}
+//
+//	boolean login (String nickname) {
+//		try {
+//			System.out.println("Logging in the user " + nickname + "...");
+//			User found = users.seekUser(nickname);
+//			String result = found == null ? " is not associated with any account" : " is now logged in";
+//			System.out.println("The user " + nickname + result);
+//
+//			controllerMediator.updateUserLoggedIn(found == null ? "" : found.getNickname());
+//
+//			this.currentlyLoggedInAs = found;
+//
+//			return found != null;
+//		}
+//		catch (RemoteException re) {
+//			System.err.println("Error logging in user from Client Side!");
+//			StringWriter outError = new StringWriter();
+//			re.printStackTrace(new PrintWriter(outError));
+//			String errorString = outError.toString();
+//			System.out.println(errorString);
+//		}
+//		return false;
+//	}
 	
 	void addOffer (String offerName, String offerDescription, String initialPrice, LocalDate offerDeadline) {
 		try {
