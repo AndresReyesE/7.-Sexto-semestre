@@ -1,0 +1,14 @@
+void bindCallback: register this callback in the registry
+
+boolean signUp: ask user to register an user, if there's a remote exception return false. If the server's function return false update the view to inform the user.
+--> registerUser: return false if the nickname is already taken 
+
+boolean login: seek in server collections for a nickname, return false if the nickname doesn't exist or if a remote exception was thrown
+--> seekUser: return the User associated to the given nickname, null if such nn doesn't exist
+
+void addOffer: converts text to numbers and asks the server to add this offer to the global collections and the current logged user's offers
+--> addOffer: adds the offer to the collection giving it an id accord to the size of the same list
+--> addOfferToUser: given a nickname, search for that user and uses its methods to append this offer to their own offers
+
+boolean addBid: ask the server to add this new bid to the history of the current logged user's offer
+--> newBid: given an offer id and the data for a new bid, the server seeks the concerned offer and append that new bid to that offer's history 
