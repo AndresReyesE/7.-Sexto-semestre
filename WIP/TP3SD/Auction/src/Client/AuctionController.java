@@ -79,6 +79,7 @@ public class AuctionController implements Initializable {
 	void updateOffers () {
 		currentOffers = controllerMediator.getCurrentOffers();
 		currentOffersObservable.setAll(offersPresentation());
+		System.out.println("Observable changed...");
 	}
 	
 	void updateSelectedOffer (int id) {
@@ -128,6 +129,9 @@ public class AuctionController implements Initializable {
 		return historyPresentation;
 	}
 	
+	/*
+	FXML EVENT HANDLERS
+	 */
 	@FXML
 	void auctionTab (Event event) {
 		updateOffers();
@@ -162,45 +166,13 @@ public class AuctionController implements Initializable {
 			dateOfferDeadline.requestFocus();
 		}
 		else {
-			lblOfferNotifications.setText("Offer placed successfully!");
+			boolean result = controllerMediator.addOffer(txtOfferName.getText(), txtOfferDescription.getText(), txtOfferInitialPrice.getText(), dateOfferDeadline.getValue());
+			
+			lblOfferNotifications.setText(result ? "Offer placed successfully!" : "There was a problem connecting to the server");
 			lblOfferNotifications.setVisible(true);
 			
-			controllerMediator.addOffer(txtOfferName.getText(), txtOfferDescription.getText(), txtOfferInitialPrice.getText(), dateOfferDeadline.getValue());
-			updateOffers();
+//			updateOffers();
 		}
-	}
-	
-	@FXML
-	void keyTyped (KeyEvent e) {
-		System.out.println("Some key typed: " + e.getCode());
-		if (e.getCode().equals(KeyCode.ENTER))
-			offerPlaced(new ActionEvent());
-		else if (e.getCode().isLetterKey())
-			lblOfferNotifications.setVisible(false);
-	}
-	
-	@FXML
-	void listClicked (MouseEvent event) {
-		String selectedItem = listOffers.getSelectionModel().getSelectedItem();
-		String strID = selectedItem.substring(0, 3);
-		int id = Integer.parseInt(strID);
-		
-		updateOffers();
-		updateSelectedOffer(id);
-		updateAuctionView();
-		updateHistoryList();
-	}
-	
-	@FXML
-	void sliderMoved (MouseEvent e) {
-//		System.out.println("Slider moved");
-//		System.out.println("" + sliderNewBid.getValue());
-		double min = Double.parseDouble(lblCurrentBid.getText()) + 1;
-		double max = Double.parseDouble(lblCurrentBid.getText()) * 10;
-		
-		double sliderValue = sliderNewBid.getValue();		double proposalBid = sliderValue * (max - min) / 100 + min;
-		txtNewBid.setText(String.format("%.2f", proposalBid));
-		txtNewBid.requestFocus();
 	}
 	
 	@FXML
@@ -224,20 +196,49 @@ public class AuctionController implements Initializable {
 				txtNewBid.requestFocus();
 			}
 			else {
-				controllerMediator.addBid(selectedOffer.getId(), bid);
+				boolean result = controllerMediator.addBid(selectedOffer.getId(), bid);
+				lblOfferNotifications.setText(result ? "Bid placed successfully! You're the highest bidder!" : "There was a problem connecting to the server");
 //				updateOffersList();
-				updateOffers();
+//				updateOffers();
 				updateSelectedOffer(selectedOffer.getId());
 				updateAuctionView();
 				updateHistoryList();
 			}
 		}
+	}
+	
+	@FXML
+	void keyTyped (KeyEvent e) {
+		if (e.getCode().equals(KeyCode.ENTER))
+			offerPlaced(new ActionEvent());
+		else if (e.getCode().isLetterKey())
+			lblOfferNotifications.setVisible(false);
+	}
+	
+	@FXML
+	void listClicked (MouseEvent event) {
+		String selectedItem = listOffers.getSelectionModel().getSelectedItem();
+		String strID = selectedItem.substring(0, 3);
+		int id = Integer.parseInt(strID);
 		
+//		updateOffers();
+		updateSelectedOffer(id);
+		updateAuctionView();
+		updateHistoryList();
+	}
+	
+	@FXML
+	void sliderMoved (MouseEvent e) {
+		double min = Double.parseDouble(lblCurrentBid.getText()) + 1;
+		double max = Double.parseDouble(lblCurrentBid.getText()) * 10;
+		
+		double sliderValue = sliderNewBid.getValue();		double proposalBid = sliderValue * (max - min) / 100 + min;
+		txtNewBid.setText(String.format("%.2f", proposalBid));
+		txtNewBid.requestFocus();
 	}
 	
 	@FXML
 	void keyTypedOnBid (KeyEvent e) {
-		System.out.println("Some key typed: " + e.getCode());
 		if (e.getCode().equals(KeyCode.ENTER))
 			bidUp(new ActionEvent());
 	}
@@ -245,6 +246,8 @@ public class AuctionController implements Initializable {
 	
 	@Override
 	public void initialize(URL url, ResourceBundle resourceBundle) {
+//		currentOffers = controllerMediator.getCurrentOffers();
+		
 		currentOffersObservable = FXCollections.observableArrayList();
 		currentHistoryObservable = FXCollections.observableArrayList();
 		

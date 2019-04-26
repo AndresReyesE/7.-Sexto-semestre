@@ -1,6 +1,5 @@
 package RemoteObjects;
 
-
 import java.io.Serializable;
 
 public class Bid implements Serializable {

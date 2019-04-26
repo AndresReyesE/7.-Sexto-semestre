@@ -13,7 +13,6 @@ public class RegisterController {
 	
 	private SceneMediator mediator;
 	private ControllerMediator controllerMediator;
-	private boolean signUp = true;
 	
 	/**
 	 * References to graphic components in Register tab
@@ -51,7 +50,6 @@ public class RegisterController {
 			
 			toggleSignUp.setText("Have an account? Log In instead!");
 			btnLoginSignUp.setText("Sign up!");
-			signUp = true;
 		}
 		else {
 			txtName.setVisible(false);
@@ -66,13 +64,12 @@ public class RegisterController {
 			
 			toggleSignUp.setText("Don't have an account yet? Create one!");
 			btnLoginSignUp.setText("Log in!");
-			signUp = false;
 		}
 	}
 	
 	@FXML
 	void registerClicked (ActionEvent event) {
-		if (signUp) {
+		if (toggleSignUp.isSelected()) {
 			System.out.println("Sign-up Button clicked");
 			if (txtName.getText().equals("")) {
 				lblUserNotifications.setText("Name field cannot be empty");
@@ -86,17 +83,25 @@ public class RegisterController {
 			}
 			else {
 				System.out.println("Data fetched by the AuctionController: " + txtName.getText() + ", " + txtNickname.getText() + " | " + txtEmail.getText() + " | " + txtAddress.getText() + " : " + txtPhone.getText());
-				if (controllerMediator.signUp(txtName.getText(), txtNickname.getText(), txtEmail.getText(), txtAddress.getText(), txtPhone.getText())) {
-					lblUserNotifications.setVisible(true);
-					lblUserNotifications.setText("Account Successfully Registered!");
-					toggleSignUp.setSelected(false);
-					signUpToggled(new ActionEvent());
-					txtNickname.requestFocus();
-				}
+				int result = controllerMediator.signUp(txtName.getText(), txtNickname.getText(), txtEmail.getText(), txtAddress.getText(), txtPhone.getText());
 				
-				else
-					lblUserNotifications.setText("The nickname " + txtNickname.getText() + " is already in use, please choose another one");
-					
+				switch (result) {
+					case 1:
+						lblUserNotifications.setVisible(true);
+						lblUserNotifications.setText("Account Successfully Registered!");
+						toggleSignUp.setSelected(false);
+						signUpToggled(new ActionEvent());
+						txtNickname.requestFocus();
+						break;
+					case 0:
+						lblUserNotifications.setVisible(true);
+						lblUserNotifications.setText("That nickname is already taken, please choose another one");
+						txtNickname.requestFocus();
+						break;
+					case -1:
+						lblUserNotifications.setVisible(true);
+						lblUserNotifications.setText("There was a problem connecting to the server, please try again");
+				}
 			}
 		}
 		else {
@@ -108,11 +113,20 @@ public class RegisterController {
 			}
 			else {
 				System.out.println("Data fetched by the AuctionController: " + txtNickname.getText());
-				if (controllerMediator.login(txtNickname.getText()))
-					mediator.activate("Auction view");
-				else {
-					lblUserNotifications.setVisible(true);
-					lblUserNotifications.setText("The user " + txtNickname.getText() + " is not associated with any account");
+				int result = controllerMediator.login((txtNickname.getText()));
+				
+				switch (result) {
+					case 1:
+						mediator.activate("Auction view");
+						break;
+					case 0:
+						lblUserNotifications.setVisible(true);
+						lblUserNotifications.setText("The user " + txtNickname.getText() + " is not associated with any account");
+ 					    break;
+					case -1:
+						lblUserNotifications.setVisible(true);
+						lblUserNotifications.setText("There was a problem connecting to the server, please try again");
+						
 				}
 			}
 		}

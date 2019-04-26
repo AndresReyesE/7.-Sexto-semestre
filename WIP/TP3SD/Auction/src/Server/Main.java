@@ -1,11 +1,6 @@
 package Server;
 
-import Interfaces.ClientInterface;
-import Interfaces.OfferInterface;
-import Interfaces.UserInterface;
-import PersistenceRoot.Clients;
-import PersistenceRoot.Offers;
-import PersistenceRoot.Users;
+import RemoteInterfaces.ServantInterface;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -14,8 +9,6 @@ import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 
 public class Main {
-	
-	
 	public static void main(String[] args) {
 		try {
 			Registry registry = LocateRegistry.createRegistry(5000);
@@ -23,20 +16,13 @@ public class Main {
 			
 			Server server = Server.getInstance();
 			
-			Users users = server.getUsers();
-			Offers offers = server.getOffers();
-			Clients clients = server.getClients();
+			Servant servant = server.getServant();
 			
-			UserInterface usersStub = (UserInterface) UnicastRemoteObject.exportObject(users, 0);
-			OfferInterface offersStub = (OfferInterface) UnicastRemoteObject.exportObject(offers, 0);
-			ClientInterface clientsStub = (ClientInterface) UnicastRemoteObject.exportObject(clients, 0);
+			ServantInterface servantStub = (ServantInterface) UnicastRemoteObject.exportObject(servant, 0);
 			
-			registry.rebind("Users", usersStub);
-			registry.rebind("Offers", offersStub);
-			registry.rebind("Clients", clientsStub);
+			registry.rebind("Servant", servantStub);
 			
 			System.out.println("Auction server is running and listening for calls...");
-			
 		}
 		catch (Exception e) {
 			StringWriter outError = new StringWriter();
