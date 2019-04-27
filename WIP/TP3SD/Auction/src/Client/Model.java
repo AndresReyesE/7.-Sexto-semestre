@@ -5,6 +5,7 @@ import RemoteInterfaces.ServantInterface;
 import RemoteObjects.Offer;
 import RemoteObjects.User;
 import Observer.Subject;
+import javafx.application.Platform;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -195,14 +196,28 @@ class Model implements Observer {
 	NOT YET DEFINED METHODS OR PRONE TO BE OMITTED
 	 */
 	
-	Hashtable <Integer, Offer> getCurrentOffers() {
+	Hashtable <Integer, Offer> getLocalOffers() {
 		return currentOffers;
 	}
 	
+	Hashtable <Integer, Offer> getCurrentOffers() {
+		try {
+			return servant.getCurrentOffers();
+		} catch (RemoteException re) {
+			System.err.println("Error retrieving offers from Client Side!");
+			StringWriter outError = new StringWriter();
+			re.printStackTrace(new PrintWriter(outError));
+			String errorString = outError.toString();
+			System.out.println(errorString);
+		}
+		return null;
+	}
+	
 	@Override
-	public void update(Hashtable <Integer, Offer> news) throws RemoteException {
+	public void update(Hashtable<Integer, Offer> news) throws RemoteException {
 //		currentOffers.putAll(news);
 		currentOffers = new Hashtable<>(news);
+//		currentOffers = servant.getCurrentOffers();
 		controllerMediator.updateOffers();
 	}
 	

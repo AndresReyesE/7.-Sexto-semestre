@@ -3,6 +3,7 @@ package Client;
 import Mediator.Mediator;
 import RemoteObjects.Offer;
 import RemoteObjects.User;
+import javafx.application.Platform;
 
 import java.time.LocalDate;
 import java.util.Hashtable;
@@ -105,11 +106,20 @@ public class ControllerMediator extends Mediator {
 		return model.getCurrentOffers();
 	}
 	
+	Hashtable <Integer, Offer> getLocalOffers () {
+		model = (Model) this.retrieveColleague("Model");
+		
+		return model.getLocalOffers();
+	}
+	
 	void updateOffers() {
-		AuctionController ac = (AuctionController) this.retrieveColleague("Auction controller");
+		auctionController = (AuctionController) this.retrieveColleague("Auction controller");
 
-//		ac.updateOffersList();
-		ac.updateOffers();
+		Platform.runLater(
+				() -> {
+					auctionController.updateOffers();
+				}
+		);
 	}
 	
 	

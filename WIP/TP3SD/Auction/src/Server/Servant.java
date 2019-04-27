@@ -70,7 +70,8 @@ public class Servant implements ServantInterface {
 		System.out.println("About to notify clients...");
 		for (Observer observer : subscribedClients) {
 			try {
-				observer.test();
+//				observer.test();
+//				observer.update(placedOffers);
 				observer.update(placedOffers);
 			} catch (RemoteException e) {
 				System.out.println("Server.Servant: RemoteException while notifying an observer");

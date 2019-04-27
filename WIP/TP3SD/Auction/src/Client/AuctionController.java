@@ -77,16 +77,23 @@ public class AuctionController implements Initializable {
 	}
 	
 	void updateOffers () {
-		currentOffers = controllerMediator.getCurrentOffers();
+		currentOffers = controllerMediator.getLocalOffers();
+//		currentOffersObservable.remove(0, currentOffersObservable.size());
 		currentOffersObservable.setAll(offersPresentation());
-		System.out.println("Observable changed...");
+//		currentOffersObservable.
+//		System.out.println("Observable changed...");
+		if (selectedOffer != null) {
+			updateSelectedOffer(selectedOffer.getId());
+			updateAuctionView();
+			updateHistoryList();
+		}
 	}
 	
-	void updateSelectedOffer (int id) {
+	private void updateSelectedOffer (int id) {
 		selectedOffer = currentOffers.get(id);
 	}
 	
-	void updateHistoryList () {
+	private void updateHistoryList () {
 		if (selectedOffer == null)
 			currentHistoryObservable.remove(0, currentHistoryObservable.size());
 		else {
@@ -96,7 +103,7 @@ public class AuctionController implements Initializable {
 	}
 	
 	private void updateAuctionView () {
-		updateOffers();
+//		updateOffers();
 		lblAuctionName.setText(selectedOffer.getName());
 		lblAuctionDescription.setText(selectedOffer.getDescription());
 		lblCurrentBid.setText(String.format("%.2f", selectedOffer.getCurrentBid()));
@@ -134,7 +141,7 @@ public class AuctionController implements Initializable {
 	 */
 	@FXML
 	void auctionTab (Event event) {
-		updateOffers();
+//		updateOffers();
 	}
 	
 	@FXML
@@ -200,9 +207,7 @@ public class AuctionController implements Initializable {
 				lblOfferNotifications.setText(result ? "Bid placed successfully! You're the highest bidder!" : "There was a problem connecting to the server");
 //				updateOffersList();
 //				updateOffers();
-				updateSelectedOffer(selectedOffer.getId());
-				updateAuctionView();
-				updateHistoryList();
+			
 			}
 		}
 	}
@@ -232,7 +237,8 @@ public class AuctionController implements Initializable {
 		double min = Double.parseDouble(lblCurrentBid.getText()) + 1;
 		double max = Double.parseDouble(lblCurrentBid.getText()) * 10;
 		
-		double sliderValue = sliderNewBid.getValue();		double proposalBid = sliderValue * (max - min) / 100 + min;
+		double sliderValue = sliderNewBid.getValue();
+		double proposalBid = sliderValue * (max - min) / 100 + min;
 		txtNewBid.setText(String.format("%.2f", proposalBid));
 		txtNewBid.requestFocus();
 	}
@@ -247,6 +253,7 @@ public class AuctionController implements Initializable {
 	@Override
 	public void initialize(URL url, ResourceBundle resourceBundle) {
 //		currentOffers = controllerMediator.getCurrentOffers();
+//		updateOffers();
 		
 		currentOffersObservable = FXCollections.observableArrayList();
 		currentHistoryObservable = FXCollections.observableArrayList();
