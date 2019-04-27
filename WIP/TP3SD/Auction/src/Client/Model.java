@@ -48,9 +48,9 @@ class Model extends UnicastRemoteObject implements Observer {
 		try {
 			Registry registry;
 			if (host == null)
-				registry = LocateRegistry.getRegistry(5000);
+				registry = LocateRegistry.getRegistry();
 			else
-				registry = LocateRegistry.getRegistry(host, 5000);
+				registry = LocateRegistry.getRegistry(host);
 			
 			servant = (ServantInterface) registry.lookup("Servant");
 			currentOffers = getCurrentOffers();
