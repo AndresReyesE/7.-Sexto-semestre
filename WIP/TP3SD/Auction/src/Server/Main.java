@@ -19,9 +19,9 @@ public class Main {
 			
 			Servant servant = server.getServant();
 			
-			ServantInterface servantStub = (ServantInterface) UnicastRemoteObject.exportObject(servant, 0);
+//			ServantInterface servantStub = (ServantInterface) UnicastRemoteObject.exportObject(servant, 0);
 			
-			registry.rebind("Servant", servantStub);
+			registry.rebind("Servant", servant);
 			
 			System.out.println("Auction server is running and listening for calls...");
 		}

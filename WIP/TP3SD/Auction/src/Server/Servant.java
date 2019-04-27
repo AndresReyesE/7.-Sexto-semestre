@@ -7,13 +7,14 @@ import RemoteObjects.Offer;
 import RemoteObjects.User;
 
 import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Hashtable;
 import java.util.List;
 
-public class Servant implements ServantInterface {
+public class Servant extends UnicastRemoteObject implements ServantInterface {
 	/*
 	COLLECTIONS
 	 */
@@ -24,10 +25,15 @@ public class Servant implements ServantInterface {
 	/*
 	CONSTRUCTOR
 	 */
-	Servant () {
-		subscribedClients = Collections.synchronizedList(new ArrayList<>());
-		registeredUsers = new Hashtable<>();
-		placedOffers = new Hashtable<>();
+	Servant () throws RemoteException {
+		super();
+		try {
+			subscribedClients = Collections.synchronizedList(new ArrayList<>());
+			registeredUsers = new Hashtable<>();
+			placedOffers = new Hashtable<>();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	

@@ -10,7 +10,6 @@ import javafx.application.Platform;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.rmi.NotBoundException;
-import java.rmi.RMISecurityManager;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -21,7 +20,7 @@ import java.util.Collection;
 import java.util.Hashtable;
 import java.util.Map;
 
-class Model implements Observer {
+class Model extends UnicastRemoteObject implements Observer {
 	/*
 	MEDIATOR ATTRIBUTES
 	 */
@@ -41,7 +40,8 @@ class Model implements Observer {
 	/*
 	CONSTRUCTOR
 	 */
-	Model (String host) {
+	Model (String host) throws RemoteException {
+		super();
 		System.setSecurityManager(new SecurityManager());
 		currentOffers = new Hashtable<>();
 		currentlyLoggedInAs = null;
@@ -73,9 +73,9 @@ class Model implements Observer {
 	void registerToServer () {
 		try {
 			Model self = (Model) controllerMediator.retrieveColleague("Model");
-			Observer selfStub = (Observer) UnicastRemoteObject.exportObject(self, 0);
+//			Observer selfStub = (Observer) UnicastRemoteObject.exportObject(self, 0);
 			
-			servant.attach(selfStub);
+			servant.attach(self);
 		}
 		catch (Exception e) {
 			StringWriter outError = new StringWriter();
