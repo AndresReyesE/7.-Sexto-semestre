@@ -10,6 +10,7 @@ import java.rmi.server.UnicastRemoteObject;
 
 public class Main {
 	public static void main(String[] args) {
+		System.setSecurityManager(new SecurityManager());
 		try {
 			Registry registry = LocateRegistry.createRegistry(5000);
 //			Registry registry = LocateRegistry.getRegistry();

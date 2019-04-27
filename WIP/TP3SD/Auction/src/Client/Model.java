@@ -10,9 +10,11 @@ import javafx.application.Platform;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.rmi.NotBoundException;
+import java.rmi.RMISecurityManager;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.rmi.server.RMIClassLoader;
 import java.rmi.server.UnicastRemoteObject;
 import java.time.LocalDate;
 import java.util.Collection;
@@ -40,10 +42,15 @@ class Model implements Observer {
 	CONSTRUCTOR
 	 */
 	Model (String host) {
+		System.setSecurityManager(new SecurityManager());
 		currentOffers = new Hashtable<>();
 		currentlyLoggedInAs = null;
 		try {
-			Registry registry = LocateRegistry.getRegistry(host, 5000);
+			Registry registry;
+			if (host == null)
+				registry = LocateRegistry.getRegistry(5000);
+			else
+				registry = LocateRegistry.getRegistry(host, 5000);
 			
 			servant = (ServantInterface) registry.lookup("Servant");
 			currentOffers = getCurrentOffers();

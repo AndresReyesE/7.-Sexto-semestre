@@ -1,0 +1,19 @@
+grant {
+	// Este permiso permite a los clientes RMI realizar
+	// conexiones de sockets a los puertos públicos de
+	// cualquier computador.
+	// Si se arranca un puerto en el registro RMI en este
+	// rango, no existirá una violación de acceso de
+// conexión.
+	// permission java.net.SocketPermission “*:1024-65535”,
+	//	“connect,accept,resolve”;
+	// Este permiso permite a los sockets acceder al puerto
+	// 80, el puerto por defecto HTTP que el cliente
+// necesita para contactar con el servidor HTTP para
+// stub downloading
+permission java.net.SocketPermission "*:80", "connect";
+
+permission java.net.SocketPermission "*:5000", "connect,listen,resolve";
+
+permission java.net.SocketPermission "*:1024-65535", "connect,accept,resolve";
+};

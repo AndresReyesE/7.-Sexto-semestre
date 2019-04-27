@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Auction/Client/AuctionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Auction/Client/AuctionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/AuctionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/AuctionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/ControllerMediator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/ControllerMediator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Client/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RemoteInterfaces/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RemoteInterfaces/Observer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server/Servant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Servant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Main.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,11 +73,41 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Client/Model.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="462">
-                  <caret line="78" column="5" lean-forward="true" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+                <state relative-caret-position="21">
+                  <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Server/Server.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="252">
+                  <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Server/Main.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="240">
+                  <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/out/production/Auction/java.policy">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="357">
+                  <caret line="17" column="78" lean-forward="true" selection-start-line="17" selection-start-column="78" selection-end-line="17" selection-end-column="78" />
                 </state>
               </provider>
             </entry>
@@ -99,7 +124,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Client/ControllerMediator.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="315">
@@ -138,7 +163,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Server/Servant.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="370">
+                <state relative-caret-position="1378">
                   <caret line="77" column="36" lean-forward="true" selection-start-line="77" selection-start-column="36" selection-end-line="77" selection-end-column="36" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -232,7 +257,6 @@
         <option value="$PROJECT_DIR$/src/PersistenceRoot/Offers.java" />
         <option value="$PROJECT_DIR$/src/Server/Server.java" />
         <option value="$PROJECT_DIR$/src/Interfaces/OfferInterface.java" />
-        <option value="$PROJECT_DIR$/src/Server/Main.java" />
         <option value="$PROJECT_DIR$/src/RemoteObjects/Bid.java" />
         <option value="$PROJECT_DIR$/src/Interfaces/ServantInterface.java" />
         <option value="$PROJECT_DIR$/src/Interfaces/Subject.java" />
@@ -242,15 +266,16 @@
         <option value="$PROJECT_DIR$/src/RemoteInterfaces/ServantInterface.java" />
         <option value="$PROJECT_DIR$/src/Mediator/Mediator.java" />
         <option value="$PROJECT_DIR$/src/Server/Servant.java" />
-        <option value="$PROJECT_DIR$/src/Client/Model.java" />
         <option value="$PROJECT_DIR$/src/Client/AuctionController.java" />
         <option value="$PROJECT_DIR$/src/RemoteInterfaces/Observer.java" />
         <option value="$PROJECT_DIR$/src/Client/ControllerMediator.java" />
+        <option value="$PROJECT_DIR$/src/Client/Model.java" />
+        <option value="$PROJECT_DIR$/src/Server/Main.java" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="32" />
     <option name="y" value="23" />
     <option name="width" value="1742" />
@@ -270,6 +295,24 @@
           <expand>
             <path>
               <item name="Auction" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Auction" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Auction" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Auction" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Auction" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Auction" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Auction" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Auction" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
               <item name="Auction" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -372,7 +415,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Client">
+  <component name="RunManager" selected="Application.Server">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -526,12 +569,12 @@
       <workItem from="1556242224463" duration="6239000" />
       <workItem from="1556251021239" duration="16223000" />
       <workItem from="1556301188436" duration="5948000" />
-      <workItem from="1556318791839" duration="14928000" />
+      <workItem from="1556318791839" duration="19907000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="253152000" />
+    <option name="totallyTimeSpent" value="258131000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -543,10 +586,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1044" extended-state="6" />
+    <frame x="0" y="0" width="1920" height="1044" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.12966916" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.12966916" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -555,7 +598,7 @@
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.36745688" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2855568" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2855568" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.40084836" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -566,7 +609,7 @@
       <window_info anchor="bottom" id="Changes" order="10" />
       <window_info anchor="bottom" id="Profiler" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" weight="0.15502183" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.32435346" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32414553" />
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="15" />
       <window_info anchor="bottom" id="Terminal" order="16" weight="0.32194045" />
@@ -644,7 +687,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Client/Model.java</url>
-          <line>218</line>
+          <line>225</line>
           <properties />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
@@ -747,23 +790,6 @@
     <entry file="file://$PROJECT_DIR$/src/Interfaces/ClientInterface.java" />
     <entry file="file://$PROJECT_DIR$/src/Interfaces/OfferInterface.java" />
     <entry file="file://$PROJECT_DIR$/src/PersistenceRoot/Offers.java" />
-    <entry file="file://$PROJECT_DIR$/src/Server/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="20" column="107" selection-start-line="20" selection-start-column="107" selection-end-line="20" selection-end-column="107" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Observer/Subject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -826,26 +852,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RemoteInterfaces/ServantInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/Servant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="77" column="36" lean-forward="true" selection-start-line="77" selection-start-column="36" selection-end-line="77" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Client/AuctionController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1134">
@@ -856,16 +862,6 @@
             <element signature="e#1810#1811#0" expanded="true" />
             <element signature="e#1892#1893#0" expanded="true" />
             <element signature="e#1933#1934#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Client/Model.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="78" column="5" lean-forward="true" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -891,6 +887,60 @@
             <element signature="e#707#708#0" expanded="true" />
             <element signature="e#742#743#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RemoteInterfaces/ServantInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/Servant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1378">
+          <caret line="77" column="36" lean-forward="true" selection-start-line="77" selection-start-column="36" selection-end-line="77" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Client/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/Auction/java.policy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="78" lean-forward="true" selection-start-line="17" selection-start-column="78" selection-end-line="17" selection-end-column="78" />
         </state>
       </provider>
     </entry>
