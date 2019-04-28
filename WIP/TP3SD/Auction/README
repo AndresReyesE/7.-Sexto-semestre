@@ -10,4 +10,4 @@ $ java -Djava.security.policy=java.policy Client.Main
 
 To run the client in another machine:
 $ cd Auction/out/production/Auction
-$ java -Djava.rmi.server.hostname=<"IP of the client machine"> -Djava.security.policy=java.policy Client.Main
+$ java -Djava.rmi.server.hostname=<IP of the client machine> -Djava.security.policy=java.policy Client.Main <IP of the server machine>

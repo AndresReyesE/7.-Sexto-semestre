@@ -1,6 +1,7 @@
 package Client;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -46,6 +47,15 @@ public class Main extends Application {
 		primaryStage.setTitle("ReyeSiordiAlvarez Auctions");
 		primaryStage.setScene(scene);
 		primaryStage.show();
+		
+		primaryStage.setOnCloseRequest(e -> {
+			System.out.println("Closing program...");
+			model.disconnectFromServer();
+			Platform.exit();
+			System.exit(0);
+		});
+		
+		
 	}
 	
 	

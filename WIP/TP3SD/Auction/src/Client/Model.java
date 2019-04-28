@@ -1,26 +1,20 @@
 package Client;
 
-import RemoteInterfaces.Observer;
+import Observer.Observer;
 import RemoteInterfaces.ServantInterface;
 import RemoteObjects.Offer;
 import RemoteObjects.User;
-import Observer.Subject;
-import javafx.application.Platform;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.net.MalformedURLException;
-import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
-import java.rmi.server.RMIClassLoader;
 import java.rmi.server.UnicastRemoteObject;
 import java.time.LocalDate;
-import java.util.Collection;
+import java.util.ArrayList;
 import java.util.Hashtable;
-import java.util.Map;
 
 class Model extends UnicastRemoteObject implements Observer {
 	/*
@@ -89,6 +83,16 @@ class Model extends UnicastRemoteObject implements Observer {
 			e.printStackTrace(new PrintWriter(outError));
 			String errorString = outError.toString();
 			System.out.println(errorString);
+		}
+	}
+	
+	void disconnectFromServer () {
+		Model self = (Model) controllerMediator.retrieveColleague("Model");
+		
+		try {
+			servant.detach(self);
+		} catch (RemoteException e) {
+			e.printStackTrace();
 		}
 	}
 	
@@ -207,13 +211,20 @@ class Model extends UnicastRemoteObject implements Observer {
 	}
 	
 	/*
-	NOT YET DEFINED METHODS OR PRONE TO BE OMITTED
+	LOCAL GETTERS
 	 */
 	
 	Hashtable <Integer, Offer> getLocalOffers() {
 		return currentOffers;
 	}
 	
+	ArrayList <Offer> getUserOffers () {
+		return currentlyLoggedInAs.getOffersPlaced();
+	}
+	
+	/*
+	REMOTE CALLS
+	 */
 	Hashtable <Integer, Offer> getCurrentOffers() {
 		try {
 			return servant.getCurrentOffers();
@@ -228,15 +239,19 @@ class Model extends UnicastRemoteObject implements Observer {
 	}
 	
 	@Override
-	public void update(Hashtable<Integer, Offer> news) throws RemoteException {
-//		currentOffers.putAll(news);
+	public void update(User updatedUser, Hashtable<Integer, Offer> news) throws RemoteException {
+		currentlyLoggedInAs = updatedUser;
 		currentOffers = new Hashtable<>(news);
-//		currentOffers = servant.getCurrentOffers();
 		controllerMediator.updateOffers();
 	}
 	
 	@Override
-	public void test () throws RemoteException{
+	public void test () throws RemoteException {
 		System.out.println("This function just can be called by the server, should be printed in this client");
+	}
+	
+	@Override
+	public String getID () throws RemoteException {
+		return currentlyLoggedInAs == null ? "" : currentlyLoggedInAs.getNickname();
 	}
 }

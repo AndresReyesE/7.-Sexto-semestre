@@ -2,11 +2,10 @@ package Client;
 
 import Mediator.Mediator;
 import RemoteObjects.Offer;
-import RemoteObjects.User;
 import javafx.application.Platform;
 
 import java.time.LocalDate;
-import java.util.Hashtable;
+import java.util.ArrayList;
 import java.util.Hashtable;
 
 public class ControllerMediator extends Mediator {
@@ -112,12 +111,18 @@ public class ControllerMediator extends Mediator {
 		return model.getLocalOffers();
 	}
 	
+	ArrayList<Offer> getUserOffers () {
+		model = (Model) this.retrieveColleague("Model");
+		
+		return model.getUserOffers();
+	}
+	
 	void updateOffers() {
 		auctionController = (AuctionController) this.retrieveColleague("Auction controller");
 
 		Platform.runLater(
 				() -> {
-					auctionController.updateOffers();
+					auctionController.updateView();
 				}
 		);
 	}

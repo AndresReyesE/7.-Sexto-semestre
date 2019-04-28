@@ -1,6 +1,6 @@
 package Server;
 
-import Observer.Subject;
+import Observer.Observer;
 import RemoteInterfaces.*;
 import RemoteObjects.Bid;
 import RemoteObjects.Offer;
@@ -73,17 +73,14 @@ public class Servant extends UnicastRemoteObject implements ServantInterface {
 	
 	@Override
 	public void notifyClients() throws RemoteException {
-		System.out.println("About to notify clients...");
-		for (Observer observer : subscribedClients) {
+		for (Observer observer : subscribedClients)
 			try {
-//				observer.test();
-//				observer.update(placedOffers);
-				observer.update(placedOffers);
+				User temp = seekUser(observer.getID());
+				observer.update(temp, placedOffers);
 			} catch (RemoteException e) {
-				System.out.println("Server.Servant: RemoteException while notifying an observer");
-				e.printStackTrace();
+				System.out.println("Server.Servant: RemoteException while notifying an observer. Removing it from observers");
+				subscribedClients.remove(observer);
 			}
-		}
 	}
 	
 	/*
@@ -161,6 +158,7 @@ public class Servant extends UnicastRemoteObject implements ServantInterface {
 		
 		
 		offerConcerned.setCurrentBid(bid);
+		offerConcerned.setCurrentBidder(bidder);
 		offerConcerned.addToHistory(bidOffered);
 		
 		placedOffers.remove(offerID);

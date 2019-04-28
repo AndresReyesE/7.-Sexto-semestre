@@ -26,6 +26,10 @@ public class User implements Serializable {
 		return name;
 	}
 	
+	public ArrayList<Offer> getOffersPlaced() {
+		return offersPlaced;
+	}
+	
 	public void setName(String name) {
 		this.name = name;
 	}
