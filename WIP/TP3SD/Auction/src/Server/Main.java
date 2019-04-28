@@ -22,7 +22,7 @@ public class Main {
 			
 //			ServantInterface servantStub = (ServantInterface) UnicastRemoteObject.exportObject(servant, 0);
 			
-			Naming.rebind("rmi://192.168.100.217/Servant", servant);
+			Naming.rebind("rmi://192.168.100.217:1099/Servant", servant);
 			
 			System.out.println("Auction server is running and listening for calls...");
 		}

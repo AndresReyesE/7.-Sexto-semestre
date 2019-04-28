@@ -48,18 +48,18 @@ class Model extends UnicastRemoteObject implements Observer {
 		currentOffers = new Hashtable<>();
 		currentlyLoggedInAs = null;
 		try {
-//			Registry registry;
-//			if (host == null)
-//				registry = LocateRegistry.getRegistry();
-//			else
-//				registry = LocateRegistry.getRegistry(host);
+			Registry registry;
+			if (host == null)
+				registry = LocateRegistry.getRegistry();
+			else
+				registry = LocateRegistry.getRegistry(host);
 			
-//			servant = (ServantInterface) registry.lookup("Servant");
-			try {
-				servant = (ServantInterface) Naming.lookup("rmi://" + host + "/Servant");
-			} catch (MalformedURLException e) {
-				e.printStackTrace();
-			}
+			servant = (ServantInterface) registry.lookup("Servant");
+//			try {
+//				servant = (ServantInterface) Naming.lookup("rmi://" + host + "/Servant");
+//			} catch (MalformedURLException e) {
+//				e.printStackTrace();
+//			}
 			currentOffers = getCurrentOffers();
 		} catch (RemoteException e) {
 			System.out.println("Client.Model: RemoteException when getting stub from registry");
