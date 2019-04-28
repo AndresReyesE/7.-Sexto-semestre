@@ -1,11 +1,13 @@
-Para correr la interfaz:
-$ cd WIP/TP3 SD/Auction/out/production/Auction
-$ java Client.Main
+In order to run the server
 
-Para correr el servidor:
-$ cd WIP/TP3 SD/Auction/out/production/Auction
-$ java Server.Main
-//NO es necesario correr rmiregistry, el servidor carga el registry por sí mismo
+$ cd Auction/out/production/Auction
+$ java -Djava.security.policy=java.policy -Djava.rmi.server.codebase=<Shared .class files> Server.Main
 
-A este punto la interfaz tiene todos los componentes gráficos necesarios para funcionar, pero no tiene funcionamiento por sí mismo aún.
-El servidor en teoría ya está terminado, pero aún no hay nadie que se conecte a él jaja
+
+To run the client locally:
+$ cd Auction/out/production/Auction
+$ java -Djava.security.policy=java.policy Client.Main
+
+To run the client in another machine:
+$ cd Auction/out/production/Auction
+$ java -Djava.rmi.server.hostname=<"IP of the client machine"> -Djava.security.policy=java.policy Client.Main
