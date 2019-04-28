@@ -1,16 +1,8 @@
 package Observer;
 
-import java.util.ArrayList;
+import java.rmi.Remote;
+import java.rmi.RemoteException;
 
-public abstract class Subject {
-	
-	private ArrayList <Object> observers;
-	
-	private Object state;
-	
-	public abstract void attach (Object observer);
-	
-	public abstract void detach (Object observer);
-	
-	public abstract void notifyObservers ();
+public interface Subject extends Remote {
+
 }

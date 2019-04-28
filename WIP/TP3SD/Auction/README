@@ -1,11 +1,28 @@
-Para correr la interfaz:
-$ cd WIP/TP3 SD/Auction/out/production/Auction
+For local test (server/client in the same machine)
+
+To run the server:
+$ cd Auction/out/production/Auction
+$ java Server.Main
+
+To run the client:
+$ cd Auction/out/production/Auction
 $ java Client.Main
 
-Para correr el servidor:
-$ cd WIP/TP3 SD/Auction/out/production/Auction
-$ java Server.Main
-//NO es necesario correr rmiregistry, el servidor carga el registry por sí mismo
 
-A este punto la interfaz tiene todos los componentes gráficos necesarios para funcionar, pero no tiene funcionamiento por sí mismo aún.
-El servidor en teoría ya está terminado, pero aún no hay nadie que se conecte a él jaja
+For distributed test (server/client in different JVM)
+
+In order to run the server:
+$ cd Auction/out/production/Auction
+$ java -Djava.server.hostname=<Server's IPv4> -Djava.rmi.server.codebase=<codebase path*> Server.Main
+
+To run the client locally:
+$ cd Auction/out/production/Auction
+$ java Client.Main
+
+To run the client in another machine:
+$ cd Auction/out/production/Auction
+$ java -Djava.rmi.server.hostname=<Client's IPv4> Client.Main <Server's IPv4>
+
+
+*Path/URL with access for both machines where to locate the shared .class files
+NOTE: if it is a file:/ or a ftp:/ server it must end with a trailing "/"

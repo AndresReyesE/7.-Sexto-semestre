@@ -27,16 +27,18 @@ public class AuctionController implements Initializable {
 	private Offer selectedOffer;
 	private Hashtable <Integer, Offer> currentOffers;
 	private ArrayList <Bid> currentHistory;
+	private ArrayList <Offer> currentUserOffers;
 	
 	private ObservableList <String> currentOffersObservable;
 	private ObservableList <String> currentHistoryObservable;
+	private ObservableList <String> currentUserOffersObservable;
 	
 	
 	/**
 	 * References to graphic components in Offer tab
 	 */
 	@FXML
-	private Label lblOfferNickname;
+	private Label lblOfferNickname, lblOfferNotifications;
 	@FXML
 	private TextField txtOfferName, txtOfferDescription, txtOfferInitialPrice;
 	@FXML
@@ -46,9 +48,9 @@ public class AuctionController implements Initializable {
 	 * References to graphic components in Auction tab
 	 */
 	@FXML
-	private ListView <String> listOffers, listHistory;
+	private ListView <String> listOffers, listHistory, listUserOffers;
 	@FXML
-	private Label lblAuctionName, lblAuctionDescription, lblCurrentBid, lblCurrentBidder, lblOfferNotifications;
+	private Label lblAuctionName, lblAuctionDescription, lblCurrentBid, lblCurrentBidder, lblAuctionNotifications;
 	@FXML
 	private TextField txtNewBid;
 	@FXML
@@ -71,37 +73,53 @@ public class AuctionController implements Initializable {
 	}
 	
 	
-	/* METHODS TO KEEP COHERENCE */
+	/* METHODS TO KEEP VIEW COHERENCE */
 	void updateUserLoggedIn (String nickname) {
 		lblOfferNickname.setText(nickname);
 	}
 	
-	void updateOffers () {
-		currentOffers = controllerMediator.getCurrentOffers();
-		currentOffersObservable.setAll(offersPresentation());
+	void updateView() {
+		updateOffersList();
+		updateUserOffersList();
+		if (selectedOffer != null) {
+			updateSelectedOffer(selectedOffer.getId());
+			updateAuctionView();
+			updateHistoryList();
+		}
+		lblAuctionNotifications.setVisible(false);
 	}
 	
-	void updateSelectedOffer (int id) {
+	private void updateSelectedOffer (int id) {
 		selectedOffer = currentOffers.get(id);
 	}
 	
-	void updateHistoryList () {
-		if (selectedOffer == null)
-			currentHistoryObservable.remove(0, currentHistoryObservable.size());
-		else {
-			currentHistory = selectedOffer.getHistory();
-			currentHistoryObservable.setAll(historyPresentation());
-		}
-	}
-	
 	private void updateAuctionView () {
-		updateOffers();
 		lblAuctionName.setText(selectedOffer.getName());
 		lblAuctionDescription.setText(selectedOffer.getDescription());
 		lblCurrentBid.setText(String.format("%.2f", selectedOffer.getCurrentBid()));
 		lblCurrentBidder.setText(selectedOffer.getCurrentBidder());
 		txtNewBid.setText(Double.toString(selectedOffer.getCurrentBid() + 1));
 		txtNewBid.requestFocus();
+	}
+	
+	private void updateOffersList () {
+		currentOffers = controllerMediator.getLocalOffers();
+		currentOffersObservable.setAll(offersPresentation());
+	}
+	
+	private void updateHistoryList () {
+		if (selectedOffer == null)
+			currentHistoryObservable.remove(0, currentHistoryObservable.size());
+		else {
+			currentHistory = selectedOffer.getHistory();
+			currentHistoryObservable.setAll(historyPresentation());
+			FXCollections.reverse(currentHistoryObservable);
+		}
+	}
+	
+	private void updateUserOffersList () {
+		currentUserOffers = controllerMediator.getUserOffers();
+		currentUserOffersObservable.setAll(userOffersPresentation());
 	}
 	
 	/* METHODS TO CREATE THE PRESENTATIONS OF LISTS */
@@ -121,16 +139,30 @@ public class AuctionController implements Initializable {
 		ArrayList <String> historyPresentation = new ArrayList<>();
 		
 		for (Bid bid : currentHistory) {
-			String s = "| " + bid.getNickname() + " bade up to " + bid.getBid();
+			String s = bid.getNickname() + " bade up to " + bid.getBid();
 			historyPresentation.add(s);
 		}
 		
 		return historyPresentation;
 	}
 	
+	private ArrayList <String> userOffersPresentation () {
+		ArrayList <String> userOffersPresentation = new ArrayList<>();
+		
+		for (Offer offer : currentUserOffers) {
+			String s = "Product: " + offer.getName() + "\nDescription" + offer.getDescription() + "\nCurrently bidden at: " + offer.getCurrentBid() + " by " + offer.getCurrentBidder() + "\nFor sale until: " + offer.getDeadline();
+			userOffersPresentation.add(s);
+		}
+		
+		return userOffersPresentation;
+	}
+	
+	/*
+	FXML EVENT HANDLERS
+	 */
 	@FXML
-	void auctionTab (Event event) {
-		updateOffers();
+	void tab (Event event) {
+		updateView();
 	}
 	
 	@FXML
@@ -162,17 +194,50 @@ public class AuctionController implements Initializable {
 			dateOfferDeadline.requestFocus();
 		}
 		else {
-			lblOfferNotifications.setText("Offer placed successfully!");
+			boolean result = controllerMediator.addOffer(txtOfferName.getText(), txtOfferDescription.getText(), txtOfferInitialPrice.getText(), dateOfferDeadline.getValue());
+			
+			lblOfferNotifications.setText(result ? "Offer placed successfully!" : "There was a problem connecting to the server");
 			lblOfferNotifications.setVisible(true);
 			
-			controllerMediator.addOffer(txtOfferName.getText(), txtOfferDescription.getText(), txtOfferInitialPrice.getText(), dateOfferDeadline.getValue());
-			updateOffers();
+			if (result) {
+				txtOfferName.clear();
+				txtOfferDescription.clear();
+				txtOfferInitialPrice.clear();
+			}
+		}
+	}
+	
+	@FXML
+	void bidUp (ActionEvent event) {
+		lblAuctionNotifications.setVisible(false);
+		System.out.println("Bid up clicked!");
+		if (txtNewBid.getText().isEmpty()) {
+			lblAuctionNotifications.setVisible(true);
+			lblAuctionNotifications.setText("Place some bid");
+			txtNewBid.requestFocus();
+		}
+		else if (isNotValidNumber(txtNewBid.getText())) {
+			lblAuctionNotifications.setVisible(true);
+			lblAuctionNotifications.setText("The bid can only be conformed by numbers");
+			txtNewBid.requestFocus();
+		}
+		else {
+			double bid = Double.parseDouble(txtNewBid.getText());
+			if (bid <= selectedOffer.getCurrentBid()) {
+				lblAuctionNotifications.setVisible(true);
+				lblAuctionNotifications.setText("Your bid gotta be greater than the current one");
+				txtNewBid.requestFocus();
+			}
+			else {
+				boolean result = controllerMediator.addBid(selectedOffer.getId(), bid);
+				lblAuctionNotifications.setVisible(true);
+				lblAuctionNotifications.setText(result ? "Bid placed successfully! You're the highest bidder!" : "There was a problem connecting to the server");
+			}
 		}
 	}
 	
 	@FXML
 	void keyTyped (KeyEvent e) {
-		System.out.println("Some key typed: " + e.getCode());
 		if (e.getCode().equals(KeyCode.ENTER))
 			offerPlaced(new ActionEvent());
 		else if (e.getCode().isLetterKey())
@@ -181,65 +246,33 @@ public class AuctionController implements Initializable {
 	
 	@FXML
 	void listClicked (MouseEvent event) {
+		lblAuctionNotifications.setVisible(false);
 		String selectedItem = listOffers.getSelectionModel().getSelectedItem();
 		String strID = selectedItem.substring(0, 3);
 		int id = Integer.parseInt(strID);
 		
-		updateOffers();
 		updateSelectedOffer(id);
-		updateAuctionView();
-		updateHistoryList();
+		updateView();
 	}
 	
 	@FXML
 	void sliderMoved (MouseEvent e) {
-//		System.out.println("Slider moved");
-//		System.out.println("" + sliderNewBid.getValue());
+		lblAuctionNotifications.setVisible(false);
 		double min = Double.parseDouble(lblCurrentBid.getText()) + 1;
 		double max = Double.parseDouble(lblCurrentBid.getText()) * 10;
 		
-		double sliderValue = sliderNewBid.getValue();		double proposalBid = sliderValue * (max - min) / 100 + min;
+		double sliderValue = sliderNewBid.getValue();
+		double proposalBid = sliderValue * (max - min) / 100 + min;
 		txtNewBid.setText(String.format("%.2f", proposalBid));
 		txtNewBid.requestFocus();
 	}
 	
 	@FXML
-	void bidUp (ActionEvent event) {
-		System.out.println("Bid up clicked!");
-		if (txtNewBid.getText().isEmpty()) {
-			lblAuctionDescription.setVisible(true);
-			lblAuctionDescription.setText("Place some bid");
-			txtNewBid.requestFocus();
-		}
-		else if (isNotValidNumber(txtNewBid.getText())) {
-			lblAuctionDescription.setVisible(true);
-			lblAuctionDescription.setText("The bid can only be conformed by numbers");
-			txtNewBid.requestFocus();
-		}
-		else {
-			double bid = Double.parseDouble(txtNewBid.getText());
-			if (bid <= selectedOffer.getCurrentBid()) {
-				lblAuctionDescription.setVisible(true);
-				lblAuctionDescription.setText("Your bid gotta be greater than the current one");
-				txtNewBid.requestFocus();
-			}
-			else {
-				controllerMediator.addBid(selectedOffer.getId(), bid);
-//				updateOffersList();
-				updateOffers();
-				updateSelectedOffer(selectedOffer.getId());
-				updateAuctionView();
-				updateHistoryList();
-			}
-		}
-		
-	}
-	
-	@FXML
 	void keyTypedOnBid (KeyEvent e) {
-		System.out.println("Some key typed: " + e.getCode());
 		if (e.getCode().equals(KeyCode.ENTER))
 			bidUp(new ActionEvent());
+		else if (e.getCode().isLetterKey())
+			lblAuctionNotifications.setVisible(false);
 	}
 	
 	
@@ -247,8 +280,12 @@ public class AuctionController implements Initializable {
 	public void initialize(URL url, ResourceBundle resourceBundle) {
 		currentOffersObservable = FXCollections.observableArrayList();
 		currentHistoryObservable = FXCollections.observableArrayList();
+		currentUserOffersObservable = FXCollections.observableArrayList();
 		
 		listOffers.setItems(currentOffersObservable);
 		listHistory.setItems(currentHistoryObservable);
+		listUserOffers.setItems(currentUserOffersObservable);
+		
+		dateOfferDeadline.setValue(LocalDate.now());
 	}
 }

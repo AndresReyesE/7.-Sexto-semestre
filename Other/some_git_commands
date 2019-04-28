@@ -1,0 +1,5 @@
+git checkout -b <branch_name> 
+--> create and checkout to a new local branch
+
+git push -u origin <branch_name>
+--> set upstream for local branch

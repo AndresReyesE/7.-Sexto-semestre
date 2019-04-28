@@ -1,14 +1,11 @@
 package Mediator;
 
 import java.util.Hashtable;
+import java.util.Map;
 
 public abstract class Mediator {
 
-	private Hashtable <String, Object> colleagues;
-	
-	public Hashtable<String, Object> getColleagues() {
-		return colleagues;
-	}
+	protected Hashtable <String, Object> colleagues;
 	
 	public abstract void addColleague (String name, Object object);
 	

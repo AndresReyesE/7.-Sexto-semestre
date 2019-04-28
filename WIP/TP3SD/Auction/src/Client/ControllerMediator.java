@@ -2,27 +2,40 @@ package Client;
 
 import Mediator.Mediator;
 import RemoteObjects.Offer;
-import RemoteObjects.User;
+import javafx.application.Platform;
 
 import java.time.LocalDate;
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.Hashtable;
 
 public class ControllerMediator extends Mediator {
 	
-	private HashMap<String, Object> colleagues;
+//	private HashMap<String, Object> colleagues;
 	
 	private AuctionController auctionController;
 	private RegisterController registerController;
 	private Model model;
 	
+	/*
+	CONSTRUCTOR
+	 */
 	ControllerMediator() {
-		colleagues = new HashMap<>();
+		this.colleagues = new Hashtable<String, Object>();
 	}
 	
+	/*
+	GETTER
+	 */
+	public Hashtable getColleagues () {
+		return colleagues;
+	}
+	
+	/*
+	IMPLEMENTATION OF MEDIATOR REQUIRED METHODS
+	 */
 	@Override
 	public void addColleague(String name, Object object) {
-		colleagues.putIfAbsent(name, object);
+		colleagues.put(name, object);
 	}
 	
 	@Override
@@ -35,29 +48,55 @@ public class ControllerMediator extends Mediator {
 		return colleagues.get(name);
 	}
 	
+	/*
+	METHODS REDIRECTION
+	INVOKER CLASS -> INVOKED CLASS
+	Invoker request the method in Invoked, this result is redirected to the invoker
+	 */
+	
+	/**
+	 * Model -> AuctionController
+	 */
 	void updateUserLoggedIn (String nickname) {
-		AuctionController ac = (AuctionController) this.retrieveColleague("Auction controller");
+		auctionController = (AuctionController) this.retrieveColleague("Auction controller");
 		
-		ac.updateUserLoggedIn(nickname);
+		auctionController.updateUserLoggedIn(nickname);
 	}
 	
-	boolean signUp (String name, String nickname, String email, String address, String phone) {
+	/**
+	 * RegisterController -> Model
+	 */
+	int signUp (String name, String nickname, String email, String address, String phone) {
 		model = (Model) this.retrieveColleague("Model");
-		registerController = (RegisterController) this.retrieveColleague("Register controller");
 		
 		return model.signUp(name, nickname, email, address, phone);
 	}
 	
-	boolean login (String nickname) {
+	/**
+	 * RegisterController -> Model
+	 */
+	int login (String nickname) {
 		model = (Model) this.retrieveColleague("Model");
 		
 		return model.login(nickname);
 	}
 	
-	void addOffer(String name, String description, String price, LocalDate deadline) {
+	/**
+	 * AuctionController -> Model
+	 */
+	boolean addOffer(String name, String description, String price, LocalDate deadline) {
 		model = (Model) this.retrieveColleague("Model");
 		
-		model.addOffer(name, description, price, deadline);
+		return model.addOffer(name, description, price, deadline);
+	}
+	
+	/**
+	 * AuctionController -> Model
+	 */
+	boolean addBid (int offerId, double bid) {
+		model = (Model) this.retrieveColleague("Model");
+		
+		return model.addBid(offerId, bid);
 	}
 	
 	Hashtable <Integer, Offer> getCurrentOffers () {
@@ -66,16 +105,27 @@ public class ControllerMediator extends Mediator {
 		return model.getCurrentOffers();
 	}
 	
-	void updateOffers() {
-		AuctionController ac = (AuctionController) this.retrieveColleague("Auction controller");
-
-//		ac.updateOffersList();
-		ac.updateOffers();
-	}
-	
-	void addBid (int offerId, double bid) {
+	Hashtable <Integer, Offer> getLocalOffers () {
 		model = (Model) this.retrieveColleague("Model");
 		
-		model.addBid(offerId, bid);
+		return model.getLocalOffers();
 	}
+	
+	ArrayList<Offer> getUserOffers () {
+		model = (Model) this.retrieveColleague("Model");
+		
+		return model.getUserOffers();
+	}
+	
+	void updateOffers() {
+		auctionController = (AuctionController) this.retrieveColleague("Auction controller");
+
+		Platform.runLater(
+				() -> {
+					auctionController.updateView();
+				}
+		);
+	}
+	
+	
 }

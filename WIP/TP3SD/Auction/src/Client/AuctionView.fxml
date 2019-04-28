@@ -47,7 +47,7 @@
                </children></AnchorPane>
       </content>
     </Tab>
-      <Tab onSelectionChanged="#auctionTab" text="Auction">
+      <Tab onSelectionChanged="#tab" text="Auction">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
@@ -69,7 +69,7 @@
                               <Label fx:id="lblCurrentBid" layoutX="341.0" layoutY="101.0" />
                               <Label fx:id="lblCurrentBidder" layoutX="341.0" layoutY="128.0" />
                               <Label layoutX="71.0" layoutY="203.0" text="\$" />
-                              <Label fx:id="lblAuctionNotifications" layoutX="263.0" layoutY="294.0" text="Label" visible="false" />
+                              <Label fx:id="lblAuctionNotifications" layoutX="50.0" layoutY="294.0" text="Label" visible="false" />
                            </children>
                         </AnchorPane>
                      </center>
@@ -77,6 +77,15 @@
                         <ListView fx:id="listHistory" prefHeight="348.0" prefWidth="272.0" BorderPane.alignment="CENTER" />
                      </right></BorderPane>
                </children></AnchorPane>
+        </content>
+      </Tab>
+      <Tab onSelectionChanged="#tab" text="My offers">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="listUserOffers" prefHeight="469.0" prefWidth="800.0" />
+               </children>
+            </AnchorPane>
         </content>
       </Tab>
   </tabs>

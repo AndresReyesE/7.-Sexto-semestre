@@ -1,6 +1,7 @@
 package Client;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -8,11 +9,8 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 	
-	
-	
 	@Override
 	public void start(Stage primaryStage) throws Exception{
-//		Parent root = FXMLLoader.load(getClass().getResource("AuctionView.fxml"));
 		FXMLLoader registerLoader = new FXMLLoader(getClass().getResource("RegisterView.fxml"));
 		Parent register = registerLoader.load();
 		RegisterController registerController = registerLoader.getController();
@@ -25,7 +23,6 @@ public class Main extends Application {
 		
 		SceneMediator mediator = new SceneMediator(scene);
 		ControllerMediator controllerMediator = new ControllerMediator();
-		Callback callback = new Callback(controllerMediator);
 		
 		String host = getParameters().getRaw().size() < 1 ? null : getParameters().getRaw().get(0);
 		Model model = new Model(host);
@@ -36,27 +33,29 @@ public class Main extends Application {
 		controllerMediator.addColleague("Auction controller", auctionController);
 		controllerMediator.addColleague("Register controller", registerController);
 		controllerMediator.addColleague("Model", model);
-		controllerMediator.addColleague("Callback", callback);
 		
-		
-		callback.setMediator(controllerMediator);
 		model.setControllerMediator(controllerMediator);
-//		model.setAuctionController(auctionController);
-		
 		
 		registerController.setMediator(mediator);
-//		registerController.setModel(model);
 		registerController.setControllerMediator(controllerMediator);
 		
 		auctionController.setMediator(mediator);
 		auctionController.setControllerMediator(controllerMediator);
-//		auctionController.setModel(model);
 
-		model.bindCallback();
+		model.registerToServer();
 		
-		primaryStage.setTitle("RS Auctions");
+		primaryStage.setTitle("ReyeSiordiAlvarez Auctions");
 		primaryStage.setScene(scene);
 		primaryStage.show();
+		
+		primaryStage.setOnCloseRequest(e -> {
+			System.out.println("Closing program...");
+			model.disconnectFromServer();
+			Platform.exit();
+			System.exit(0);
+		});
+		
+		
 	}
 	
 	

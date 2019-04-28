@@ -1,42 +1,28 @@
 package Server;
 
-import Interfaces.ClientInterface;
-import Interfaces.OfferInterface;
-import Interfaces.UserInterface;
-import PersistenceRoot.Clients;
-import PersistenceRoot.Offers;
-import PersistenceRoot.Users;
-
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
-import java.rmi.server.UnicastRemoteObject;
 
 public class Main {
-	
-	
 	public static void main(String[] args) {
+		System.setProperty("java.security.policy", "java.policy");
+		System.setSecurityManager(new SecurityManager());
 		try {
-			Registry registry = LocateRegistry.createRegistry(5000);
+			Registry registry = LocateRegistry.createRegistry(1099);
 //			Registry registry = LocateRegistry.getRegistry();
 			
 			Server server = Server.getInstance();
 			
-			Users users = server.getUsers();
-			Offers offers = server.getOffers();
-			Clients clients = server.getClients();
+			Servant servant = server.getServant();
 			
-			UserInterface usersStub = (UserInterface) UnicastRemoteObject.exportObject(users, 0);
-			OfferInterface offersStub = (OfferInterface) UnicastRemoteObject.exportObject(offers, 0);
-			ClientInterface clientsStub = (ClientInterface) UnicastRemoteObject.exportObject(clients, 0);
+//			ServantInterface servantStub = (ServantInterface) UnicastRemoteObject.exportObject(servant, 0);
 			
-			registry.rebind("Users", usersStub);
-			registry.rebind("Offers", offersStub);
-			registry.rebind("Clients", clientsStub);
+//			Naming.rebind("rmi://192.168.100.217:1099/Servant", servant);
+			registry.rebind("Servant", servant);
 			
 			System.out.println("Auction server is running and listening for calls...");
-			
 		}
 		catch (Exception e) {
 			StringWriter outError = new StringWriter();

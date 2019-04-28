@@ -1,47 +1,26 @@
 package Server;
 
-import Client.Callback;
-import Interfaces.CallbackInterface;
-import PersistenceRoot.Clients;
-import PersistenceRoot.Offers;
-import PersistenceRoot.Users;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
+import java.rmi.RemoteException;
 
 public class Server {
 	private static Server uniqueInstance = new Server();
 	
-	
-	private Users users;
-	private Offers offers;
-	private Clients clients;
-//	private Callback clients;
-	
+	private Servant servant;
 	
 	public static Server getInstance() {
 		return uniqueInstance;
 	}
 	
 	private Server() {
-		users = new Users();
-		offers = new Offers();
-		clients = new Clients();
-	}
-	public Users getUsers() {
-		return users;
-	}
-	
-	public Offers getOffers() {
-		return offers;
+		try {
+			servant = new Servant();
+		} catch (RemoteException e) {
+			e.printStackTrace();
+		}
 	}
 	
-	public Clients getClients () {
-		return clients;
+	public Servant getServant() {
+		return servant;
 	}
-	
-//	public void addOffer (String nickname, String name, String description, double initialPrice, LocalDate deadline) {
-//		offers.addOffer(name, description, initialPrice, deadline);
-//		users.seekUser(nickname).addOffer();
-//	}
 }
