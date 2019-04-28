@@ -12,6 +12,7 @@ import java.rmi.server.UnicastRemoteObject;
 public class Main {
 	public static void main(String[] args) {
 		System.setSecurityManager(new SecurityManager());
+		System.setProperty("java.rmi.server.hostname", "192.168.100.217");
 		try {
 			Registry registry = LocateRegistry.createRegistry(1099);
 //			Registry registry = LocateRegistry.getRegistry();
