@@ -1,19 +1,15 @@
 package Server;
 
-import RemoteInterfaces.ServantInterface;
-
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.rmi.Naming;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
-import java.rmi.server.UnicastRemoteObject;
 
 public class Main {
 	public static void main(String[] args) {
+		System.setProperty("java.security.policy", "java.policy");
 		System.setSecurityManager(new SecurityManager());
-//		System.setProperty("java.security.policy", "/home/reyes/7.-Sexto-semestre/WIP/TP3SD/Auction/out/production/Auction/java.policy");
-		System.setProperty("java.rmi.server.hostname", "192.168.100.217");
+		System.setProperty("java.rmi.server.hostname", "0.0.0.0");
 		try {
 			Registry registry = LocateRegistry.createRegistry(1099);
 //			Registry registry = LocateRegistry.getRegistry();

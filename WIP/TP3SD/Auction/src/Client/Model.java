@@ -38,6 +38,7 @@ class Model extends UnicastRemoteObject implements Observer {
 	 */
 	Model (String host) throws RemoteException {
 		super();
+		System.setProperty("java.security.policy", "java.policy");
 		System.setSecurityManager(new SecurityManager());
 		currentOffers = new Hashtable<>();
 		currentlyLoggedInAs = null;
