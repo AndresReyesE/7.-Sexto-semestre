@@ -74,10 +74,10 @@ class Model extends UnicastRemoteObject implements Observer {
 	
 	void registerToServer () {
 		try {
-			Model self = (Model) controllerMediator.retrieveColleague("Model");
+//			Model self = (Model) controllerMediator.retrieveColleague("Model");
 //			Observer selfStub = (Observer) UnicastRemoteObject.exportObject(self, 0);
 			
-			servant.attach(self);
+			servant.attach(this);
 		}
 		catch (Exception e) {
 			StringWriter outError = new StringWriter();
@@ -88,10 +88,10 @@ class Model extends UnicastRemoteObject implements Observer {
 	}
 	
 	void disconnectFromServer () {
-		Model self = (Model) controllerMediator.retrieveColleague("Model");
+//		Model self = (Model) controllerMediator.retrieveColleague("Model");
 		
 		try {
-			servant.detach(self);
+			servant.detach(this);
 		} catch (RemoteException e) {
 			e.printStackTrace();
 		}

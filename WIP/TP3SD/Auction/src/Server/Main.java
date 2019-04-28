@@ -9,7 +9,6 @@ public class Main {
 	public static void main(String[] args) {
 		System.setProperty("java.security.policy", "java.policy");
 		System.setSecurityManager(new SecurityManager());
-		System.setProperty("java.rmi.server.hostname", "0.0.0.0");
 		try {
 			Registry registry = LocateRegistry.createRegistry(1099);
 //			Registry registry = LocateRegistry.getRegistry();
