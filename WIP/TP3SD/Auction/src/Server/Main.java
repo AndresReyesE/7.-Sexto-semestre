@@ -13,7 +13,7 @@ public class Main {
 	public static void main(String[] args) {
 		System.setSecurityManager(new SecurityManager());
 		try {
-			Registry registry = LocateRegistry.createRegistry();
+//			Registry registry = LocateRegistry.createRegistry();
 //			Registry registry = LocateRegistry.getRegistry();
 			
 			Server server = Server.getInstance();
@@ -22,7 +22,7 @@ public class Main {
 			
 //			ServantInterface servantStub = (ServantInterface) UnicastRemoteObject.exportObject(servant, 0);
 			
-			Naming.rebind("//192.168.100.217/Servant", servant);
+			Naming.rebind("rmi://192.168.100.217/Servant", servant);
 			
 			System.out.println("Auction server is running and listening for calls...");
 		}

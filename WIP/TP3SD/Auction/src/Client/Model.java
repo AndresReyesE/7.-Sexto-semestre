@@ -56,7 +56,7 @@ class Model extends UnicastRemoteObject implements Observer {
 			
 //			servant = (ServantInterface) registry.lookup("Servant");
 			try {
-				servant = (ServantInterface) Naming.lookup("//" + host + "/Servant");
+				servant = (ServantInterface) Naming.lookup("rmi://" + host + "/Servant");
 			} catch (MalformedURLException e) {
 				e.printStackTrace();
 			}
