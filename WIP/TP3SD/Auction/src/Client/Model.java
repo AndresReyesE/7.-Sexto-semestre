@@ -48,7 +48,7 @@ class Model extends UnicastRemoteObject implements Observer {
 		currentOffers = new Hashtable<>();
 		currentlyLoggedInAs = null;
 		try {
-			Registry registry;
+//			Registry registry;
 //			if (host == null)
 //				registry = LocateRegistry.getRegistry();
 //			else

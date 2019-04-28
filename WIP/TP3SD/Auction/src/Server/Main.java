@@ -13,7 +13,7 @@ public class Main {
 	public static void main(String[] args) {
 		System.setSecurityManager(new SecurityManager());
 		try {
-//			Registry registry = LocateRegistry.createRegistry();
+			Registry registry = LocateRegistry.createRegistry(1099);
 //			Registry registry = LocateRegistry.getRegistry();
 			
 			Server server = Server.getInstance();
