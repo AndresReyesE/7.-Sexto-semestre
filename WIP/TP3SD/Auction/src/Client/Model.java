@@ -9,6 +9,8 @@ import javafx.application.Platform;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.net.MalformedURLException;
+import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
@@ -47,12 +49,17 @@ class Model extends UnicastRemoteObject implements Observer {
 		currentlyLoggedInAs = null;
 		try {
 			Registry registry;
-			if (host == null)
-				registry = LocateRegistry.getRegistry();
-			else
-				registry = LocateRegistry.getRegistry(host);
+//			if (host == null)
+//				registry = LocateRegistry.getRegistry();
+//			else
+//				registry = LocateRegistry.getRegistry(host);
 			
-			servant = (ServantInterface) registry.lookup("Servant");
+//			servant = (ServantInterface) registry.lookup("Servant");
+			try {
+				servant = (ServantInterface) Naming.lookup("//" + host + "/Servant");
+			} catch (MalformedURLException e) {
+				e.printStackTrace();
+			}
 			currentOffers = getCurrentOffers();
 		} catch (RemoteException e) {
 			System.out.println("Client.Model: RemoteException when getting stub from registry");

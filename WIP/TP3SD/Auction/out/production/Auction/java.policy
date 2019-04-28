@@ -13,7 +13,8 @@ grant {
 // stub downloading
 permission java.net.SocketPermission "*:80", "connect";
 
-permission java.net.SocketPermission "*:5000", "connect,listen,resolve";
+//permission java.net.SocketPermission "*:5000", "connect,listen,resolve";
+permission java.net.SocketPermission "*:1099", "connect,listen,resolve";
 
 permission java.net.SocketPermission "*:1024-65535", "connect,accept,resolve";
 };

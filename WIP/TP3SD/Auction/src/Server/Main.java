@@ -4,6 +4,7 @@ import RemoteInterfaces.ServantInterface;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.rmi.Naming;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
@@ -12,8 +13,8 @@ public class Main {
 	public static void main(String[] args) {
 		System.setSecurityManager(new SecurityManager());
 		try {
-//			Registry registry = LocateRegistry.createRegistry(5000);
-			Registry registry = LocateRegistry.getRegistry();
+			Registry registry = LocateRegistry.createRegistry();
+//			Registry registry = LocateRegistry.getRegistry();
 			
 			Server server = Server.getInstance();
 			
@@ -21,7 +22,7 @@ public class Main {
 			
 //			ServantInterface servantStub = (ServantInterface) UnicastRemoteObject.exportObject(servant, 0);
 			
-			registry.rebind("Servant", servant);
+			Naming.rebind("//192.168.100.217/Servant", servant);
 			
 			System.out.println("Auction server is running and listening for calls...");
 		}
