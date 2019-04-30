@@ -1,8 +1,11 @@
 package Mediator;
 
 import java.util.Hashtable;
-import java.util.Map;
 
+/**
+ * Abstract structure of a Mediator.
+ * Software design pattern
+ */
 public abstract class Mediator {
 
 	protected Hashtable <String, Object> colleagues;

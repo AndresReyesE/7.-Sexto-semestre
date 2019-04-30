@@ -7,6 +7,17 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/**
+ * This class represents the application to be run by the client. It creates an instance of the necessary objects and links them all together through the mediators' setters
+ * In specific it creates:
+ * An (FXML scene) instance for each View
+ * A Controller for each view
+ * A Model
+ * A SceneMediator that connects the Views and the Controllers
+ * A ControllerMediator that connects the Controllers and Model
+ *
+ * Those instances stay alive for the lifetime of the application and never is created another instance
+ */
 public class Main extends Application {
 	
 	@Override

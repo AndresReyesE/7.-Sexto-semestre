@@ -8,6 +8,14 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
+/**
+ * Concrete implementation of a Mediator that handle and redirect requests from a set of objects that should exchange information among each other
+ * This is done in order to reduce the number of connections required in the application.
+ * The colleagues for this mediator are supposed to be:
+ * - A Controller for the Auction View
+ * - A Controller for the Register View
+ * - A reference to the global model
+ */
 public class ControllerMediator extends Mediator {
 	
 //	private HashMap<String, Object> colleagues;
@@ -99,27 +107,36 @@ public class ControllerMediator extends Mediator {
 		return model.addBid(offerId, bid);
 	}
 	
-	Hashtable <Integer, Offer> getCurrentOffers () {
-		model = (Model) this.retrieveColleague("Model");
-		
-		return model.getCurrentOffers();
-	}
-	
+	/**
+	 * AuctionController -> Model
+	 */
 	Hashtable <Integer, Offer> getLocalOffers () {
 		model = (Model) this.retrieveColleague("Model");
 		
 		return model.getLocalOffers();
 	}
 	
+	/**
+	 * AuctionController -> Model
+	 */
 	ArrayList<Offer> getUserOffers () {
 		model = (Model) this.retrieveColleague("Model");
 		
 		return model.getUserOffers();
 	}
 	
+	/**
+	 * Model -> AuctionController
+	 */
 	void updateOffers() {
 		auctionController = (AuctionController) this.retrieveColleague("Auction controller");
 
+		/*
+		As this instruction is being called outside a FX application (from the model) it is required to use the
+		static methods of Platform that allows the concerned thread to run these instructions -that'll modify the FXML components-
+		as soon as it's possible.
+		The nested lambda is supposed to override the new Runnable () method required for runLater (equivalent to invokeLater in Swing)
+		 */
 		Platform.runLater(
 				() -> {
 					auctionController.updateView();

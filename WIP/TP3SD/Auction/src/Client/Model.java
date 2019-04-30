@@ -16,6 +16,10 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
+/**
+ * Contains a local version of the collections concerning to a client, methods that handle the requests from the Controllers, performs remote methods invocation to the server and implements its own remote
+ * methods defined in the Observer interface (for use of the server in order to receive callbacks)
+ */
 class Model extends UnicastRemoteObject implements Observer {
 	/*
 	MEDIATOR ATTRIBUTES

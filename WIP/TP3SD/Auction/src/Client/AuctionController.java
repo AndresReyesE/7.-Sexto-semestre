@@ -19,16 +19,23 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.ResourceBundle;
 
+/**
+ * Controller linked to the Auction view. Handles the user's input for offer a new product and perform a bid over a existing offer. Calls the ControllerMediator to receive information (principally
+ * from the Model). Update the view whenever necessary.
+ */
 public class AuctionController implements Initializable {
 	
 	private SceneMediator mediator;
 	private ControllerMediator controllerMediator;
 	
 	private Offer selectedOffer;
+	
+	/* COLLECTIONS REQUIRED FOR SHOWING INFORMATION IN CLIENT SIDE */
 	private Hashtable <Integer, Offer> currentOffers;
 	private ArrayList <Bid> currentHistory;
 	private ArrayList <Offer> currentUserOffers;
 	
+	/* OBSERVABLE COLLECTIONS TO BE ATTACHED TO THEIR CORRESPONDENT LIST VIEW */
 	private ObservableList <String> currentOffersObservable;
 	private ObservableList <String> currentHistoryObservable;
 	private ObservableList <String> currentUserOffersObservable;
@@ -122,7 +129,10 @@ public class AuctionController implements Initializable {
 		currentUserOffersObservable.setAll(userOffersPresentation());
 	}
 	
-	/* METHODS TO CREATE THE PRESENTATIONS OF LISTS */
+	/*
+	METHODS TO CREATE THE PRESENTATIONS OF LISTS
+	These methods use the collections previously declared to export a text version of the objects. These string will be displayed in the list views
+	* */
 	
 	private ArrayList <String> offersPresentation () {
 		ArrayList <String> offersPresentation = new ArrayList<>();
@@ -168,32 +178,32 @@ public class AuctionController implements Initializable {
 	@FXML
 	void offerPlaced (ActionEvent event) {
 		System.out.println("Offer placed button clicked!");
-		if (txtOfferName.getText().isEmpty()) {
+		if (txtOfferName.getText().isEmpty()) { //if user didn't specify a name of the product
 			lblOfferNotifications.setText("The product must have a name");
 			lblOfferNotifications.setVisible(true);
 			txtOfferName.requestFocus();
 		}
-		else if (txtOfferInitialPrice.getText().isEmpty()) {
+		else if (txtOfferInitialPrice.getText().isEmpty()) { //if user didn't specify an initial price
 			lblOfferNotifications.setText("The product must have an initial price");
 			lblOfferNotifications.setVisible(true);
 			txtOfferInitialPrice.requestFocus();
 		}
-		else if (isNotValidNumber(txtOfferInitialPrice.getText())) {
+		else if (isNotValidNumber(txtOfferInitialPrice.getText())) { //if the price ain't a number
 			lblOfferNotifications.setText("The product price is not a valid number. Please enter a numeric value greater than 0");
 			lblOfferNotifications.setVisible(true);
 			txtOfferInitialPrice.requestFocus();
 		}
-		else if (dateOfferDeadline.getValue() == null) {
+		else if (dateOfferDeadline.getValue() == null) { //if the user didn't specify a date as deadline
 			lblOfferNotifications.setText("You must choose a date");
 			lblOfferNotifications.setVisible(true);
 			dateOfferDeadline.requestFocus();
 		}
-		else if (dateOfferDeadline.getValue().isBefore(LocalDate.now())) {
+		else if (dateOfferDeadline.getValue().isBefore(LocalDate.now())) { //if the date is in the past
 			lblOfferNotifications.setText("The date shouldn't be in the past, don't ya think?");
 			lblOfferNotifications.setVisible(true);
 			dateOfferDeadline.requestFocus();
 		}
-		else {
+		else { //if all the data is valid
 			boolean result = controllerMediator.addOffer(txtOfferName.getText(), txtOfferDescription.getText(), txtOfferInitialPrice.getText(), dateOfferDeadline.getValue());
 			
 			lblOfferNotifications.setText(result ? "Offer placed successfully!" : "There was a problem connecting to the server");

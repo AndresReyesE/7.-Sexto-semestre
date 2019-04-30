@@ -9,6 +9,10 @@ import javafx.scene.control.ToggleButton;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 
+/**
+ * Controller linked to the Register view. Handles the user's input for register a new user and login with an existing nickname. Calls the ControllerMediator to receive information (principally
+ * from the Model); calls the SceneMediator for change between scenes (views). Update the view whenever necessary.
+ */
 public class RegisterController {
 	
 	private SceneMediator mediator;

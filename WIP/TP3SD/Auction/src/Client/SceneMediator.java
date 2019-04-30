@@ -6,6 +6,13 @@ import javafx.scene.Scene;
 
 import java.util.HashMap;
 
+/**
+ * Concrete implementation of a Mediator that handle and redirect requests from a set of objects that should exchange information among each other
+ * This is done in order to reduce the number of connections required in the application.
+ * The colleagues for this mediator are supposed to be:
+ * - A Controller for the Auction View
+ * - A Controller for the Register View
+ */
 public class SceneMediator extends Mediator {
 	
 	private HashMap <String, Object> colleagues;
@@ -28,7 +35,7 @@ public class SceneMediator extends Mediator {
 		return colleagues.get(name);
 	}
 	
-	public void activate (String name) {
+	void activate (String name) {
 		scene.setRoot((Parent) colleagues.get(name));
 	}
 	
