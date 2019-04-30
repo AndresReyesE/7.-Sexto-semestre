@@ -16,7 +16,7 @@ import javafx.stage.Stage;
  * A SceneMediator that connects the Views and the Controllers
  * A ControllerMediator that connects the Controllers and Model
  *
- * Those instances stay alive for the lifetime of the application and never is created another instance
+ * Those instances stay alive for the lifetime of the application and never is created another instance of these classes to encourage the coherence
  */
 public class Main extends Application {
 	

@@ -96,6 +96,7 @@ public class AuctionController implements Initializable {
 		lblAuctionNotifications.setVisible(false);
 	}
 	
+	
 	private void updateSelectedOffer (int id) {
 		selectedOffer = currentOffers.get(id);
 	}

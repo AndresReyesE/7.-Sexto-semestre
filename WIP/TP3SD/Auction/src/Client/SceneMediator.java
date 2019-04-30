@@ -23,6 +23,9 @@ public class SceneMediator extends Mediator {
 		colleagues = new HashMap<>();
 	}
 	
+	/*
+	IMPLEMENTATION OF MEDIATOR REQUIRED METHODS
+	 */
 	public void addColleague (String name, Object value) {
 		colleagues.putIfAbsent(name, value);
 	}
@@ -35,17 +38,10 @@ public class SceneMediator extends Mediator {
 		return colleagues.get(name);
 	}
 	
+	/**
+	 * Given the name of a colleague, this mediator change the current view to that precise colleague (it has to be a name associated to a FXML view)
+	 */
 	void activate (String name) {
 		scene.setRoot((Parent) colleagues.get(name));
 	}
-	
-//	void updateLoggedUser () {
-//		Parent auctionView = (Parent) colleagues.get("Auction view");
-//		RegisterController rc = auctionView.getCon
-//
-//		Model m = (Model) colleagues.get("Model");
-//
-//		rc.
-//	}
-	
 }

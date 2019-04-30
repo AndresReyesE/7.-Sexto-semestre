@@ -38,7 +38,9 @@ public class RegisterController {
 		this.controllerMediator = cm;
 	}
 	
-	
+	/*
+	EVENT HANDLERS FOR
+	 */
 	@FXML
 	void signUpToggled (ActionEvent event) {
 		if (toggleSignUp.isSelected()) {

@@ -1,6 +1,6 @@
 package Client;
 
-import Observer.Observer;
+import RemoteInterfaces.Observer;
 import RemoteInterfaces.ServantInterface;
 import RemoteObjects.Offer;
 import RemoteObjects.User;

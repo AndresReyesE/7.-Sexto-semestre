@@ -8,6 +8,9 @@ import java.rmi.RemoteException;
 import java.time.LocalDate;
 import java.util.Hashtable;
 
+/**
+ * Single remote interface to be implemented by the servant. Defines all the methods a remote client can invoke/request to the server
+ */
 public interface ServantInterface extends Remote {
 	/*
 	SUBJECT RELATED METHODS

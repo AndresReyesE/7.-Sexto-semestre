@@ -1,6 +1,6 @@
 package Server;
 
-import Observer.Observer;
+import RemoteInterfaces.Observer;
 import RemoteInterfaces.*;
 import RemoteObjects.Bid;
 import RemoteObjects.Offer;
