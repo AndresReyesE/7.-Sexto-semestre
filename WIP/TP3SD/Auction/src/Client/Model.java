@@ -37,8 +37,11 @@ class Model extends UnicastRemoteObject implements Observer {
 	private User currentlyLoggedInAs;
 	private Hashtable <Integer, Offer> currentOffers;
 	
-	/*
-	CONSTRUCTOR
+	/**
+	 * Constructor
+	 * Set the security manager with the required permissions for this application,
+	 * initialize local objects and locate the registry initiated by the server
+	 * in order to get a reference of the remote object Servant.
 	 */
 	Model (String host) throws RemoteException {
 		super();
@@ -54,11 +57,7 @@ class Model extends UnicastRemoteObject implements Observer {
 				registry = LocateRegistry.getRegistry(host);
 			
 			servant = (ServantInterface) registry.lookup("Servant");
-//			try {
-//				servant = (ServantInterface) Naming.lookup("rmi://" + host + "/Servant");
-//			} catch (MalformedURLException e) {
-//				e.printStackTrace();
-//			}
+//
 			currentOffers = getCurrentOffers();
 		} catch (RemoteException e) {
 			System.out.println("Client.Model: RemoteException when getting stub from registry");
@@ -74,31 +73,6 @@ class Model extends UnicastRemoteObject implements Observer {
 	 */
 	void setControllerMediator (ControllerMediator cm) {
 		this.controllerMediator = cm;
-	}
-	
-	void registerToServer () {
-		try {
-//			Model self = (Model) controllerMediator.retrieveColleague("Model");
-//			Observer selfStub = (Observer) UnicastRemoteObject.exportObject(self, 0);
-			
-			servant.attach(this);
-		}
-		catch (Exception e) {
-			StringWriter outError = new StringWriter();
-			e.printStackTrace(new PrintWriter(outError));
-			String errorString = outError.toString();
-			System.out.println(errorString);
-		}
-	}
-	
-	void disconnectFromServer () {
-//		Model self = (Model) controllerMediator.retrieveColleague("Model");
-		
-		try {
-			servant.detach(this);
-		} catch (RemoteException e) {
-			e.printStackTrace();
-		}
 	}
 	
 	/*
@@ -179,10 +153,7 @@ class Model extends UnicastRemoteObject implements Observer {
 			double price = Double.parseDouble(initialPrice);
 			
 			servant.addOffer(currentlyLoggedInAs.getNickname(), offerName, offerDescription, price, offerDeadline);
-		
-//			clients.notifyClients();
-//			offers.displayOffers();
-//			users.displayUsers();
+			
 			return true;
 		} catch (RemoteException e) {
 			System.out.println("Client.Model: RemoteException while trying to login");
@@ -201,16 +172,11 @@ class Model extends UnicastRemoteObject implements Observer {
 	boolean addBid (int offerId, double bid) {
 		try {
 			servant.newBid(offerId, currentlyLoggedInAs.getNickname(), bid);
-//			offers.displayOffers();
-//			controllerMediator.updateOffersList();
-//			clients.notifyClients();
+			
 			return true;
-		} catch (RemoteException re) {
-			System.err.println("Error retrieving offers from Client Side!");
-			StringWriter outError = new StringWriter();
-			re.printStackTrace(new PrintWriter(outError));
-			String errorString = outError.toString();
-			System.out.println(errorString);
+		} catch (RemoteException e) {
+			System.err.println("Client.Model: Error adding a bid!");
+			e.printStackTrace();
 			return false;
 		}
 	}
@@ -233,16 +199,24 @@ class Model extends UnicastRemoteObject implements Observer {
 	Hashtable <Integer, Offer> getCurrentOffers() {
 		try {
 			return servant.getCurrentOffers();
-		} catch (RemoteException re) {
+		} catch (RemoteException e) {
 			System.err.println("Error retrieving offers from Client Side!");
-			StringWriter outError = new StringWriter();
-			re.printStackTrace(new PrintWriter(outError));
-			String errorString = outError.toString();
-			System.out.println(errorString);
+			e.printStackTrace();
 		}
 		return null;
 	}
 	
+	/*
+	OBSERVER METHODS
+	 */
+	
+	/**
+	 * When a change is occurred in the Subject (Servant) it is waited this function to be called
+	 * as a result of the Callback generated
+	 * @param updatedUser
+	 * @param news
+	 * @throws RemoteException
+	 */
 	@Override
 	public void update(User updatedUser, Hashtable<Integer, Offer> news) throws RemoteException {
 		currentlyLoggedInAs = updatedUser;
@@ -250,13 +224,52 @@ class Model extends UnicastRemoteObject implements Observer {
 		controllerMediator.updateOffers();
 	}
 	
+	/**
+	 * Test function to prove that the subscription to the server was made successfully
+	 * @throws RemoteException
+	 */
 	@Override
 	public void test () throws RemoteException {
 		System.out.println("This function just can be called by the server, should be printed in this client");
 	}
 	
+	/**
+	 * If the server requires an ID of this Model the nickname of the user logged in is returned
+	 * This is useful for the server to send a new copy of the user logged in with the changed made since the
+	 * last Callback
+	 * @return
+	 * @throws RemoteException
+	 */
 	@Override
 	public String getID () throws RemoteException {
 		return currentlyLoggedInAs == null ? "" : currentlyLoggedInAs.getNickname();
+	}
+	
+	/**
+	 * Send a reference of this object to the server in order to receive updates when a change is registered
+	 * As this object extends UnicastRemoteObject and implements Observer it counts as a perfect candidate
+	 * to be an observer of the state (offersPlaced) in the Subject (Servant)
+	 */
+	void registerToServer () {
+		try {
+			servant.attach(this);
+		}
+		catch (Exception e) {
+			System.out.println("Client.Model: Error subscribing to the Server");
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * Send a reference of this object to the server in order to stop receiving updates
+	 * This method is called when the application is closed, so the server knows a client isn't available anymore
+	 */
+	void disconnectFromServer () {
+		try {
+			servant.detach(this);
+		} catch (RemoteException e) {
+			System.out.println("Client.Model: Error unsubscribing from the model");
+			e.printStackTrace();
+		}
 	}
 }
