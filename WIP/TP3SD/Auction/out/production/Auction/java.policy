@@ -1,9 +1,0 @@
-/* AUTOMATICALLY GENERATED ON Sat Apr 27 20:51:35 CDT 2019*/
-/* DO NOT EDIT */
-
-grant {
-  permission java.net.SocketPermission "*:80", "connect";
-  permission java.net.SocketPermission "*:1024-65535", "connect,accept,listen,resolve";
-  permission java.util.PropertyPermission "java.rmi.server.hostname", "write";
-};
-
