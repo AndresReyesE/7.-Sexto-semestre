@@ -29,7 +29,7 @@ public class Main extends Application implements Initializable {
         
         
         primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 600, 500));
+        primaryStage.setScene(new Scene(root, 500, 500));
         primaryStage.show();
     }
     
