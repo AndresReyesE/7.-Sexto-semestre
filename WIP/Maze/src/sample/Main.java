@@ -27,7 +27,7 @@ public class Main extends Application implements Initializable {
     
         Model model = new Model (controller);
         
-        model.createGeneticAlgorithm(3, 20, 5, 0.0, false, 1);
+        model.createGeneticAlgorithm(3, 100, 5, 0.0, false, 1);
         
         
         primaryStage.setTitle("Hello World");

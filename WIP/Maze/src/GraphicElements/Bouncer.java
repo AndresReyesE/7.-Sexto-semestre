@@ -42,6 +42,8 @@ public class Bouncer {
 	
 	private double finalX;
 	private double finalY;
+	private double maximumDistance;
+	private double minimumDistance;
 	
 	private Point2D targetPoint;
 	private double closestX;
@@ -75,7 +77,9 @@ public class Bouncer {
 		this.bouncingArea = maze;
 		this.fitnessValue = 0;
 		this.targetPoint = new Point2D(targetZone.getX() + targetZone.getWidth() / 2, targetZone.getY() + targetZone.getHeight() / 2);
-		this.closestDistance = initialPosition.distance(targetPoint);
+		this.maximumDistance = initialPosition.distance(targetPoint);
+		this.minimumDistance =  radius + new Point2D(targetZone.getX(), targetZone.getY()).distance(targetPoint);
+		this.closestDistance = maximumDistance;
 		
 		
 		collide = Bindings.createIntegerBinding(
@@ -134,7 +138,7 @@ public class Bouncer {
 					else if (newValue.equals(OBSTACLE_HIT_FROM_CORNER))
 						updateDirection(Math.PI - this.currentDirection);
 					else if (newValue.equals(TARGET_HIT)) {
-						this.fitnessValue = 1;
+//						this.fitnessValue = 1;
 						stop();
 					}
 				}
@@ -183,12 +187,12 @@ public class Bouncer {
 	}
 	
 	private void calculateFitnessValue() {
-		fitnessValue = (-1 / 640) * closestDistance + 1;
+		fitnessValue = (minimumDistance - closestDistance) / (maximumDistance - minimumDistance) + 1;
 		
 		Line line = new Line(closestX, closestY, targetPoint.getX(), targetPoint.getY());
 		for (Rectangle obstacle : bouncingArea.getObstacleNodes()) {
 			if (line.intersects(obstacle.localToParent(obstacle.getBoundsInLocal())))
-				fitnessValue -= 0.10;
+				fitnessValue -= 0.20;
 		}
 		
 	}
@@ -213,9 +217,8 @@ public class Bouncer {
 	public void stop () {
 		bouncingAnimation.stop();
 		
-		closestDistance -= radius - bouncingArea.getTargetZone().getWidth() / 2;
-		this.finalX = node.getCenterX();
-		this.finalY = node.getCenterY();
+//		closestDistance -= radius - bouncingArea.getTargetZone().getWidth() / 2;
+		System.out.println("Closest distance: " + closestDistance + "\tFitness value: " + fitnessValue);
 	}
 	
 	private void updateDirection (double newDirection) {

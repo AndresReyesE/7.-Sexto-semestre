@@ -95,7 +95,6 @@ public class Model {
 				}
 			}, 5000);
 		}
-		
 		for (Bouncer bouncer : bouncers) {
 //			bouncer.play();
 			timer.schedule(new TimerTask() {
@@ -108,6 +107,7 @@ public class Model {
 			timer.schedule(new TimerTask() {
 				@Override
 				public void run() {
+					System.out.println("--------");
 					bouncer.stop();
 				}
 			}, 5000);
