@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Sphere?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Sphere fx:id="sphere" layoutX="342.0" layoutY="219.0" radius="10.0" />
+      <Label layoutX="32.0" layoutY="397.0" text="S: Layout X" />
+      <Label fx:id="sphereLayoutX" layoutX="51.0" layoutY="425.0" text="Label" />
+      <Label fx:id="sphereLayoutY" layoutX="157.0" layoutY="425.0" text="Label" />
+      <Label layoutX="248.0" layoutY="397.0" text="S: TranslateX" />
+      <Label layoutX="138.0" layoutY="397.0" text="S: Layout Y" />
+      <Label layoutX="353.0" layoutY="397.0" text="S: TranslateY" />
+      <Label fx:id="sphereTranslateX" layoutX="274.0" layoutY="425.0" text="Label" />
+      <Label fx:id="sphereTranslateY" layoutX="378.0" layoutY="425.0" text="Label" />
+      <Label layoutX="496.0" layoutY="397.0" text="Distance" />
+      <Label fx:id="sphereDistance" layoutX="507.0" layoutY="425.0" text="Label" />
+      <Label fx:id="collisionDetected" layoutX="274.0" layoutY="464.0" text="Collision detected" />
    </children>
 </AnchorPane>

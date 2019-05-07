@@ -1,0 +1,92 @@
+final double circleX = 25, circleY = 50, circleRadius = 25;
+        final double colliderX = 0, colliderY = 180, colliderWidth = 420, colliderHeight = 40;
+    
+        Circle circle = new Circle(circleX, circleY, circleRadius);
+        Rectangle collider = new Rectangle(colliderX, colliderY, colliderWidth, colliderHeight);
+    
+        Random random = new Random(System.currentTimeMillis());
+    
+        double[] points = new double[100];
+    
+        for (int i = 0; i < 20; i++) {
+            points[i] = random.nextInt(150);
+//			System.out.print(points[i] + " ");
+//			if (i % 2 != 0)
+//				System.out.println();
+        }
+    
+//        Polyline pl = new Polyline(points);
+        Line pl = new Line(circleX, circleY, circleX + 200, circleY + 200);
+        PathTransition transition = new PathTransition();
+        transition.setDuration(Duration.seconds(10));
+        transition.setCycleCount(PathTransition.INDEFINITE);
+        transition.setPath(pl);
+        transition.setNode(circle);
+    
+        circle.translateXProperty().addListener(new ChangeListener<Number>() {
+			@Override
+			public void changed(ObservableValue<? extends Number> observableValue, Number number, Number t1) {
+				controller.collisionDetected.setVisible(false);
+				controller.sphereLayoutX.setText(""+circle.getLayoutX());
+                controller.sphereLayoutY.setText(""+circle.getLayoutY());
+                controller.sphereTranslateX.setText(String.format("%.2f", circle.getTranslateX()));
+                controller.sphereTranslateY.setText(String.format("%.2f", circle.getTranslateY()));
+                
+//                if (circle.intersects())
+		}});
+        
+        
+        TranslateTransition colliderTransition = new TranslateTransition(Duration.seconds(3), collider);
+        colliderTransition.setAutoReverse(true);
+        colliderTransition.setByX(200);
+        colliderTransition.setCycleCount(TranslateTransition.INDEFINITE);
+    
+//        BooleanBinding collision = Bindings.createBooleanBinding(() -> {
+//            Point2D colliderLocation = collider.localToParent(colliderX, colliderY + colliderHeight);
+//            Point2D circleLocation = circle.localToParent(circleX, circleY);
+//            return (colliderLocation.distance(circleLocation) <= circleRadius + colliderWidth);
+//        }, circle.translateXProperty(), circle.translateYProperty());
+//
+//        collision.addListener((observable, haveCollided, isColliding) -> {
+//            if (isColliding) {
+//                System.out.println("Collision detected");
+//                controller.collisionDetected.setVisible(true);
+//            }
+//            else
+//                controller.collisionDetected.setVisible(false);
+//        });
+        
+        System.out.println("Collider Layout X: " + collider.getLayoutX());
+        System.out.println("Collider Layout Y: " + collider.getLayoutY());
+        System.out.println("Collider Layout bounds: " + collider.getLayoutBounds());
+    
+        controller.pane.getChildren().addAll(circle, collider);
+//        colliderTransition.play();
+        transition.play();
+
+        
+        
+        
+        
+        
+        //IN MAIN BEFORE CHANGING TO MODEL STRUCTURE
+        
+        
+    Maze bouncingArea = new Maze(1);
+        Bouncer bouncer = new Bouncer(new Point2D(50, 50), 24, bouncingArea, Math.PI / 9);
+        
+        controller.addNode(bouncingArea.getBouncingArea());
+        controller.addNodes(bouncingArea.getObstacleNodes());
+        controller.addNode(bouncer.getNode());
+    
+        bouncer.play();
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                bouncer.stop();
+            }
+        }, 5000);
+        
+        for (Obstacle obs : bouncingArea.getObstacles())
+            obs.play();

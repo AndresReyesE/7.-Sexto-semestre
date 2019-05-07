@@ -4,25 +4,25 @@ scrivere	-he escrito		HO SCRITTO
 leggere		-he leído		HO LETTO
 prendere	-he tomado		HO PRESO
 chiudere	-he cerrar		HO CHIUSO
-decidere	-he decidido		HO DECISO
+decidere	-he decidido	HO DECISO
 morire		-he muerto		SONO MORTO
-offrire		-he ofrecido		HO OFFERTO
+offrire		-he ofrecido	HO OFFERTO
 aprire		-he abierto		HO APERTO
 venire		-he venido		SONO VENUTO
-essere		-he sido/estado		SONO STATO
+essere		-he sido/estado	SONO STATO
 vivere		-he vivido		SONO VISSUTO
 perdere		-he perdido		HO PERSO
 chiedere	-he pedido		HO CHIESTO
-rispondere	-he respondido		HO RISPOSTO
+rispondere	-he respondido	HO RISPOSTO
 vedere		-he visto		HO VISTO
-rimanere	-he permanecido		SONO RIMASTO
-conoscere	-he conocido		HO CONOSCIUTO
+rimanere	-he permanecido	SONO RIMASTO
+conoscere	-he conocido	HO CONOSCIUTO
 vincere		-he vencido		HO VINTO
 piacere		-ha gustado		SONO PIACIUTO
 correre		-he corrido		HO CORSO
 bere		-he bebido		HO BEVUTO
 mettere		-he puesto		HO MESSO
-succedere	-ha sucedido		HO SUCCESO
+succedere	-ha sucedido	HO SUCCESO
 
 El fin de semana pasado fue muy tranquilo, el viernes vi algunas películas, comí pizza y jugué videojuegos. Después, el sábado saqué a pasear a mis perros y fui a ver algunos peces, fui con mi familia, jugamos un juego de mesa y cenamos sopa. El domingo solo leí un libro e hice tarea de la universidad.
 
