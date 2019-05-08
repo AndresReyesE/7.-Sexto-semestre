@@ -28,7 +28,7 @@ public class GeneticAlgorithm {
 		this.mutationRate = mutationRate;
 		this.elitism = elitism;
 		
-		currentGeneration = new Population(populationSize);
+		currentGeneration = new Population(populationSize, tournamentSize);
 		currentCountGeneration = 0;
 	}
 	
@@ -47,18 +47,6 @@ public class GeneticAlgorithm {
 		
 	}
 	
-	public static Individual tournamentSelection (Individual[] population, int tournamentSize) {
-		Random random = new Random(System.currentTimeMillis());
-		Individual [] participants = new Individual[tournamentSize];
-		
-		
-		for (int i = 0; i < tournamentSize; i++) {
-			participants[i] = population[random.nextInt(population.length)];
-		}
-		
-		return null;
-	}
-	
 	/**
 	 * Will update the value of this instance currentGeneration property.
 	 * If it is the first time this method is called, new individuals will be generated randomly,
@@ -71,5 +59,9 @@ public class GeneticAlgorithm {
 			currentGeneration.evolve(elitism, mutationRate);
 		}
 		currentCountGeneration++;
+	}
+	
+	public void setCurrentGeneration (Individual [] updatedIndividuals) {
+		this.currentGeneration.updatePopulation(updatedIndividuals);
 	}
 }

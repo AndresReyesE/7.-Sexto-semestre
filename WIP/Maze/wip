@@ -26,11 +26,11 @@ final double circleX = 25, circleY = 50, circleRadius = 25;
         circle.translateXProperty().addListener(new ChangeListener<Number>() {
 			@Override
 			public void changed(ObservableValue<? extends Number> observableValue, Number number, Number t1) {
-				controller.collisionDetected.setVisible(false);
-				controller.sphereLayoutX.setText(""+circle.getLayoutX());
-                controller.sphereLayoutY.setText(""+circle.getLayoutY());
-                controller.sphereTranslateX.setText(String.format("%.2f", circle.getTranslateX()));
-                controller.sphereTranslateY.setText(String.format("%.2f", circle.getTranslateY()));
+				simulationController.collisionDetected.setVisible(false);
+				simulationController.sphereLayoutX.setText(""+circle.getLayoutX());
+                simulationController.sphereLayoutY.setText(""+circle.getLayoutY());
+                simulationController.sphereTranslateX.setText(String.format("%.2f", circle.getTranslateX()));
+                simulationController.sphereTranslateY.setText(String.format("%.2f", circle.getTranslateY()));
                 
 //                if (circle.intersects())
 		}});
@@ -50,17 +50,17 @@ final double circleX = 25, circleY = 50, circleRadius = 25;
 //        collision.addListener((observable, haveCollided, isColliding) -> {
 //            if (isColliding) {
 //                System.out.println("Collision detected");
-//                controller.collisionDetected.setVisible(true);
+//                simulationController.collisionDetected.setVisible(true);
 //            }
 //            else
-//                controller.collisionDetected.setVisible(false);
+//                simulationController.collisionDetected.setVisible(false);
 //        });
         
         System.out.println("Collider Layout X: " + collider.getLayoutX());
         System.out.println("Collider Layout Y: " + collider.getLayoutY());
         System.out.println("Collider Layout bounds: " + collider.getLayoutBounds());
     
-        controller.pane.getChildren().addAll(circle, collider);
+        simulationController.pane.getChildren().addAll(circle, collider);
 //        colliderTransition.play();
         transition.play();
 
@@ -75,9 +75,9 @@ final double circleX = 25, circleY = 50, circleRadius = 25;
     Maze bouncingArea = new Maze(1);
         Bouncer bouncer = new Bouncer(new Point2D(50, 50), 24, bouncingArea, Math.PI / 9);
         
-        controller.addNode(bouncingArea.getBouncingArea());
-        controller.addNodes(bouncingArea.getObstacleNodes());
-        controller.addNode(bouncer.getNode());
+        simulationController.addNode(bouncingArea.getBouncingArea());
+        simulationController.addNodes(bouncingArea.getObstacleNodes());
+        simulationController.addNode(bouncer.getNode());
     
         bouncer.play();
         Timer timer = new Timer();

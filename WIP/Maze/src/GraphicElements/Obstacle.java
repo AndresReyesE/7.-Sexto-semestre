@@ -25,11 +25,11 @@ public class Obstacle {
 		return node;
 	}
 	
-	public void play () {
+	public void play() {
 		transition.play();
 	}
 	
-	public void stop () {
+	public void stop() {
 		transition.stop();
 	}
 }

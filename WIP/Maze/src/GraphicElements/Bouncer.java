@@ -198,8 +198,7 @@ public class Bouncer {
 	}
 	
 	public double getFitnessValue() {
-		return fitnessValue;
-		
+		return fitnessValue > 1 ? 1 : (fitnessValue < 0) ? 0 : fitnessValue;
 	}
 	
 	/*
@@ -216,9 +215,6 @@ public class Bouncer {
 	
 	public void stop () {
 		bouncingAnimation.stop();
-		
-//		closestDistance -= radius - bouncingArea.getTargetZone().getWidth() / 2;
-		System.out.println("Closest distance: " + closestDistance + "\tFitness value: " + fitnessValue);
 	}
 	
 	private void updateDirection (double newDirection) {
