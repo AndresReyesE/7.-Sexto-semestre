@@ -37,6 +37,7 @@ public class Main extends Application implements Initializable {
         Model model = new Model(simulationController);
         
         parameterSelectionController.setModel(model);
+        simulationController.setModel(model);
 
 //        model.createGeneticAlgorithm(3, 100, 5, 0.0, false, 1);
         

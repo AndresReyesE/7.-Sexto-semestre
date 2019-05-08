@@ -4,25 +4,25 @@ import java.util.Random;
 
 public class Population {
 	
-	private int populationSize;
-	private int tournamentSize;
+//	private int populationSize;
+//	private int tournamentSize;
 	
-	private Individual [] population;
+//	private Individual [] population;
 	
-	public Population(int populationSize, int tournamentSize) {
-		this.populationSize = populationSize;
-		this.tournamentSize = tournamentSize;
-		this.population = new Individual[populationSize];
-	}
+//	public Population(int populationSize, int tournamentSize) {
+//		this.populationSize = populationSize;
+//		this.tournamentSize = tournamentSize;
+//		this.population = new Individual[populationSize];
+//	}
 	
 	/*
 	GETTER
 	 */
-	public Individual[] getPopulation() {
-		return population;
-	}
+//	public Individual[] getPopulation() {
+//		return population;
+//	}
 	
-	Individual getFittest(Individual [] participants) {
+	static Individual getFittest(Individual [] participants) {
 		double bestFitnessValue = participants[0].getFitnessValue();
 		Individual currentFittest = participants[0];
 		for (Individual individual : participants) {
@@ -37,8 +37,10 @@ public class Population {
 	/**
 	 * Initialize this population by generating a set of populationSize random individuals
 	 */
-	public void initialize () {
+	public static Individual [] initialize(int populationSize) {
 		Random random = new Random(System.currentTimeMillis());
+		
+		Individual [] population = new Individual[populationSize];
 		
 		double initialX, initialY, initialDirection, velocity;
 		long initialDelay;
@@ -51,6 +53,8 @@ public class Population {
 			
 			population[i] = new Individual(initialX, initialY, initialDirection, Math.abs(initialDelay), velocity);
 		}
+		
+		return population;
 	}
 	
 	/**
@@ -58,7 +62,7 @@ public class Population {
 	 * @param elitism
 	 * @param mutationRate
 	 */
-	void evolve (boolean elitism, double mutationRate) {
+	public static Individual [] evolve (Individual [] population, int populationSize, int tournamentSize, boolean elitism, double mutationRate) {
 		Individual [] newGeneration = new Individual[populationSize];
 		
 		for (int i = 0; i < populationSize; i++) {
@@ -66,15 +70,17 @@ public class Population {
 				newGeneration[0] = getFittest(population);
 				continue;
 			}
-			Individual father = tournamentSelection();
-			Individual mother = tournamentSelection();
+			Individual father = tournamentSelection(population, tournamentSize);
+			Individual mother = tournamentSelection(population, tournamentSize);
 			newGeneration[i] = crossover(father, mother);
 			if (mutationRate < Math.random())
 				newGeneration[i].mutate();
 		}
+		
+		return newGeneration;
 	}
 	
-	private Individual tournamentSelection () {
+	public static Individual tournamentSelection(Individual [] population, int tournamentSize) {
 		Random random = new Random(System.currentTimeMillis());
 		Individual [] participants = new Individual[tournamentSize];
 		
@@ -84,11 +90,11 @@ public class Population {
 		return getFittest(participants);
 	}
 	
-	void updatePopulation(Individual[] updatedIndividuals) {
-		System.arraycopy(updatedIndividuals, 0, population, 0, populationSize);
-	}
+//	void updatePopulation(Individual[] updatedIndividuals) {
+//		System.arraycopy(updatedIndividuals, 0, population, 0, populationSize);
+//	}
 	
-	private Individual crossover(Individual father, Individual mother) {
+	public static Individual crossover(Individual father, Individual mother) {
 		Random random = new Random(System.currentTimeMillis());
 		double initialX = random.nextBoolean() ? father.getInitialX() : mother.getInitialX();
 		double initialY = random.nextBoolean() ? father.getInitialY() : mother.getInitialY();

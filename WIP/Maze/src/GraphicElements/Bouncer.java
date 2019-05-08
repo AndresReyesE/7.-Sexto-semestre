@@ -4,6 +4,7 @@ import javafx.animation.AnimationTimer;
 import javafx.beans.binding.Bindings;
 import javafx.beans.binding.IntegerBinding;
 import javafx.geometry.Point2D;
+import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
@@ -62,7 +63,7 @@ public class Bouncer {
 	 */
 	public Bouncer (Point2D position, double radius, Maze maze, double currentDirection, double velocity, long initialDelay) {
 		ArrayList <Rectangle> obstacles = maze.getObstacleNodes();
-		Rectangle targetZone = maze.getTargetZone();
+		ImageView targetZone = maze.getTargetZone();
 		
 		this.initialPosition = position;
 		this.radius = radius;
@@ -76,7 +77,7 @@ public class Bouncer {
 		
 		this.bouncingArea = maze;
 		this.fitnessValue = 0;
-		this.targetPoint = new Point2D(targetZone.getX() + targetZone.getWidth() / 2, targetZone.getY() + targetZone.getHeight() / 2);
+		this.targetPoint = new Point2D(targetZone.getX() + targetZone.getFitWidth() / 2, targetZone.getY() + targetZone.getFitHeight() / 2);
 		this.maximumDistance = initialPosition.distance(targetPoint);
 		this.minimumDistance =  radius + new Point2D(targetZone.getX(), targetZone.getY()).distance(targetPoint);
 		this.closestDistance = maximumDistance;

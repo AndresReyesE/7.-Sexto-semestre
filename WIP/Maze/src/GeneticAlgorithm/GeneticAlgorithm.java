@@ -10,7 +10,8 @@ public class GeneticAlgorithm {
 	private boolean elitism;
 	private double mutationRate;
 	
-	private Population currentGeneration;
+//	private Population currentGeneration;
+	private Individual [] currentGeneration;
 	private int currentCountGeneration;
 	
 	/**
@@ -28,7 +29,8 @@ public class GeneticAlgorithm {
 		this.mutationRate = mutationRate;
 		this.elitism = elitism;
 		
-		currentGeneration = new Population(populationSize, tournamentSize);
+//		currentGeneration = new Population(populationSize, tournamentSize);
+		currentGeneration = new Individual[populationSize];
 		currentCountGeneration = 0;
 	}
 	
@@ -36,7 +38,16 @@ public class GeneticAlgorithm {
 	GETTERS
 	 */
 	public Individual [] getCurrentGeneration() {
-		return currentGeneration.getPopulation();
+		return currentGeneration;
+//		return currentGeneration.getPopulation();
+	}
+	
+	public int getCurrentCountGeneration() {
+		return currentCountGeneration;
+	}
+	
+	public Individual getFittest() {
+		return Population.getFittest(currentGeneration);
 	}
 	
 	public void run () {
@@ -54,14 +65,20 @@ public class GeneticAlgorithm {
 	 */
 	public void computeNextGeneration() {
 		if (currentCountGeneration == 0)
-			currentGeneration.initialize();
+			currentGeneration = Population.initialize(populationSize);
+//			currentGeneration.initialize();
+		else if (currentCountGeneration <= numberOfGenerations) {
+			currentGeneration = Population.evolve(currentGeneration, populationSize, tournamentSize, elitism, mutationRate);
+//			currentGeneration.evolve(elitism, mutationRate);
+		}
 		else {
-			currentGeneration.evolve(elitism, mutationRate);
+			System.out.println("Limit reached");
 		}
 		currentCountGeneration++;
 	}
 	
 	public void setCurrentGeneration (Individual [] updatedIndividuals) {
-		this.currentGeneration.updatePopulation(updatedIndividuals);
+//		this.currentGeneration.updatePopulation(updatedIndividuals);
+		System.arraycopy(updatedIndividuals, 0, currentGeneration, 0, populationSize);
 	}
 }

@@ -43,8 +43,8 @@ public class ParameterSelectionController implements Initializable {
 	}
 	
 	/*
-			EVENT HANDLERS
-			 */
+	EVENT HANDLERS
+	 */
 	@FXML
 	public void closeClicked(MouseEvent event) {
 		System.out.println("Closing program...");

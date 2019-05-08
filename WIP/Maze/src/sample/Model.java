@@ -7,6 +7,7 @@ import GraphicElements.Maze;
 import GraphicElements.Obstacle;
 import Zipper.Tuple;
 import Zipper.Zip;
+import javafx.application.Platform;
 import javafx.geometry.Point2D;
 import javafx.scene.paint.Color;
 
@@ -63,18 +64,10 @@ public class Model {
 		
 		geneticAlgorithm = new GeneticAlgorithm(numberOfGenerations, populationSize, tournamentSize, mutationRate, elitism);
 		
-		
-		
 		/*
 		TO BE MOVED. WILL BE INVOKED EVERY TIME A NEW GENERATION IS REQUIRED,
 		 */
-//		geneticAlgorithm.computeNextGeneration();
-//		createBouncers();
-//		initiateSimulation();
-		
-//		geneticAlgorithm.computeNextGeneration();
-//		createBouncers();
-//		initiateSimulation();
+
 	}
 	
 	public void setUserParameters(int mazeLevel, int bouncersRadius, Color bouncersColor) {
@@ -102,7 +95,20 @@ public class Model {
 		}
 	}
 	
-	public void initiateSimulation () {
+	public void cleanBouncers() {
+		for (Bouncer bouncer : bouncers) {
+			simulationController.removeNode(bouncer.getNode());
+		}
+	}
+	
+	public void nextGeneration() {
+		geneticAlgorithm.computeNextGeneration();
+		simulationController.updateCurrentGeneration(geneticAlgorithm.getCurrentCountGeneration());
+		createBouncers();
+		initiateSimulation();
+	}
+	
+	private void initiateSimulation() {
 		Timer timer = new Timer();
 		
 		for (Obstacle obstacle : maze.getObstacles()) {
@@ -136,8 +142,13 @@ public class Model {
 			@Override
 			public void run() {
 				geneticAlgorithm.setCurrentGeneration(currentGeneration);
+				Individual fittest = geneticAlgorithm.getFittest();
+				Platform.runLater(() -> {
+					simulationController.updateFittest(fittest.getFitnessValue());
+					cleanBouncers();
+				});
 			}
-		}, 5000);
+		}, 5500);
 		
 	}
 	

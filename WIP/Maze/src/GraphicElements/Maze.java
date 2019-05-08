@@ -1,6 +1,9 @@
 package GraphicElements;
 
 
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
@@ -10,7 +13,8 @@ import java.util.Arrays;
 public class Maze {
 	private Rectangle bouncingArea;
 	private ArrayList <Obstacle> obstacles;
-	private Rectangle targetZone;
+	private Image target;
+	private ImageView targetZone;
 	
 	public Maze (int level) {
 		bouncingArea = new Rectangle(0, 0, 500, 500);
@@ -40,7 +44,7 @@ public class Maze {
 		return obstacles;
 	}
 	
-	public Rectangle getTargetZone() {
+	public ImageView getTargetZone() {
 		return targetZone;
 	}
 	
@@ -52,8 +56,16 @@ public class Maze {
 		
 		obstacles.addAll(Arrays.asList(obstacle));
 		
-		targetZone = new Rectangle(450, 450, 50, 50);
-		targetZone.setFill(Color.GHOSTWHITE);
+//		targetZone = new Rectangle(450, 450, 50, 50);
+		target = new Image("resources/target.jpg", 50, 50, true, true);
+//		targetZone.setStroke(Color.RED);
+//		targetZone.setFill(Color.GHOSTWHITE);
+		targetZone = new ImageView(target);
+		targetZone.setX(450);
+		targetZone.setY(450);
+//		Label targetIndicator = new Label("Target zone!", targetZone);
+//		targetIndicator.setVisible(true);
+		
 		
 	}
 	
