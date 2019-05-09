@@ -14,7 +14,7 @@ import java.util.ResourceBundle;
 
 public class ParameterSelectionController implements Initializable {
 	
-	private int currentNumberOfGenerations, currentPopulationSize, currentTournamentSize, currentLevel, currentRadius;
+	private int currentNumberOfGenerations, currentPopulationSize, currentTournamentSize, currentLevel, currentRadius, simulationTime;
 	private double currentMutationRate;
 	private boolean elitism;
 	private Color bouncersColor;
@@ -23,7 +23,7 @@ public class ParameterSelectionController implements Initializable {
 	private Model model;
 	
 	@FXML
-	Spinner spinnerNumberOfGenerations, spinnerPopulationSize, spinnerTournamentSize, spinnerMutationRate, spinnerMazeLevel, spinnerRadius;
+	Spinner spinnerNumberOfGenerations, spinnerPopulationSize, spinnerTournamentSize, spinnerMutationRate, spinnerMazeLevel, spinnerRadius, spinnerSimulationTime;
 	@FXML
 	ImageView imageClose;
 	@FXML
@@ -45,21 +45,20 @@ public class ParameterSelectionController implements Initializable {
 	/*
 	EVENT HANDLERS
 	 */
-	@FXML
-	public void closeClicked(MouseEvent event) {
-		System.out.println("Closing program...");
-		Platform.exit();
-		System.exit(0);
-	}
 	
 	@FXML
-	public void updatePopulationSize(Event e) {
+	public void updatePopulationSize() {
 		currentPopulationSize = (int) spinnerPopulationSize.getValue();
-		spinnerTournamentSize.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(2, currentPopulationSize, currentTournamentSize));
+		spinnerTournamentSize.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(2, currentPopulationSize, currentTournamentSize, 5));
 	}
 	
 	@FXML
-	public void acceptClicked(Event event) {
+	public void updateTournamentSize() {
+		currentTournamentSize = (int) spinnerTournamentSize.getValue();
+	}
+	
+	@FXML
+	public void acceptClicked() {
 		currentNumberOfGenerations = (int) spinnerNumberOfGenerations.getValue();
 		currentPopulationSize = (int) spinnerPopulationSize.getValue();
 		currentTournamentSize = (int) spinnerTournamentSize.getValue();
@@ -68,28 +67,35 @@ public class ParameterSelectionController implements Initializable {
 		
 		currentLevel = (int) spinnerMazeLevel.getValue();
 		currentRadius = (int) spinnerRadius.getValue();
+		simulationTime = (int) spinnerSimulationTime.getValue();
 		bouncersColor = colorPicker.getValue();
 		
 		model.createGeneticAlgorithm(currentNumberOfGenerations, currentPopulationSize, currentTournamentSize, currentMutationRate, elitism);
-		model.setUserParameters(currentLevel, currentRadius, bouncersColor);
+		model.setUserParameters(currentLevel, currentRadius, bouncersColor, simulationTime);
 		model.createMaze();
 		
 		mediator.activate("Simulation view");
 	}
 	
+	@FXML
+	public void closeClicked() {
+		System.out.println("Closing program...");
+		Platform.exit();
+		System.exit(0);
+	}
 	
 	@Override
 	public void initialize(URL url, ResourceBundle resourceBundle) {
-		currentNumberOfGenerations = 3;
-		currentPopulationSize = 40;
 		currentTournamentSize = 10;
-		
-		spinnerNumberOfGenerations.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 3));
-		spinnerPopulationSize.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(4, 10000, 40, 50));
+		spinnerNumberOfGenerations.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(2, 100, 7));
+		spinnerPopulationSize.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(4, 10000, 50, 50));
 		spinnerTournamentSize.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(2, 40, 10, 5));
 		spinnerMutationRate.setValueFactory(new SpinnerValueFactory.DoubleSpinnerValueFactory(0, 1, 0.15, 0.05));
 		
-		spinnerMazeLevel.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 3, 1));
-		spinnerRadius.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(8, 32, 12));
+		spinnerMazeLevel.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 3, 3));
+		spinnerRadius.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(5, 32, 10));
+		spinnerSimulationTime.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(2, 30, 5));
+		
+		colorPicker.setValue(Color.DARKBLUE);
 	}
 }

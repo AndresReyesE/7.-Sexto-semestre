@@ -35,6 +35,7 @@ public class Model {
 	private GeneticAlgorithm geneticAlgorithm;
 	private Individual [] currentGeneration;
 	
+	private long simulationTime;
 	
 	/**
 	 * Constructor
@@ -70,10 +71,12 @@ public class Model {
 
 	}
 	
-	public void setUserParameters(int mazeLevel, int bouncersRadius, Color bouncersColor) {
+	public void setUserParameters(int mazeLevel, int bouncersRadius, Color bouncersColor, int simulationTimeSeconds) {
 		this.mazeLevel = mazeLevel;
 		this.bouncersRadius = bouncersRadius;
 		this.bouncersColor = bouncersColor;
+		this.simulationTime = simulationTimeSeconds * 1000;
+		simulationController.setSimulationTime(this.simulationTime);
 	}
 	
 	public void createMaze() {
@@ -89,7 +92,8 @@ public class Model {
 		int i = 0;
 		currentGeneration = geneticAlgorithm.getCurrentGeneration();
 		for (Individual individual : currentGeneration) {
-			bouncers[i] = new Bouncer(new Point2D(individual.getInitialX(), individual.getInitialY()), 12, maze, individual.getInitialDirection(), individual.getVelocity(), individual.getInitialDelay());
+			bouncers[i] = new Bouncer(new Point2D(individual.getInitialX(), individual.getInitialY()), bouncersRadius, maze, individual.getInitialDirection(), individual.getVelocity(), individual.getInitialDelay());
+			bouncers[i].getNode().setFill(bouncersColor);
 			simulationController.addNode(bouncers[i].getNode());
 			i++;
 		}
@@ -103,7 +107,8 @@ public class Model {
 	
 	public void nextGeneration() {
 		geneticAlgorithm.computeNextGeneration();
-		simulationController.updateCurrentGeneration(geneticAlgorithm.getCurrentCountGeneration());
+		geneticAlgorithm.displayCurrentGeneration();
+		simulationController.updateCurrentGeneration(geneticAlgorithm.getCurrentCountGeneration() + "/" + numberOfGenerations);
 		createBouncers();
 		initiateSimulation();
 	}
@@ -117,16 +122,16 @@ public class Model {
 				@Override
 				public void run() {
 					obstacle.stop();
+					obstacle.resetPosition();
 				}
-			}, 5000);
+			}, simulationTime);
 		}
 		
 		for (Tuple<Bouncer, Individual> bouncerIndividualTuple : Zip.zip(Arrays.asList(bouncers), Arrays.asList(currentGeneration))) {
 			timer.schedule(new TimerTask() {
 				@Override
 				public void run() {
-					bouncerIndividualTuple.getLeft().play();
-				}
++				}
 			}, bouncerIndividualTuple.getLeft().getInitialDelay());
 			
 			timer.schedule(new TimerTask() {
@@ -135,7 +140,7 @@ public class Model {
 					bouncerIndividualTuple.getLeft().stop();
 					bouncerIndividualTuple.getRight().setFitnessValue(bouncerIndividualTuple.getLeft().getFitnessValue());
 				}
-			}, 5000);
+			}, simulationTime);
 		}
 		
 		timer.schedule(new TimerTask() {
@@ -148,7 +153,7 @@ public class Model {
 					cleanBouncers();
 				});
 			}
-		}, 5500);
+		}, simulationTime + 500);
 		
 	}
 	

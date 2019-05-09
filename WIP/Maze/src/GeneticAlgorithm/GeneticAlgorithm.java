@@ -64,21 +64,31 @@ public class GeneticAlgorithm {
 	 * otherwise it will use the current population to get the next one by evolution (tournaments + crossover)
 	 */
 	public void computeNextGeneration() {
-		if (currentCountGeneration == 0)
+		if (currentCountGeneration == 0) {
 			currentGeneration = Population.initialize(populationSize);
+			currentCountGeneration++;
+		}
 //			currentGeneration.initialize();
 		else if (currentCountGeneration <= numberOfGenerations) {
 			currentGeneration = Population.evolve(currentGeneration, populationSize, tournamentSize, elitism, mutationRate);
+			currentCountGeneration++;
 //			currentGeneration.evolve(elitism, mutationRate);
 		}
 		else {
 			System.out.println("Limit reached");
 		}
-		currentCountGeneration++;
 	}
 	
 	public void setCurrentGeneration (Individual [] updatedIndividuals) {
 //		this.currentGeneration.updatePopulation(updatedIndividuals);
 		System.arraycopy(updatedIndividuals, 0, currentGeneration, 0, populationSize);
+	}
+	
+	public void displayCurrentGeneration() {
+		int i = 0;
+		for (Individual individual : currentGeneration) {
+			System.out.println("[" + i + " " + individual.toString() + "] ");
+			i++;
+		}
 	}
 }

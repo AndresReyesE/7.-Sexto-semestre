@@ -2,10 +2,12 @@ package sample;
 
 import javafx.application.Application;
 import javafx.application.Platform;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -13,7 +15,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class Main extends Application implements Initializable {
-
+    
+    private double xOffset, yOffset;
+    
     @Override
     public void start(Stage primaryStage) throws Exception {
         FXMLLoader parameterSelectionLoader = new FXMLLoader(getClass().getResource("ParameterSelectionView.fxml"));
@@ -46,12 +50,29 @@ public class Main extends Application implements Initializable {
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
         primaryStage.initStyle(StageStyle.UNDECORATED);
+    
+        EventHandler<MouseEvent> mousePressed = new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                xOffset = event.getSceneX();
+                yOffset = event.getSceneY();
+            }
+        };
         
-        primaryStage.setOnCloseRequest(e -> {
-            System.out.println("Closing program...");
-            Platform.exit();
-//            System.exit(0);
-        });
+        EventHandler<MouseEvent> mouseDragged = new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                primaryStage.setX(mouseEvent.getScreenX() - xOffset);
+                primaryStage.setY(mouseEvent.getScreenY() - yOffset);
+            }
+        };
+        
+        parameterSelectionView.setOnMousePressed(mousePressed);
+        parameterSelectionView.setOnMouseDragged(mouseDragged);
+        
+        simulationView.setOnMousePressed(mousePressed);
+        simulationView.setOnMouseDragged(mouseDragged);
+        
         primaryStage.show();
     }
     

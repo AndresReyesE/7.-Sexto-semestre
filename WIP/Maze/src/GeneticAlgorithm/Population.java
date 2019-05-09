@@ -49,7 +49,7 @@ public class Population {
 			initialY = random.nextDouble() * 100;
 			initialDirection = random.nextDouble() * Math.PI * 2;
 			initialDelay = random.nextLong() % 3000;
-			velocity = random.nextDouble() * 4 + 1;
+			velocity = random.nextDouble() * 2 + 1;
 			
 			population[i] = new Individual(initialX, initialY, initialDirection, Math.abs(initialDelay), velocity);
 		}

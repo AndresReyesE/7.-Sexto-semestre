@@ -86,4 +86,8 @@ public class Individual {
 		this.velocity = velocity < 1 ? 1 : (velocity > 5) ? 5 : velocity;
 		this.initialDelay = initialDelay < 0 ? 0 : (initialDelay > 3000) ? 3000 : initialDelay;
 	}
+	
+	public String toString() {
+		return initialX + ", " + initialY + ", " + String.format("%.2f", initialDirection);
+	}
 }
