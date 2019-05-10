@@ -2,6 +2,14 @@ package Mediator;
 
 import java.util.Hashtable;
 
+/*
+ * Carlos Andrés Reyes Evangelista
+ * Universidad de las Américas Puebla
+ * Ingeniería en Sistemas Computacionales
+ *
+ * May 9, 2019
+ */
+
 /**
  * Abstract structure of a Mediator.
  * Software design pattern that defines an object that controls how a set of other objects, denominated colleagues, interact with each other.

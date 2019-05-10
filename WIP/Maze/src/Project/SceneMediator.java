@@ -1,4 +1,4 @@
-package sample;
+package Project;
 
 import Mediator.Mediator;
 import javafx.scene.Parent;
@@ -6,12 +6,18 @@ import javafx.scene.Scene;
 
 import java.util.HashMap;
 
+/*
+ * Carlos Andrés Reyes Evangelista
+ * Universidad de las Américas Puebla
+ * Ingeniería en Sistemas Computacionales
+ *
+ * May 9, 2019
+ */
+
 /**
  * Concrete implementation of a Mediator that handle and redirect requests from a set of objects that should exchange information among each other
  * This is done in order to reduce the number of connections required in the application.
- * The colleagues for this mediator are supposed to be:
- * - A SimulationController for the Auction View
- * - A SimulationController for the Register View
+ * The colleagues for this mediator are supposed to be views for enable the application to switch among views
  */
 public class SceneMediator extends Mediator {
 	

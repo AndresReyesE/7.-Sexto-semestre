@@ -5,7 +5,17 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
 
+/*
+ * Carlos Andrés Reyes Evangelista
+ * Universidad de las Américas Puebla
+ * Ingeniería en Sistemas Computacionales
+ *
+ * May 9, 2019
+ */
 
+/**
+ * Object that represents an obstacle, it contains a graphical node and an cyclic animation
+ */
 public class Obstacle {
 	
 	private Rectangle node;
@@ -30,7 +40,6 @@ public class Obstacle {
 	public void resetPosition() {
 		node.setTranslateX(0);
 		node.setTranslateY(0);
-//		node.setY(y);
 	}
 	
 	public void play() {

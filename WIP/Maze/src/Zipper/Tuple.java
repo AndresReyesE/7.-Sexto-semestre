@@ -5,7 +5,7 @@ public class Tuple <Bouncer, Individual> {
 	private final Bouncer left;
 	private final Individual right;
 	
-	public Tuple(Bouncer left, Individual right) {
+	Tuple(Bouncer left, Individual right) {
 		this.left = left;
 		this.right = right;
 	}

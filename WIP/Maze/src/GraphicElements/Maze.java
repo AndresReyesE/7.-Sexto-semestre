@@ -1,7 +1,5 @@
 package GraphicElements;
 
-
-import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
@@ -10,6 +8,20 @@ import javafx.scene.shape.Rectangle;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/*
+ * Carlos Andrés Reyes Evangelista
+ * Universidad de las Américas Puebla
+ * Ingeniería en Sistemas Computacionales
+ *
+ * May 9, 2019
+ */
+
+/**
+ * Object that contains:
+ * - The bouncing area (rectangle) delimiter for a bouncer to bounce over
+ * - The obstacles it has to avoid
+ * - The target zone it has to reach
+ */
 public class Maze {
 	private Rectangle bouncingArea;
 	private ArrayList <Obstacle> obstacles;
