@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<!---*
+     * Carlos Andrés Reyes Evangelista
+     * Universidad de las Américas Puebla
+     * Ingeniería en Sistemas Computacionales
+     *
+     * May 9, 2019
+     *-->
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project.ParameterSelectionController">
+   <children>
+      <Spinner fx:id="spinnerNumberOfGenerations" layoutX="54.0" layoutY="110.0" prefHeight="26.0" prefWidth="151.0" />
+      <Label layoutX="54.0" layoutY="45.0" text="Select the parameters for your Genetic Algorithm">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="54.0" layoutY="94.0" text="Number of generations" />
+      <HBox alignment="TOP_RIGHT" layoutY="-2.0" prefHeight="35.0" prefWidth="510.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="-2.0">
+         <children>
+            <ImageView fx:id="imageClose" fitHeight="35.0" fitWidth="35.0" onMouseClicked="#closeClicked" pickOnBounds="true" preserveRatio="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <image>
+                  <Image url="@../resources/icons8-cerrar-ventana-filled-80.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <Label layoutX="251.0" layoutY="94.0" text="Population size" />
+      <Spinner fx:id="spinnerPopulationSize" layoutX="251.0" layoutY="110.0" onInputMethodTextChanged="#updatePopulationSize" onMouseClicked="#updatePopulationSize" prefHeight="26.0" prefWidth="151.0" />
+      <Spinner fx:id="spinnerTournamentSize" layoutX="54.0" layoutY="180.0" onInputMethodTextChanged="#updateTournamentSize" onMouseClicked="#updateTournamentSize" prefHeight="26.0" prefWidth="151.0" />
+      <Spinner fx:id="spinnerMutationRate" layoutX="251.0" layoutY="180.0" prefHeight="26.0" prefWidth="151.0" />
+      <Label layoutX="54.0" layoutY="164.0" text="Tournament size" />
+      <Label layoutX="251.0" layoutY="164.0" text="Mutation rate" />
+      <CheckBox fx:id="checkboxElitism" layoutX="213.0" layoutY="238.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="79.0" selected="true" text="Elitism" />
+      <Label layoutX="192.0" layoutY="313.0" text="Maze options">
+         <font>
+            <Font name="Droid Sans" size="20.0" />
+         </font></Label>
+      <Spinner fx:id="spinnerMazeLevel" layoutX="54.0" layoutY="370.0" prefHeight="26.0" prefWidth="151.0" />
+      <ColorPicker fx:id="colorPicker" layoutX="254.0" layoutY="450.0" />
+      <Spinner fx:id="spinnerRadius" layoutX="251.0" layoutY="370.0" prefHeight="26.0" prefWidth="151.0" />
+      <Label layoutX="54.0" layoutY="354.0" text="Maze level" />
+      <Label layoutX="263.0" layoutY="434.0" text="Bouncers' color" />
+      <Label layoutX="259.0" layoutY="354.0" text="Bouncers' radius" />
+      <Button fx:id="buttonAccept" layoutX="186.0" layoutY="550.0" mnemonicParsing="false" onAction="#acceptClicked" text="Accept and begin" />
+      <Spinner fx:id="spinnerSimulationTime" layoutX="54.0" layoutY="450.0" prefHeight="26.0" prefWidth="151.0" />
+      <Label layoutX="54.0" layoutY="434.0" text="Simulation time (seconds)" />
+   </children>
+</AnchorPane>

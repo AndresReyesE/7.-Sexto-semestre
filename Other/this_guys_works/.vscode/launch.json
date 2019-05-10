@@ -8,7 +8,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/examen3",
+            "program": "${workspaceFolder}/.vscode/file",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
