@@ -3,3 +3,9 @@ git checkout -b <branch_name>
 
 git push -u origin <branch_name>
 --> set upstream for local branch
+
+git reset --hard @{u}
+--> ignore local changes and make local repository look exactly as upstream
+
+git clean -df
+--> remove untracked files and directories
