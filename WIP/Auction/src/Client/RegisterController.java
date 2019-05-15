@@ -39,7 +39,7 @@ public class RegisterController {
 	}
 	
 	/*
-	EVENT HANDLERS FOR
+	FXML EVENT HANDLERS
 	 */
 	@FXML
 	void signUpToggled (ActionEvent event) {
