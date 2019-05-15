@@ -1,0 +1,22 @@
+<revisiones>
+	<obra>
+		<titulo>Data on the Web</titulo>
+		<precio>34.95</precio>
+		<revision>Presenta una discusión muy buena sobre XML y
+	 sistemas de bases de datos semi-estructurados.</revision>
+	</obra>
+
+
+
+	<obra>
+		<titulo>Advanced Programming in the Unix environment</titulo>
+		<precio>65.95</precio>
+		<revision>Presenta una discusión clara
+	 y detallada para programar en UNIX.</revision>
+	</obra>
+	<obra>
+		<titulo>TCP/IP Illustrated</titulo>
+		<precio>65.95</precio>
+		<revision>Uno de los mejores libros sobre TCP/IP.</revision>
+	</obra>
+</revisiones>

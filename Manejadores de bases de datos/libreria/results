@@ -1,0 +1,44 @@
+//1
+<result>
+  {
+    for $libro in doc("../libreria/libreria.xml")/libreria/libro
+    where $libro/editora = "Addison-Wesley" and $libro/@año > 1991
+    return 
+    <libro year = "{$libro/@año}">
+      {$libro/titulo}
+    </libro>
+  }
+</result>
+
+//2
+<result>
+  {
+    for $book in doc("../libreria/libreria.xml")/libreria/libro
+    let $authors := $book/autor
+    return 
+    <libro>
+      {$book/titulo}
+      {$authors}
+    </libro>
+  }
+</result>
+
+//4
+<result>
+  {
+    for $author in doc("../libreria/libreria.xml")//autor
+    return 
+    <res>
+      <author>
+        { $author/nombre/text() } - { $author/apellido/text() }
+      </author>
+      <books>
+      {
+        for $book in doc("../libreria/libreria.xml")/libreria/libro
+        where $book/autor/nombre = $author/nombre and $book/autor/apellido = $author/apellido
+        return $book/titulo
+      }
+      </books>      
+    </res>
+  }
+</result>

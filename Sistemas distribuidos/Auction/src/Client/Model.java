@@ -71,7 +71,7 @@ class Model extends UnicastRemoteObject implements Observer {
 	/*
 	SETTERS
 	 */
-	void setControllerMediator (ControllerMediator cm) {
+	void setControllerMediator(ControllerMediator cm) {
 		this.controllerMediator = cm;
 	}
 	
@@ -92,7 +92,7 @@ class Model extends UnicastRemoteObject implements Observer {
 	 * 0 if the user's nickname was already taken
 	 * -1 if some exception occur during the connection
 	 */
-	int signUp (String name, String nickname, String email, String address, String phone) {
+	int signUp(String name, String nickname, String email, String address, String phone) {
 		try {
 			System.out.println("Registering user in Model with data: " + name + ", " + nickname + " | " + email + " | " + address + " : " + phone);
 			boolean nicknameFree = servant.registerUser(name, nickname, email, address, phone);
@@ -113,7 +113,7 @@ class Model extends UnicastRemoteObject implements Observer {
 	 * 0 if the user's nickname doesn't exist
 	 * -1 if some exception occur during the connection
 	 */
-	int login (String nickname) {
+	int login(String nickname) {
 		try {
 			System.out.println("Logging in the user " + nickname + "...");
 			User found = servant.seekUser(nickname);
@@ -148,7 +148,7 @@ class Model extends UnicastRemoteObject implements Observer {
 	 * @return true if the method ends without problems
 	 * false if a remote exception is thrown
 	 */
-	boolean addOffer (String offerName, String offerDescription, String initialPrice, LocalDate offerDeadline) {
+	boolean addOffer(String offerName, String offerDescription, String initialPrice, LocalDate offerDeadline) {
 		try {
 			double price = Double.parseDouble(initialPrice);
 			
@@ -169,7 +169,7 @@ class Model extends UnicastRemoteObject implements Observer {
 	 * @return true if the method ends without problems
 	 * false if a remote exception is thrown
 	 */
-	boolean addBid (int offerId, double bid) {
+	boolean addBid(int offerId, double bid) {
 		try {
 			servant.newBid(offerId, currentlyLoggedInAs.getNickname(), bid);
 			
@@ -229,7 +229,7 @@ class Model extends UnicastRemoteObject implements Observer {
 	 * @throws RemoteException
 	 */
 	@Override
-	public void test () throws RemoteException {
+	public void test() throws RemoteException {
 		System.out.println("This function just can be called by the server, should be printed in this client");
 	}
 	
@@ -241,7 +241,7 @@ class Model extends UnicastRemoteObject implements Observer {
 	 * @throws RemoteException
 	 */
 	@Override
-	public String getID () throws RemoteException {
+	public String getID() throws RemoteException {
 		return currentlyLoggedInAs == null ? "" : currentlyLoggedInAs.getNickname();
 	}
 	

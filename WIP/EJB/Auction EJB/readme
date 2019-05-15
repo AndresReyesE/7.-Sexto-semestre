@@ -1,7 +1,0 @@
-EJBRemoteInterface -> contains the interface for the session bean, there can be declared the remote methods the client can invoke
-
-EntAppEJB -> Enterprise Application, contains the app logic per implement the remote methods declared
-
-EntAppEJB/EntAppEJB-ejb -> module able to be modified, there it is the session bean
-
-EntAppClient -> Normal application that can run the session bean as client

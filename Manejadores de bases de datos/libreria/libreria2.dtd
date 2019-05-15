@@ -1,0 +1,5 @@
+<!ELEMENT revisiones (obra*)>
+<!ELEMENT obra (titulo, precio, revision)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT revision (#PCDATA)>

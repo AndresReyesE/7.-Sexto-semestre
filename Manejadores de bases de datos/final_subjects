@@ -1,0 +1,15 @@
+what's a data ware house
+what's its objective
+what are OLTP
+what is OLAP
+which are the differences among OLTP and OLAP
+how do you go from OLTP to OLAP
+what kind of software are used as mediator between OLTP and OLAP
+in a multidimensional model, what is an analysis subject and what are the indicators it is represented with?
+which are the steps to design a DW
+what's a data mart
+does the user have to know the intern structure of a DW in order to formulate a query
+what's a query in an OLAP context
+it is an OLAP operator to facilitate aggregation: _______ (drill or roll)
+it is an OLAP operator to facilitate disgreggation _______ (drill or roll)
+

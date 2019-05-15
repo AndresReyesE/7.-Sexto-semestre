@@ -1,0 +1,15 @@
+menciona una limitacion del paradigma OO
+qué tipos de interfaces debe incluir un componente?
+qué funciones desempeña un contenedor?
+cuántos y qué tipos de contratos deben definirse y respetarse en una aplicación EJB?
+qué tipos de interfaces deben definirse para un bean en EJB?
+qué implementan los entity beans?
+qué implementan los session beans?
+por quiénes puede ser administrada la persistencia de un bean de entidad
+
+estás en un barco pirata con 100 piratas y tienes que repartir el botín, los piratas votarán si están de acuerdo o no con tu repartición, si menos de la mitad de los piratas están de acuerdo contigo, mueres. cómo repartes el botín de tal manera que te garantizas una buena porción del botín y al mismo tiempo sobrevives?
+qué es el rpc binding?
+cuáles son los métodos de HTTP?
+cuáles son las dos partes principales que debe contener un mensaje SOAP?
+cuál es la diferencia entre URI y URL?
+

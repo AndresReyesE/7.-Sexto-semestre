@@ -1,0 +1,32 @@
+<precios>
+	<libro>
+		<titulo>Advanced Programming in the Unix Environment</titulo>
+		<fuente>bstore2.example.com</fuente>
+		<precio>65.95</precio>
+	</libro>
+	<libro>
+		<titulo>Advanced Programming in the Unix Environment</titulo>
+		<fuente>bstore1.example.com</fuente>
+		<precio>65.95</precio>
+	</libro>
+	<libro>
+		<titulo>TCP/IP Illustrated</titulo>
+		<fuente>bstore2.example.com</fuente>
+		<precio>65.95</precio>
+	</libro>
+	<libro>
+		<titulo>TCP/IP Illustrated</titulo>
+		<fuente>bstore1.example.com</fuente>
+		<precio>65.95</precio>
+	</libro>
+	<libro>
+		<titulo>Data on the Web</titulo>
+		<fuente>bstore2.example.com</fuente>
+		<precio>34.95</precio>
+	</libro>
+	<libro>
+		<titulo>Data on the Web</titulo>
+		<fuente>bstore1.example.com</fuente>
+		<precio>39.95</precio>
+	</libro>
+</precios>

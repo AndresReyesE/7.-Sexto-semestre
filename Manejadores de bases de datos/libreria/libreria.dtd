@@ -1,0 +1,11 @@
+<!ELEMENT libreria (libro*)>
+<!ELEMENT libro (titulo, (autor+ | editor+), editora, precio)>
+<!ATTLIST libro año CDATA #REQUIRED >
+<!ELEMENT autor (apellido, nombre)>
+<!ELEMENT editor (apellido, nombre, afiliacion)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT afiliacion (#PCDATA)>
+<!ELEMENT editora (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>

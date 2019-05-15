@@ -1,0 +1,25 @@
+1. Explica cuales son los requerimientos para un modelo a componentes
+
+	2. Cuál es el objetivo del paradigma orientado a componentes?
+Evitar algunas de las limitaciones del paradigma orientado a objetos como dependencias implicitas, interaccion indebida con el middleware (a pesar de los esfuerzos de transparencia, el desarrollador tenía que seguir lidiando con algunos asuntos de middleware, servidores de nombres, referencias remotas), falta de separacion de asuntos distribuidos (el usuario debe programar a mano las transacciones y aspectos no funcionales) y falta de soporte para despliegues (cada cliente/servidor debe desplegarse individualmente en cada maquina). 
+	3. Cuáles son los servicios comunes que una infraestructura para un modelo a componentes debe ofrecer?
+	Transacciones, persistencia, aspectos no funcionales...
+	4. Cuáles son los dos tipos de entidades en una arquitectura de componentes?
+	Stateless y stateful (?
+	5. Qué es una configuración?
+	El resultado de ensamblar componentes y conectores
+	6. Qué es un servicio web?
+	Provee un servicio con base en sus interfaces 
+	7. Para qué sirve SOAP?
+	Para hacer llamadas a métodos de servicios/servidores/componentes/objetos sin imponer un API, ORB, modelo de programación... 
+	
+	8. Cuáles son los 5 elementos necesarios par ala descripción de un servicio web?
+	
+	9. Para el descubrimiento de unu servicio, qué se necesita para poder conectarse a un directorio de servicios?
+	
+	10. Qué protocolos componen el servicio de interacción?
+	
+	11. Cuál es la diferencia entre SOAP y REST?
+	SOAP es un protocolo orientado a mensajes y REST es orientado a recursos
+	12. Qué es un mashup?
+	Es una aplicación que agrega, integra y administra información proveniente de varias fuentes
