@@ -1,9 +1,0 @@
-private SessionBeanRemote lookupEntityClassFacadeRemote() {
-        try {
-            Context c = new InitialContext();
-            return (SessionBeanRemote) c.lookup("java:comp/env/EntityClassFacade");
-        } catch (NamingException ne) {
-            Logger.getLogger(getClass().getName()).log(Level.SEVERE, "exception caught", ne);
-            throw new RuntimeException(ne);
-        }
-    }

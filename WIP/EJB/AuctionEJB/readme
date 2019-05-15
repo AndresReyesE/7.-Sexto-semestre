@@ -1,6 +1,0 @@
-Dr. Zechinelli, para correrlo fácilmente cargue las 3 carpetas como proyectos en Netbeans. 
-Si desea inspeccionar el código de los beans abra la carpeta dentro de EntAppEJB llamada EntAppEJB-ejb, ese es el modulo que contiene los beans.
-Asegúrese de que la enterprise application auction (EntAppEJB/), con un triangulo de ícono, tenga como librería (Properties | Libraries) tenga referencia al proyecto EJBRemoteInterface y en Packaging al proyecto AuctionEJBModule (ubicado en la subcarpeta previamente mencionada) y de que el proyecto EnterpriseApplication client tenga como Librería al mismo proyecto EJBRemoteInterface.
-Con esas dependencias debería ser inmediato el despliegue de EnterpriseApplicationAuction y la ejecución de EnterpriseApplicationClient.
-
-Nota: como es especificado en el reporte el cliente es una aplicación JavaFX, así que es requerido un JDK con JavaFX integrado o instalarlo por separado. Con un JDK 1.8 es suficiente.
