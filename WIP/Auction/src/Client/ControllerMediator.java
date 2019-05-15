@@ -28,7 +28,14 @@ public class ControllerMediator extends Mediator {
 	CONSTRUCTOR
 	 */
 	ControllerMediator() {
-		this.colleagues = new Hashtable<>();
+		this.colleagues = new Hashtable<String, Object>();
+	}
+	
+	/*
+	GETTER
+	 */
+	public Hashtable getColleagues () {
+		return colleagues;
 	}
 	
 	/*
