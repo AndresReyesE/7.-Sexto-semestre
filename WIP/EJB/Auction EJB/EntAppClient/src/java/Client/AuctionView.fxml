@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" stylesheets="@../Style/Test.css" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.AuctionController">
+  <tabs>
+    <Tab text="Offer a product">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="lblOfferRegisteredAs" layoutX="357.0" layoutY="25.0" text="Currently logged in as:" />
+                  <Label fx:id="lblOfferNickname" layoutX="539.0" layoutY="25.0" text="User" />
+                  <VBox layoutX="47.0" layoutY="61.0" prefHeight="200.0" prefWidth="100.0" />
+                  <VBox alignment="TOP_CENTER" layoutX="97.0" layoutY="77.0" prefHeight="285.0" prefWidth="180.0" spacing="50.0">
+                     <children>
+                        <Label fx:id="lblOfferName" text="Product name*" />
+                        <Label fx:id="lblOfferDescription" text="Description" />
+                        <Label fx:id="lblOfferInitialPrice" text="Initial price*" />
+                        <Label fx:id="lblOfferDeadline" text="Auction deadline*" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="277.0" layoutY="74.0" prefHeight="285.0" prefWidth="424.0" spacing="37.0">
+                     <children>
+                        <TextField fx:id="txtOfferName" onKeyReleased="#keyTyped" />
+                        <TextField fx:id="txtOfferDescription" onKeyReleased="#keyTyped" />
+                        <AnchorPane prefHeight="27.0" prefWidth="424.0">
+                           <children>
+                              <TextField fx:id="txtOfferInitialPrice" layoutX="49.0" layoutY="1.0" onKeyReleased="#keyTyped" prefHeight="26.0" prefWidth="104.0" />
+                              <Label layoutX="32.0" prefHeight="23.0" prefWidth="12.0" text="\$" textAlignment="CENTER" AnchorPane.leftAnchor="32.0" />
+                           </children>
+                        </AnchorPane>
+                        <DatePicker fx:id="dateOfferDeadline" onKeyReleased="#keyTyped" />
+                     </children>
+                  </VBox>
+                  <Button fx:id="btnPlaceOffer" layoutX="369.0" layoutY="359.0" mnemonicParsing="false" onAction="#offerPlaced" text="Place offer!" />
+                  <Label fx:id="lblOfferNotifications" layoutX="79.0" layoutY="420.0" text="Notifications" visible="false" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab onSelectionChanged="#tab" text="Auction">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <BorderPane prefHeight="468.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <top>
+                        <ListView fx:id="listOffers" onMouseReleased="#listClicked" prefHeight="119.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
+                     </top>
+                     <center>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label fx:id="lblAuctionName" layoutX="235.0" layoutY="14.0" />
+                              <Label fx:id="lblAuctionDescription" layoutX="80.0" layoutY="47.0" />
+                              <Label layoutX="80.0" layoutY="101.0" text="Highest current bid" />
+                              <Label layoutX="80.0" layoutY="174.0" text="Your bid:" />
+                              <TextField fx:id="txtNewBid" layoutX="81.0" layoutY="198.0" onKeyReleased="#keyTypedOnBid" prefHeight="26.0" prefWidth="135.0" />
+                              <Slider fx:id="sliderNewBid" layoutX="80.0" layoutY="236.0" onMouseDragged="#sliderMoved" />
+                              <Button fx:id="btnBidUp" layoutX="341.0" layoutY="198.0" mnemonicParsing="false" onAction="#bidUp" text="Bid up!" />
+                              <Label layoutX="81.0" layoutY="128.0" text="Highest current bidder" />
+                              <Label fx:id="lblCurrentBid" layoutX="341.0" layoutY="101.0" />
+                              <Label fx:id="lblCurrentBidder" layoutX="341.0" layoutY="128.0" />
+                              <Label layoutX="71.0" layoutY="203.0" text="\$" />
+                              <Label fx:id="lblAuctionNotifications" layoutX="50.0" layoutY="294.0" text="Label" visible="false" />
+                           </children>
+                        </AnchorPane>
+                     </center>
+                     <right>
+                        <ListView fx:id="listHistory" prefHeight="348.0" prefWidth="272.0" BorderPane.alignment="CENTER" />
+                     </right></BorderPane>
+               </children></AnchorPane>
+        </content>
+      </Tab>
+      <Tab onSelectionChanged="#tab" text="My offers">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="listUserOffers" prefHeight="469.0" prefWidth="800.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>

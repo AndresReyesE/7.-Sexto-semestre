@@ -5,29 +5,49 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Hashtable;
 import java.util.List;
 import java.util.Properties;
 import javax.naming.InitialContext;
+import javax.naming.Context;
 import javax.naming.NamingException;
  
  
 public class EJBTester {
    BufferedReader brConsoleReader = null; 
-   //Properties props;
-   InitialContext ctx;
+   Properties props;
+   Context ctx;
    {
-      /*props = new Properties();
-      try {
-         props.load(new FileInputStream("jndi.properties"));
-        System.out.println(props.toString());
-      } catch (IOException ex) {
-         ex.printStackTrace();
-      }
-      
-      System.out.println("-------");
-      */
+      props = new Properties();
+//      try {
+//         props.load(new FileInputStream("jndi.properties"));
+//        System.out.println(props.toString());
+//      } catch (IOException ex) {
+//         ex.printStackTrace();
+//      }
+//      
+//      System.out.println("-------");
+      //try {
+            //props.put(Context.INITIAL_CONTEXT_FACTORY, "com.sun.enterprise.naming.SerialInitContextFactory");
+            //props.setProperty("org.omg.CORBA.ORBInitialHost", "localhost");
+ // glassfish default port value will be 3700,
+            //props.setProperty("org.omg.CORBA.ORBInitialPort", "3700");
+            //props.setProperty("java.naming.provider.url", "localhost");
+      //} catch (Exception e) {
+          
+      //}
+       
+        /*Hashtable <String, String> hashTable = new Hashtable<String, String>();
+        hashTable.put(Context.INITIAL_CONTEXT_FACTORY, "com.sun.enterprise.naming.impl.SerialInitContextFactory");
+        hashTable.put(Context.STATE_FACTORIES, "com.sun.corba.ee.impl.presentation.rmi.JNDIStateFactoryImpl");
+        hashTable.put(Context.URL_PKG_PREFIXES, "com.sun.enterprise.naming");*/
+       /*Hashtable env = new Hashtable();
+        env.put(Context.INITIAL_CONTEXT_FACTORY,"com.sun.enterprise.naming.SerialInitContextFactory");*/
+
+       
       try {
          ctx = new InitialContext();
+//         ctx = new InitialContext(props);
          System.out.println("If this line is printed, we have a context");
       } catch (NamingException ex) {
          ex.printStackTrace();
@@ -54,7 +74,7 @@ public class EJBTester {
       try {
          int choice = 1; 
          LibrarySessionBeanRemote libraryBean = 
-         (LibrarySessionBeanRemote)ctx.lookup("LibrarySessionBean/remote");
+         (LibrarySessionBeanRemote)ctx.lookup("java:global/EJBComponent/LibrarySessionBeanRemote/library");
          while (choice != 2) {
             String bookName;
             showGUI();

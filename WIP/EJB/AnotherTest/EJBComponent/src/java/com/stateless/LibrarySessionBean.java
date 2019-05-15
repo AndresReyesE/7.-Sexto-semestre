@@ -7,9 +7,10 @@ package com.stateless;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.ejb.Stateless;
+import javax.ejb.*;
  
-@Stateless
+
+@Stateless(name = "library")
 public class LibrarySessionBean implements LibrarySessionBeanRemote {
    
    List<String> bookShelf;    

@@ -1,0 +1,10 @@
+<person>
+	<name> Alan </name>
+	<age> 23 </age>
+	<email> alan@abc.com </email>
+</person>
+
+{person: {name: "Alan", age: 23, email: "Alan@abc.com"}}
+
+
+askdjaksaZzssdaZasdassdA
