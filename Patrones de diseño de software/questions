@@ -1,0 +1,32 @@
+Qué patrón de diseño utiliza un caretaker?
+
+Cuál utiliza un director?
+
+Facade permite añadir comportamientos o atributos a un objeto sin modificar la subclase (V/F)
+
+Qué patrón utilizarías si tienes un sistema legado que necesitas conectar con una aplicación moderna si tienes el contrato que la primera debe de seguir?
+
+Podrías utilizar algún patrón para no tener que crear todos los símbolos terminales de un Interpreter cada vez que los requieras? Si es así, cuál? 
+
+Template method se encarga de definir un skeleton para una familia de algoritmos que pueden ser intercambiados entre ellos (V/F)
+
+Podrías utilizar en conjunto los patrones Composite e Iterator? Cómo?
+
+Si tuvieras que utilizarlos en conjunto, dirías que Abstract Factory es implementada con Factory Methods o que Factory Method utiliza Abstract Factories?
+
+En el patrón Observer, un _______ notifica a sus ________ cuando un cambio ocurrió en el estado del primero
+
+Patrón que permite encapsular una instrucción en un objeto para permitir su transferencia, apilación y aplazación: _____________: 
+
+Patrón que permite crear objetos de difícil construcción a partir de sí mismo?
+
+Patrón utilizado para reducir la cantidad de conexiones que existen entre un conjunto arbitrario de objetos: ___________
+
+Singleton se asegura de que exista _________________
+
+Memento permite abstraer el estado interno de un objeto para regresar a ese estado a voluntad (V/F)
+
+Iterator permite recorrer los elementos de:
+  a) Una lista
+  b) Un objeto agregado
+  c) Una estructura
