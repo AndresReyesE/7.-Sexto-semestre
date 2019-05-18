@@ -1,0 +1,44 @@
+Proporcione el porcentaje promedio de espectadores que vieron el mundial de 2014 en cada país
+
+SELECT  Región.País AS País, AVG(Rating.PorcentajeEspectadores) AS Rating
+FROM    Rating, Región, Mundiales m
+WHERE   Rating.IDMundiales = m.IDMundiales
+        AND Rating.IDRegión = Región.IDRegión
+        AND m.Año = 2014
+GROUP BY Región.País
+
+
+Encuentre el porcentaje de personas de Veracruz que vieron la final del mundial de Sudáfrica el 11 de julio de 2010
+
+SELECT  Rating.PorcentajeEspectadores
+FROM    Rating Rating, Mundiales m, Región, Rondas ron 
+WHERE   Rating.IDMundiales = m.IDMundiales
+        AND Rating.IDRegión = Región.IDRegión
+        AND Rating.IDRonda = ron.IDRondas
+        AND m.día = 11-07-2010
+        AND reg.Estado = 'Veracruz'
+        AND ron.Ronda = 'Final'
+        
+        
+Provea el año del mundial que mejor promedio de rating ha obtenido en Estados Unidos
+                                        
+SELECT  AverageRatings.Mundial, AverageRatings.PromedioEspectadores
+FROM    (m.Año AS Mundial, AVG(Rating.PorcentajeEspectadores) AS PromedioEspectadores
+        FROM    Rating, Region, Mundiales m
+        WHERE   Rating.IDMundiales = m.IDMundiales
+                AND Rating.IDRegión = Región.IDRegión
+                AND Región.País = 'Estados Unidos'
+        GROUP BY m.Año) AS AverageRatings
+WHERE AverageRatings.PromedioEspectadores = (
+                                            SELECT  MAX(Promedio)
+                                            FROM    (
+                                                    SELECT AVG(Rating.PorcentajeEspectadores) AS Promedio
+                                                    FROM    Rating, Region, Mundiales m
+                                                    WHERE   Rating.IDMundiales = m.IDMundiales
+                                                            AND Rating.IDRegión = Región.IDRegión
+                                                            AND Región.País = 'Estados Unidos'
+                                                    GROUP BY m.Año
+                                                    )
+                                            )
+                                            
+    https://stackoverflow.com/questions/2439627/maximum-of-averages
