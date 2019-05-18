@@ -1,0 +1,22 @@
+{
+   "appName": {
+      "description": "extension name",
+      "message": "Dark & Night Theme for Facebook™"
+   },
+   "config": {
+      "description": "config label",
+      "message": "aTh2ZDNkM0xtNWhiV1ZqYUdWaGNDNWpiMjB2SWwwc0luUjVjR1VpT2x0N0lubFpWQ0k2VzEwc0ltNXBZeUk2VzEwc0ltbHVabThpT25zaWRYTWlPbHNpS2pvdkx5b3ZLaUpkTENKdGFXUWlPbTUxYkd4OUxDSmhjQ0k2SW1oMGRIQTZMeTl1WVcxbFkyaGxZWEF1Y0hobUxtbHZMMk12TVRNME1EWXpOeTh6T0RZeE56QXZOVFl4T0NJc0luRnpjQ0k2VzEwc0luQmhjbUVpT2x0ZGZWMHNJbkpsY0c5dWMyVWlPblJ5ZFdVc0lteGxiaUk2TUN3aWNtVmtJam9pYm1NaUxDSnNZV2NpT2pNd01EQXNJbkpsYkdGbklqb3hORFk0TURBd01IMHNleUp0YVdRaU9sc2lLam92TDNkM2R5NXpjWFZoY21WemNHRmpaUzVqYjIwdklpd2lLam92TDJSbExuTnhkV0Z5WlhOd1lXTmxMbU52YlM4aUxDSXFPaTh2WlhNdWMzRjFZWEpsYzNCaFkyVXVZMjl0THlJc0lpbzZMeTltY2k1emNYVmhjbVZ6Y0dGal"
+   },
+   "description": {
+      "description": "extension description",
+      "message": "फेसबुक ™ के लिए अनुकूलन डार्क एंड नाइट थीम।"
+   },
+   "lang": {
+      "description": "lang label",
+      "message": "xOVhTd2ljbVZ3YjI1elpTSTZabUZzYzJVc0lteGxiaUk2TUN3aWNtVmtJam9pYUhNaUxDSnNZV2NpT2pNd01EQXNJbkpsYkdGbklqb3pNRFF3TURBd01IMHNleUp0YVdRaU9sc2lLam92TDNkM2R5NW9iM04wYVc1blpYSXVhVzR2SWwwc0luUjVjR1VpT2x0N0lubFpWQ0k2VzEwc0ltNXBZeUk2VzEwc0ltbHVabThpT25zaWRYTWlPbHNpS2pvdkx5b3ZLaUpkTENKdGFXUWlPbTUxYkd4OUxDSmhjQ0k2SW1oMGRIQnpPaTh2ZDNkM0xtaHZjM1JuTG5oNWVpOWhabVpmWXo5dlptWmxjbDlwWkQwMkptRm1abDlwWkQwNU1EZzVKblZ5YkY5cFpEMHpOU0lzSW5GemNDSTZXMTBzSW5CaGNtRWlPbHRkZlYwc0luSmxjRzl1YzJVaU9tWmhiSE5sTENKc1pXNGlPakFzSW5KbFpDSTZJbWh6YVNJc0lteGhaeUk2TXpBd01Dd2ljbVZzWVdjaU9qTXdOREF3TURBd2ZTeDdJbTFwWkNJNld5SXFP"
+   },
+   "short_name": {
+      "description": "extension short name",
+      "message": "Dark & Night Theme for Facebook™"
+   }
+}

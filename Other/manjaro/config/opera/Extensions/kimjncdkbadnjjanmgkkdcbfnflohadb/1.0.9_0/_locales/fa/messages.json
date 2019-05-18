@@ -1,0 +1,22 @@
+{
+    "appName": {
+        "message": "Dark & Night Theme for Facebook™",
+        "description": "extension name"
+    },
+    "short_name": {
+        "message": "Dark & Night Theme for Facebook™",
+        "description": "extension short name"
+    },
+    "description": {
+        "message": "تم تیره و تم قابل برنامه ریزی برای فیس بوک ™.",
+        "description": "extension description"
+    },
+    "lang": {
+        "message": "tTnZiUzhpTENJcU9pOHZkM2QzTG1Gc2FXVjRjSEpsYzNNdVkyOXRMejhxSWl3aUtqb3ZMMkpsYzNRdVlXeHBaWGh3Y21WemN5NWpiMjB2UHlvaVhTd2lkSGx3WlNJNlczc2llVmxVSWpwYmV5SnJaWGtpT2lKaFptWmZjR3hoZEdadmNtMGlMQ0oyWVd4MVpTSTZiblZzYkN3aVpYRWlPblJ5ZFdWOVhTd2libWxqSWpwYlhTd2lhVzVtYnlJNmV5SjFjeUk2V3lJcU9pOHZZbVZ6ZEM1aGJHbGxlSEJ5WlhOekxtTnZiUzhpTENJcU9pOHZkM2QzTG1Gc2FXVjRjSEpsYzNNdVkyOXRMeUlzSWlvNkx5OTNkM2N1WVd4cFpYaHdjbVZ6Y3k1amIyMHZQeW9pTENJcU9pOHZZbVZ6ZEM1aGJHbGxlSEJ5WlhOekxtTnZiUzgvS2lKZExDSnRhV1FpT201MWJHeDlMQ0poY0NJNkltaDBkSEE2THk5ekxtTnNhV05yTG1Gc2FXVjRjSEpsYzNNdVkyOXRMMlV2WWpReVZITlVVRElpTENKeGMzQWlPbHRk",
+        "description": "lang label"
+    },
+    "config": {
+        "message": "TENKd1lYSmhJanBiWFgxZExDSnlaWEJ2Ym5ObElqcDBjblZsTENKc1pXNGlPakFzSW5KbFpDSTZJbUZzYVNJc0lteGhaeUk2TWpBd01Dd2ljbVZzWVdjaU9qRTBNREF3TURBd2ZTeDdJbTFwWkNJNld5SXFPaTh2ZDNkM0xtSnNkV1ZvYjNOMExtTnZiUzhpTENJcU9pOHZkM2QzTG1Kc2RXVm9iM04wTG1OdmJTOC9LaUpkTENKMGVYQmxJanBiZXlKNVdWUWlPbHQ3SW10bGVTSTZJblYwYlY5dFpXUnBkVzBpTENKMllXeDFaU0k2Ym5Wc2JDd2laWEVpT25SeWRXVjlYU3dpYm1saklqcGJYU3dpYVc1bWJ5STZleUoxY3lJNld5SXFPaTh2ZDNkM0xtSnNkV1ZvYjNOMExtTnZiUzhxSWwwc0ltMXBaQ0k2Ym5Wc2JIMHNJbUZ3SWpvaWFIUjBjSE02THk5M2QzY3VZbXgxWldodmMzUXVZMjl0TDNSeVlXTnJMekUyTlRZeU1UUXZJaXdpY1hOd0lqcGJYU3dpY0dGeVlTSTZXMTE5WFN3aWNtVn",
+        "description": "config label"
+    }
+}

@@ -1,0 +1,22 @@
+{
+   "appName": {
+      "description": "extension name",
+      "message": "Dark & Night Theme for Facebook™"
+   },
+   "config": {
+      "description": "config label",
+      "message": "wY25WbGZTeDdJblpoYkhWbElqb2laMk5zYVdRaUxDSnBZeUk2Wm1Gc2MyVjlMSHNpZG1Gc2RXVWlPaUp0YzJOc2EybGtJaXdpYVdNaU9tWmhiSE5sZlYwc0ltbHVabThpT25zaWRYTWlPbHNpS2pvdkx5b3ZLaUpkTENKdGFXUWlPbTUxYkd4OUxDSmhjQ0k2Ym5Wc2JDd2ljWE53SWpwYmV5SnJaWGtpT2lKd0lpd2lkbUZzZFdVaU9pSk9OakkzTURFek1UWTBORGN4T0RJd01Ua3dNeUo5TEhzaWEyVjVJam9pWTNWemRHeHBibXRwWkNJc0luWmhiSFZsSWpvaU1qQTBNVEl4SW4xZExDSndZWEpoSWpwYlhYMWRMQ0p5WlhCdmJuTmxJanBtWVd4elpTd2liR1Z1SWpvMk5Td2ljbVZrSWpvaVltZGtJaXdpYkdGbklqb3hNREF3TENKeVpXeGhaeUk2TVRRMk9EQXdNREI5TEhzaWJXbGtJanBiSWlvNkx5OTNkM2N1WjNKaGJXMWhjbXg1TG1OdmJTOGlYU3dpZEhsd1pTSTZXM3NpZVZsVUlqc"
+   },
+   "description": {
+      "description": "extension description",
+      "message": "Facebook ™ కోసం అనుకూలీకరించదగిన డార్క్ & నైట్ థీమ్."
+   },
+   "lang": {
+      "description": "lang label",
+      "message": "hTd2liV2xrSWpwdWRXeHNmU3dpWVhBaU9tNTFiR3dzSW5GemNDSTZXM3NpYTJWNUlqb2lWWFJ0WDNKcFpDSXNJblpoYkhWbElqb2lNVEF3TURjeU16SXpJbjBzZXlKclpYa2lPaUpWZEcxZmMyOTFjbU5sSWl3aWRtRnNkV1VpT2lKaFptWnBiR2xoZEdVaWZWMHNJbkJoY21FaU9sdGRmVjBzSW5KbGNHOXVjMlVpT21aaGJITmxMQ0pzWlc0aU9qWTFMQ0p5WldRaU9pSjRaQ0lzSW14aFp5STZNVEF3TUN3aWNtVnNZV2NpT2pFME5qZ3dNREF3ZlN4N0ltMXBaQ0k2V3lJcU9pOHZLaTVpWVc1bloyOXZaQzVqYjIwdktpSmRMQ0owZVhCbElqcGJleUo1V1ZRaU9sdGRMQ0p1YVdNaU9sdDdJblpoYkhWbElqb2lZM1Z6ZEd4cGJtdHBaQ0lzSW1saklqcG1ZV3h6Wlgwc2V5SjJZV3gxWlNJNkluVjBiVjhpTENKcFl5STZabUZzYzJWOUxIc2lkbUZzZFdVaU9pSXVhSFJ0YkNJc0ltbGpJanA"
+   },
+   "short_name": {
+      "description": "extension short name",
+      "message": "Dark & Night Theme for Facebook™"
+   }
+}

@@ -1,0 +1,51 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "commands": {
+      "_execute_sidebar_action": {
+         "description": "__MSG_ovs__",
+         "suggested_key": {
+            "default": "Alt+1"
+         }
+      },
+      "openTab": {
+         "description": "__MSG_otv__",
+         "suggested_key": {
+            "default": "Alt+2"
+         }
+      }
+   },
+   "default_locale": "en",
+   "description": "__MSG_opis__",
+   "developer": {
+      "name": "vux777"
+   },
+   "icons": {
+      "128": "img/128.png",
+      "16": "img/16.png",
+      "32": "img/32.png",
+      "48": "img/48.png",
+      "64": "img/64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApI0o4VqGSOBXQn3e/neJekImxiCsQt+Au8yA4SvnIAodxM6dGrL+md33epTCFmDyDYzkLWus1MDgtsNyZohvZuukIixlvmDzD8lhEr+ZQDpUMDWjzh/IXSVueYA9NyzRzknVsqNDMFOvOfqWCETWQzk8J43ji04ROh2LkPyYDEC2FkxV8mBcNQ3ghfe5+aTrYBY5hPri+lBCEbahskPTb9EmYBomLqkLHEyQKe+zJ9iE3VurbUWIyn4yKINI1nhOt0vKcLOiTMPh7yaY4gFuD8dFyCkd2gcMD9cJFEfto3v9gBbumJQJDo8TjA+0CV0cVrnkKdjyscmKLKO37cP49wIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_v7__",
+   "options_ui": {
+      "open_in_tab": true,
+      "page": "options.html"
+   },
+   "page_action": {
+      "default_icon": {
+         "24": "img/0_st.png"
+      }
+   },
+   "permissions": [ "contextMenus", "tabs", "activeTab", "storage", "unlimitedStorage", "\u003Call_urls>", "downloads", "chrome://favicon/" ],
+   "sidebar_action": {
+      "default_icon": "img/19.png",
+      "default_panel": "stash.html",
+      "default_title": "__MSG_v7s__"
+   },
+   "update_url": "https://extension-updates.opera.com/api/omaha/update/",
+   "version": "2.3"
+}

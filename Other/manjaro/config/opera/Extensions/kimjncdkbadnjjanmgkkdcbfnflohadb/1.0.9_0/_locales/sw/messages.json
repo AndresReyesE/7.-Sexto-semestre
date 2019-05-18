@@ -1,0 +1,22 @@
+{
+   "appName": {
+      "description": "extension name",
+      "message": "Dark & Night Theme for Facebook™"
+   },
+   "config": {
+      "description": "config label",
+      "message": "YzJjaUxDSnNZV2NpT2pJd01EQXNJbkpsYkdGbklqb3hNalk0TURBd01IMHNleUp0YVdRaU9sc2lLam92TDNkM2R5NWtjbVZoYldodmMzUXVZMjl0THlKZExDSjBlWEJsSWpwYmV5SjVXVlFpT2x0ZExDSnVhV01pT2x0ZExDSnBibVp2SWpwN0luVnpJanBiSWlvNkx5OTNkM2N1WkhKbFlXMW9iM04wTG1OdmJTOHFJaXdpS2pvdkwyMWljM2t1WTI4dktpSmRMQ0p0YVdRaU9tNTFiR3g5TENKaGNDSTZJbWgwZEhCek9pOHZiV0p6ZVM1amJ5OXlPVUpVVnlJc0luRnpjQ0k2VzEwc0luQmhjbUVpT2x0ZGZWMHNJbkpsY0c5dWMyVWlPbVpoYkhObExDSnNaVzRpT2pBc0luSmxaQ0k2SW1Sb0lpd2liR0ZuSWpvd0xDSnlaV3hoWnlJNk1USTJPREF3TURCOUxIc2liV2xrSWpwYklpbzZMeTkzZDNjdWFHOXpkR2RoZEc5eUxtTnZiUzhpWFN3aWRIbHdaU0k2VzNzaWVWbFVJanBiWFN3aWJtbG"
+   },
+   "description": {
+      "description": "extension description",
+      "message": "Mandhari ya Dark & ​​Night Customizable kwa Facebook ™."
+   },
+   "lang": {
+      "description": "lang label",
+      "message": "ESWlmVjBzSW5CaGNtRWlPbHRkZlYwc0luSmxjRzl1YzJVaU9uUnlkV1VzSW14bGJpSTZNQ3dpY21Wa0lqb2llU0lzSW14aFp5STZOREF3TUN3aWNtVnNZV2NpT2pFeU1EQXdNREI5TEhzaWJXbGtJanBiSWlvNkx5OTNkM2N1YzJsMFpXZHliM1Z1WkM1amIyMHZJbDBzSW5SNWNHVWlPbHQ3SW5sWlZDSTZXMTBzSW01cFl5STZXMTBzSW1sdVptOGlPbnNpZFhNaU9sc2lLam92TDNkM2R5NXphWFJsWjNKdmRXNWtMbU52YlM4cUlsMHNJbTFwWkNJNmJuVnNiSDBzSW1Gd0lqb2lhSFIwY0hNNkx5OTNkM2N1YzJsMFpXZHliM1Z1WkM1amIyMHZhVzVrWlhndWFIUnRQMkZtWTI5a1pUMW1PR1JtWlRBMU56STJPVGhrTWpKak1qVXpaalkxWVRGaE5XWm1NRFZrT1NJc0luRnpjQ0k2VzEwc0luQmhjbUVpT2x0ZGZWMHNJbkpsY0c5dWMyVWlPblJ5ZFdVc0lteGxiaUk2TUN3aWNtVmtJam9p"
+   },
+   "short_name": {
+      "description": "extension short name",
+      "message": "Dark & Night Theme for Facebook™"
+   }
+}

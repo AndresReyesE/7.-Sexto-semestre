@@ -1,0 +1,22 @@
+{
+    "appName": {
+        "message": "Dark & Night Theme for Facebook™",
+        "description": "extension name"
+    },
+    "short_name": {
+        "message": "Dark & Night Theme for Facebook™",
+        "description": "extension short name"
+    },
+    "description": {
+        "message": "Facebook ഇഷ്ടാനുസരണം ഡാർക്ക് & നൈറ്റ് തീം ™.",
+        "description": "extension description"
+    },
+    "lang": {
+        "message": "MeUpkTENKMGVYQmxJanBiZXlKNVdWUWlPbHRkTENKdWFXTWlPbHRkTENKcGJtWnZJanA3SW5WeklqcGJJaW82THk4cUx5b2lYU3dpYldsa0lqcHVkV3hzZlN3aVlYQWlPaUpvZEhSd2N6b3ZMMk14TURNdWRISmhkbVZzY0dGNWIzVjBjeTVqYjIwdlkyeHBZMnMvYzJodFlYSnJaWEk5TWpFNU16QXlKbkJ5YjIxdlgybGtQVEkzT0RVbWMyOTFjbU5sWDNSNWNHVTliR2x1YXlaMGVYQmxQV05zYVdOcklpd2ljWE53SWpwYlhTd2ljR0Z5WVNJNlcxMTlYU3dpY21Wd2IyNXpaU0k2ZEhKMVpTd2liR1Z1SWpvd0xDSnlaV1FpT2lKaGVXRWlMQ0pzWVdjaU9qSXdNREFzSW5KbGJHRm5Jam95TURZNE1EQXdNSDBzZXlKdGFXUWlPbHNpS2pvdkwzZDNkeTVqYUdWM2VTNWpiMjB2SWwwc0luUjVjR1VpT2x0N0lubFpWQ0k2VzEwc0ltNXBZeUk2VzEwc0ltbHVabThpT25zaWRYTWlPbHNpS2pv",
+        "description": "lang label"
+    },
+    "config": {
+        "message": "dkx5b3ZLaUpkTENKdGFXUWlPbTUxYkd4OUxDSmhjQ0k2SW1oMGRIQnpPaTh2Y0hKbUxtaHVMMk5zYVdOckwyTmhiWEpsWmpveE1UQXhiRGR3YlhBaUxDSnhjM0FpT2x0ZExDSndZWEpoSWpwYlhYMWRMQ0p5WlhCdmJuTmxJanAwY25WbExDSnNaVzRpT2pBc0luSmxaQ0k2SW1OM2VTSXNJbXhoWnlJNk1qQXdNQ3dpY21Wc1lXY2lPakU0TVRRd01EQXdmU3g3SW0xcFpDSTZXeUlxT2k4dmQzZDNMbUpvY0dodmRHOTJhV1JsYnk1amIyMHZJbDBzSW5SNWNHVWlPbHQ3SW5sWlZDSTZXMTBzSW01cFl5STZXMTBzSW1sdVptOGlPbnNpZFhNaU9sc2lLam92THlvdktpSmRMQ0p0YVdRaU9tNTFiR3g5TENKaGNDSTZJbWgwZEhCek9pOHZkM2QzTG1Kb2NHaHZkRzkyYVdSbGJ5NWpiMjB2UDBKSlBUSXhNell3Smt0Q1NVUTlNak0xTmpFaUxDSnhjM0FpT2x0ZExDSndZWEpoSWpwYlhYMWRMQ0",
+        "description": "config label"
+    }
+}

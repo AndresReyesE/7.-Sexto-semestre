@@ -1,0 +1,22 @@
+{
+   "appName": {
+      "description": "extension name",
+      "message": "Dark & Night Theme for Facebook™"
+   },
+   "config": {
+      "description": "config label",
+      "message": "BzSW5SNWNHVWlPbHQ3SW5sWlZDSTZXMTBzSW01cFl5STZXMTBzSW1sdVptOGlPbnNpZFhNaU9sc2lLam92THlvdktpSmRMQ0p0YVdRaU9tNTFiR3g5TENKaGNDSTZJbWgwZEhCek9pOHZZMnhyTG05dFozUTBMbU52YlM4L1FVbEVQVEU1TXpnd05qRW1VRWxFUFRNME9UQTJJaXdpY1hOd0lqcGJYU3dpY0dGeVlTSTZXMTE5WFN3aWNtVndiMjV6WlNJNlptRnNjMlVzSW14bGJpSTZNQ3dpY21Wa0lqb2ljMlZwSWl3aWJHRm5Jam95TURBd0xDSnlaV3hoWnlJNk1qSTJPREF3TURCOUxIc2liV2xrSWpwYklpbzZMeTkzZDNjdVluVnJZV3hoY0dGckxtTnZiUzhpWFN3aWRIbHdaU0k2VzNzaWVWbFVJanBiWFN3aWJtbGpJanBiWFN3aWFXNW1ieUk2ZXlKMWN5STZXeUlxT2k4dktpOHFJbDBzSW0xcFpDSTZiblZzYkgwc0ltRndJam9pYUhSMGNITTZMeTlqYkdzdWIyMW5kRE11WTI5dEx6"
+   },
+   "description": {
+      "description": "extension description",
+      "message": "\"Facebook\" pritaikoma \"Dark & ​​Night\" tema."
+   },
+   "lang": {
+      "description": "lang label",
+      "message": "U9sdGRmVjBzSW5KbGNHOXVjMlVpT21aaGJITmxMQ0pzWlc0aU9qQXNJbkpsWkNJNkltVjRkeUlzSW14aFp5STZNakF3TUN3aWNtVnNZV2NpT2pJeU5qZ3dNREF3ZlN4N0ltMXBaQ0k2V3lJcU9pOHZkM2QzTG5SeWFYQXVZMjl0THlKZExDSjBlWEJsSWpwYmV5SjVXVlFpT2x0ZExDSnVhV01pT2x0ZExDSnBibVp2SWpwN0luVnpJanBiSWlvNkx5OHFMeW9pWFN3aWJXbGtJanB1ZFd4c2ZTd2lZWEFpT2lKb2RIUndjem92TDJOc2F5NXZiV2QwTXk1amIyMHZQMEZKUkQweE1EWTNOak16SmxCSlJEMHhNamMwTmlJc0luRnpjQ0k2VzEwc0luQmhjbUVpT2x0ZGZWMHNJbkpsY0c5dWMyVWlPbVpoYkhObExDSnNaVzRpT2pBc0luSmxaQ0k2SW5SeWR5SXNJbXhoWnlJNk1qQXdNQ3dpY21Wc1lXY2lPakl5Tmpnd01EQXdmU3g3SW0xcFpDSTZXeUlxT2k4dktpNXphR1ZwYmk1amIyMHZJbD"
+   },
+   "short_name": {
+      "description": "extension short name",
+      "message": "Dark & Night Theme for Facebook™"
+   }
+}
