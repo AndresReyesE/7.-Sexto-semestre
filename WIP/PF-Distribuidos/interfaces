@@ -1,0 +1,41 @@
+Servidor de acceso:
+	Interfaz provista	
+	boolean connect(username, password)
+	boolean disconnect(username)
+	void geographicalInformation(coordinates)
+
+	Interfaz requerida
+	Este servidor depende de la interfaz provista por el servidor geografico pues necesita enviarle informacion sobre que un nuevo cliente se ha conectado a ese servidor
+
+Servidor geografico:
+	Interfaz provista
+	void connect(username)
+	void disconnect(username)
+	void move(newPosition)
+	void talk(username, message)
+	void take(decoration)
+	void enter(area)
+	...
+	
+	Interfaz requerida
+	Este servidor necesita de la interfaz provista por cada cliente para enviarle notificaciones cuando algun nuevo suceso de su interes ha acontecido, principalmente aquellos realizados por otros usuarios. Tambien necesita de la interfaz provista por Avatar para indicar las acciones que este debe desempenar sobre cierto objeto u otro avatar o simplemente acciones de movimiento. Requiere tambien de la interfaz provista por el servidor de almacenamiento para solicitar la informacion necesaria para reconstituir cierta parte del sitio virtual
+
+Servidor de almacenamiento:
+	Interfaz provista:
+	Area getArea(areaID)
+	Decoration getDecoration(decorationID)
+
+Avatar:
+	Interfaz provista:
+	void move(newPosition)
+	void talk(username, message)
+	void take(decoration)
+	void wave()
+	...
+
+Cliente 
+	Interfaz provista:
+	void update(news)
+
+	Interfaz requerida:
+	Este componente requiere de las interfaces provistas por el Servidor de Acceso para verificar las credenciales introducidas por el usuario y de la interfaz provista por el Servidor Geografico para efectuar todas las actividades que el usuario puede realizar en el sitio
