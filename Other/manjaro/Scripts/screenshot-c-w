@@ -1,8 +1,0 @@
-#!/bin/bash
-
-print () {
-	gnome-screenshot -w --file="/home/reyes/Pictures/Screenshots/window.png" 
-	copyq copy image/png - < ~/Pictures/Screenshots/window.png
-}
-
-print

@@ -1,8 +1,0 @@
-#!/bin/bash
-
-print () {
-    spectacle -r -b -n -o ~/Pictures/Screenshots/region.png
-    copyq copy image/png - < ~/Pictures/Screenshots/region.png
-}
-
-print
